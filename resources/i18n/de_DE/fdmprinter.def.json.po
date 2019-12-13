@@ -2,7 +2,7 @@
 # Copyright (C) 2019 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
 # Ruben Dulek <r.dulek@ultimaker.com>, 2019.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.4\n"
@@ -1038,8 +1038,7 @@ msgstr "Erste untere Schichten"
 #: fdmprinter.def.json
 msgctxt "initial_bottom_layers description"
 msgid "The number of initial bottom layers, from the build-plate upwards. When calculated by the bottom thickness, this value is rounded to a whole number."
-msgstr "Die Anzahl der ersten Schichten, die auf die Druckplatte aufgetragen werden. Wenn diese anhand der unteren Dicke berechnet werden, wird der Wert auf eine"
-" ganze Zahl auf- oder abgerundet."
+msgstr "Die Anzahl der ersten Schichten, die auf die Druckplatte aufgetragen werden. Wenn diese anhand der unteren Dicke berechnet werden, wird der Wert auf eine ganze Zahl auf- oder abgerundet."
 
 #: fdmprinter.def.json
 msgctxt "top_bottom_pattern label"
@@ -3993,8 +3992,7 @@ msgstr "Mindestbereich Stützstruktur-Schnittstelle"
 #: fdmprinter.def.json
 msgctxt "minimum_interface_area description"
 msgid "Minimum area size for support interface polygons. Polygons which have an area smaller than this value will be printed as normal support."
-msgstr "Mindestflächenbreite für Stützstruktur-Schnittstellen-Polygone. Polygone, die eine kleinere Fläche als diesen Wert aufweisen, werden als normale Stützstruktur"
-" gedruckt."
+msgstr "Mindestflächenbreite für Stützstruktur-Schnittstellen-Polygone. Polygone, die eine kleinere Fläche als diesen Wert aufweisen, werden als normale Stützstruktur gedruckt."
 
 #: fdmprinter.def.json
 msgctxt "minimum_roof_area label"
@@ -5533,8 +5531,7 @@ msgstr "Ausgleichsfaktor Durchflussrate"
 #: fdmprinter.def.json
 msgctxt "flow_rate_extrusion_offset_factor description"
 msgid "How far to move the filament in order to compensate for changes in flow rate, as a percentage of how far the filament would move in one second of extrusion."
-msgstr "Wie weit das Filament bewegt werden kann, um Änderungen der Durchflussrate zu kompensieren – als Prozentsatz der Strecke, die das Filament sich während"
-" einer Sekunde Extrusion bewegen würde."
+msgstr "Wie weit das Filament bewegt werden kann, um Änderungen der Durchflussrate zu kompensieren – als Prozentsatz der Strecke, die das Filament sich während einer Sekunde Extrusion bewegen würde."
 
 #: fdmprinter.def.json
 msgctxt "wireframe_enabled label"
@@ -5833,8 +5830,7 @@ msgstr "Topographische Größe der Anpassschichten"
 #: fdmprinter.def.json
 msgctxt "adaptive_layer_height_threshold description"
 msgid "Target horizontal distance between two adjacent layers. Reducing this setting causes thinner layers to be used to bring the edges of the layers closer together."
-msgstr "Horizontaler Abstand zwischen zwei angrenzenden Schichten. Bei Einstellung eines niedrigeren Werts werden dünnere Schichten aufgetragen, damit die Kanten"
-" der Schichten enger aneinander liegen."
+msgstr "Horizontaler Abstand zwischen zwei angrenzenden Schichten. Bei Einstellung eines niedrigeren Werts werden dünnere Schichten aufgetragen, damit die Kanten der Schichten enger aneinander liegen."
 
 #: fdmprinter.def.json
 msgctxt "wall_overhang_angle label"
@@ -5844,8 +5840,7 @@ msgstr "Winkel für überhängende Wände"
 #: fdmprinter.def.json
 msgctxt "wall_overhang_angle description"
 msgid "Walls that overhang more than this angle will be printed using overhanging wall settings. When the value is 90, no walls will be treated as overhanging. Overhang that gets supported by support will not be treated as overhang either."
-msgstr "Wände, die über diesen Winkel hinaus hängen, werden mithilfe der Einstellungen für Winkel für überhängende Wände gedruckt. Wenn der Wert 90 beträgt, werden"
-" keine Wände als überhängend behandelt. Überhänge, die von Stützstrukturen gestützt werden, werden ebenfalls nicht als Überhang behandelt."
+msgstr "Wände, die über diesen Winkel hinaus hängen, werden mithilfe der Einstellungen für Winkel für überhängende Wände gedruckt. Wenn der Wert 90 beträgt, werden keine Wände als überhängend behandelt. Überhänge, die von Stützstrukturen gestützt werden, werden ebenfalls nicht als Überhang behandelt."
 
 #: fdmprinter.def.json
 msgctxt "wall_overhang_speed_factor label"
@@ -6225,8 +6220,7 @@ msgstr "Detailgeschwindigkeit"
 #: fdmprinter.def.json
 msgctxt "small_feature_speed_factor description"
 msgid "Small features will be printed at this percentage of their normal print speed. Slower printing can help with adhesion and accuracy."
-msgstr "Bei kleinen Details wird die Geschwindigkeit auf diesen Prozentsatz der normalen Druckgeschwindigkeit gesetzt. Durch eine niedrigere Druckgeschwindigkeit"
-" können die Haftung und die Genauigkeit verbessert werden."
+msgstr "Bei kleinen Details wird die Geschwindigkeit auf diesen Prozentsatz der normalen Druckgeschwindigkeit gesetzt. Durch eine niedrigere Druckgeschwindigkeit können die Haftung und die Genauigkeit verbessert werden."
 
 #: fdmprinter.def.json
 msgctxt "small_feature_speed_factor_0 label"
@@ -6236,8 +6230,7 @@ msgstr "Geschwindigkeit der ersten Schicht von Details"
 #: fdmprinter.def.json
 msgctxt "small_feature_speed_factor_0 description"
 msgid "Small features on the first layer will be printed at this percentage of their normal print speed. Slower printing can help with adhesion and accuracy."
-msgstr "Bei kleinen Details wird die Geschwindigkeit bei der ersten Schicht auf diesen Prozentsatz der normalen Druckgeschwindigkeit gesetzt. Durch eine niedrigere"
-" Druckgeschwindigkeit können die Haftung und die Genauigkeit verbessert werden."
+msgstr "Bei kleinen Details wird die Geschwindigkeit bei der ersten Schicht auf diesen Prozentsatz der normalen Druckgeschwindigkeit gesetzt. Durch eine niedrigere Druckgeschwindigkeit können die Haftung und die Genauigkeit verbessert werden."
 
 #: fdmprinter.def.json
 msgctxt "command_line_settings label"

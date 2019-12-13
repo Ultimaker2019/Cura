@@ -2,7 +2,7 @@
 # Copyright (C) 2019 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
 # Ruben Dulek <r.dulek@ultimaker.com>, 2019.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.4\n"
@@ -5531,8 +5531,7 @@ msgstr "Akış hızı dengeleme çarpanı"
 #: fdmprinter.def.json
 msgctxt "flow_rate_extrusion_offset_factor description"
 msgid "How far to move the filament in order to compensate for changes in flow rate, as a percentage of how far the filament would move in one second of extrusion."
-msgstr "Akış hızındaki değişiklikleri telafi edebilmek için filamentin bir saniyelik ekstrüzyonda hareket ettirileceği mesafenin yüzdesi olarak filamentin ne kadar"
-" uzağa hareket ettirileceği."
+msgstr "Akış hızındaki değişiklikleri telafi edebilmek için filamentin bir saniyelik ekstrüzyonda hareket ettirileceği mesafenin yüzdesi olarak filamentin ne kadar uzağa hareket ettirileceği."
 
 #: fdmprinter.def.json
 msgctxt "wireframe_enabled label"
@@ -5831,8 +5830,7 @@ msgstr "Uyarlanabilir Katman Topografisi Boyutu"
 #: fdmprinter.def.json
 msgctxt "adaptive_layer_height_threshold description"
 msgid "Target horizontal distance between two adjacent layers. Reducing this setting causes thinner layers to be used to bring the edges of the layers closer together."
-msgstr "İki bitişik katman arasındaki hedef yatay mesafe. Bu ayarın azaltılması, katmanların kenarlarını birbirine yakınlaştırmak için daha ince katmanlar kullanılmasına"
-" neden olur."
+msgstr "İki bitişik katman arasındaki hedef yatay mesafe. Bu ayarın azaltılması, katmanların kenarlarını birbirine yakınlaştırmak için daha ince katmanlar kullanılmasına neden olur."
 
 #: fdmprinter.def.json
 msgctxt "wall_overhang_angle label"
@@ -5842,8 +5840,7 @@ msgstr "Çıkıntılı Duvar Açısı"
 #: fdmprinter.def.json
 msgctxt "wall_overhang_angle description"
 msgid "Walls that overhang more than this angle will be printed using overhanging wall settings. When the value is 90, no walls will be treated as overhanging. Overhang that gets supported by support will not be treated as overhang either."
-msgstr "Bu açıdan daha yüksek çıkıntıya sahip duvarlar çıkıntılı duvar ayarları kullanılarak basılacaktır. Değer 90 ise hiçbir duvarda çıkıntı olmadığı varsayılacaktır."
-" Destek ile desteklenen çıkıntılar da çıkıntı olarak değerlendirilmeyecektir."
+msgstr "Bu açıdan daha yüksek çıkıntıya sahip duvarlar çıkıntılı duvar ayarları kullanılarak basılacaktır. Değer 90 ise hiçbir duvarda çıkıntı olmadığı varsayılacaktır. Destek ile desteklenen çıkıntılar da çıkıntı olarak değerlendirilmeyecektir."
 
 #: fdmprinter.def.json
 msgctxt "wall_overhang_speed_factor label"

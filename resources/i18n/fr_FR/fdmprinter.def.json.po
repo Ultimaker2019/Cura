@@ -2,7 +2,7 @@
 # Copyright (C) 2019 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
 # Ruben Dulek <r.dulek@ultimaker.com>, 2019.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.4\n"
@@ -1038,8 +1038,7 @@ msgstr "Couches inférieures initiales"
 #: fdmprinter.def.json
 msgctxt "initial_bottom_layers description"
 msgid "The number of initial bottom layers, from the build-plate upwards. When calculated by the bottom thickness, this value is rounded to a whole number."
-msgstr "Le nombre de couches inférieures initiales à partir du haut du plateau. Lorsqu'elle est calculée par l'épaisseur du dessous, cette valeur est arrondie"
-" à un nombre entier."
+msgstr "Le nombre de couches inférieures initiales à partir du haut du plateau. Lorsqu'elle est calculée par l'épaisseur du dessous, cette valeur est arrondie à un nombre entier."
 
 #: fdmprinter.def.json
 msgctxt "top_bottom_pattern label"
@@ -3993,8 +3992,7 @@ msgstr "Surface minimale de l'interface de support"
 #: fdmprinter.def.json
 msgctxt "minimum_interface_area description"
 msgid "Minimum area size for support interface polygons. Polygons which have an area smaller than this value will be printed as normal support."
-msgstr "Taille minimale de la surface des polygones d'interface de support. Les polygones dont la surface est inférieure à cette valeur ne seront pas imprimés"
-" comme support normal."
+msgstr "Taille minimale de la surface des polygones d'interface de support. Les polygones dont la surface est inférieure à cette valeur ne seront pas imprimés comme support normal."
 
 #: fdmprinter.def.json
 msgctxt "minimum_roof_area label"
@@ -4004,8 +4002,7 @@ msgstr "Surface minimale du plafond de support"
 #: fdmprinter.def.json
 msgctxt "minimum_roof_area description"
 msgid "Minimum area size for the roofs of the support. Polygons which have an area smaller than this value will be printed as normal support."
-msgstr "Taille minimale de la surface des plafonds du support. Les polygones dont la surface est inférieure à cette valeur ne seront pas imprimés comme support"
-" normal."
+msgstr "Taille minimale de la surface des plafonds du support. Les polygones dont la surface est inférieure à cette valeur ne seront pas imprimés comme support normal."
 
 #: fdmprinter.def.json
 msgctxt "minimum_bottom_area label"
@@ -5534,8 +5531,7 @@ msgstr "Facteur de compensation du débit"
 #: fdmprinter.def.json
 msgctxt "flow_rate_extrusion_offset_factor description"
 msgid "How far to move the filament in order to compensate for changes in flow rate, as a percentage of how far the filament would move in one second of extrusion."
-msgstr "La distance de déplacement du filament pour compenser les variations du débit, en pourcentage de la distance de déplacement du filament en une seconde"
-" d'extrusion."
+msgstr "La distance de déplacement du filament pour compenser les variations du débit, en pourcentage de la distance de déplacement du filament en une seconde d'extrusion."
 
 #: fdmprinter.def.json
 msgctxt "wireframe_enabled label"
@@ -5834,8 +5830,7 @@ msgstr "Taille de la topographie des couches adaptatives"
 #: fdmprinter.def.json
 msgctxt "adaptive_layer_height_threshold description"
 msgid "Target horizontal distance between two adjacent layers. Reducing this setting causes thinner layers to be used to bring the edges of the layers closer together."
-msgstr "Distance horizontale cible entre deux couches adjacentes. La réduction de ce paramètre entraîne l'utilisation de couches plus fines pour rapprocher les"
-" bords des couches."
+msgstr "Distance horizontale cible entre deux couches adjacentes. La réduction de ce paramètre entraîne l'utilisation de couches plus fines pour rapprocher les bords des couches."
 
 #: fdmprinter.def.json
 msgctxt "wall_overhang_angle label"
@@ -5845,8 +5840,7 @@ msgstr "Angle de parois en porte-à-faux"
 #: fdmprinter.def.json
 msgctxt "wall_overhang_angle description"
 msgid "Walls that overhang more than this angle will be printed using overhanging wall settings. When the value is 90, no walls will be treated as overhanging. Overhang that gets supported by support will not be treated as overhang either."
-msgstr "Les parois ayant un angle supérieur à cette valeur seront imprimées en utilisant les paramètres de parois en porte-à-faux. Si la valeur est 90, aucune"
-" paroi ne sera considérée comme étant en porte-à-faux. La saillie soutenue par le support ne sera pas non plus considérée comme étant en porte-à-faux."
+msgstr "Les parois ayant un angle supérieur à cette valeur seront imprimées en utilisant les paramètres de parois en porte-à-faux. Si la valeur est 90, aucune paroi ne sera considérée comme étant en porte-à-faux. La saillie soutenue par le support ne sera pas non plus considérée comme étant en porte-à-faux."
 
 #: fdmprinter.def.json
 msgctxt "wall_overhang_speed_factor label"
@@ -6226,8 +6220,7 @@ msgstr "Vitesse de petite structure"
 #: fdmprinter.def.json
 msgctxt "small_feature_speed_factor description"
 msgid "Small features will be printed at this percentage of their normal print speed. Slower printing can help with adhesion and accuracy."
-msgstr "Les petites structures seront imprimées à ce pourcentage de la vitesse d'impression normale. Une impression plus lente peut aider à l'adhésion et à la"
-" précision."
+msgstr "Les petites structures seront imprimées à ce pourcentage de la vitesse d'impression normale. Une impression plus lente peut aider à l'adhésion et à la précision."
 
 #: fdmprinter.def.json
 msgctxt "small_feature_speed_factor_0 label"
@@ -6237,8 +6230,7 @@ msgstr "Vitesse de la couche initiale de petite structure"
 #: fdmprinter.def.json
 msgctxt "small_feature_speed_factor_0 description"
 msgid "Small features on the first layer will be printed at this percentage of their normal print speed. Slower printing can help with adhesion and accuracy."
-msgstr "Les petites structures sur la première couche seront imprimées à ce pourcentage de la vitesse d'impression normale. Une impression plus lente peut aider"
-" à l'adhésion et à la précision."
+msgstr "Les petites structures sur la première couche seront imprimées à ce pourcentage de la vitesse d'impression normale. Une impression plus lente peut aider à l'adhésion et à la précision."
 
 #: fdmprinter.def.json
 msgctxt "command_line_settings label"

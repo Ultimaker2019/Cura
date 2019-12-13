@@ -2,7 +2,7 @@
 # Copyright (C) 2019 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
 # Ruben Dulek <r.dulek@ultimaker.com>, 2019.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.4\n"
@@ -1038,8 +1038,7 @@ msgstr "Capas inferiores iniciales"
 #: fdmprinter.def.json
 msgctxt "initial_bottom_layers description"
 msgid "The number of initial bottom layers, from the build-plate upwards. When calculated by the bottom thickness, this value is rounded to a whole number."
-msgstr "El número de capas inferiores iniciales, desde la capa de impresión hacia arriba. Al calcularlo por el grosor inferior, este valor se redondea a un número"
-" entero."
+msgstr "El número de capas inferiores iniciales, desde la capa de impresión hacia arriba. Al calcularlo por el grosor inferior, este valor se redondea a un número entero."
 
 #: fdmprinter.def.json
 msgctxt "top_bottom_pattern label"
@@ -3993,8 +3992,7 @@ msgstr "Área de la interfaz de soporte mínima"
 #: fdmprinter.def.json
 msgctxt "minimum_interface_area description"
 msgid "Minimum area size for support interface polygons. Polygons which have an area smaller than this value will be printed as normal support."
-msgstr "Tamaño del área mínima para los polígonos de la interfaz de soporte. Los polígonos que posean un área de menor tamaño que este valor se imprimirán como"
-" soporte normal."
+msgstr "Tamaño del área mínima para los polígonos de la interfaz de soporte. Los polígonos que posean un área de menor tamaño que este valor se imprimirán como soporte normal."
 
 #: fdmprinter.def.json
 msgctxt "minimum_roof_area label"
@@ -5533,8 +5531,7 @@ msgstr "Factor de compensación del caudal"
 #: fdmprinter.def.json
 msgctxt "flow_rate_extrusion_offset_factor description"
 msgid "How far to move the filament in order to compensate for changes in flow rate, as a percentage of how far the filament would move in one second of extrusion."
-msgstr "La distancia para mover el filamento con el fin de compensar los cambios en el caudal, como porcentaje de la distancia a la que se movería el filamento"
-" en un segundo de extrusión."
+msgstr "La distancia para mover el filamento con el fin de compensar los cambios en el caudal, como porcentaje de la distancia a la que se movería el filamento en un segundo de extrusión."
 
 #: fdmprinter.def.json
 msgctxt "wireframe_enabled label"
@@ -5833,8 +5830,7 @@ msgstr "Tamaño de la topografía de las capas de adaptación"
 #: fdmprinter.def.json
 msgctxt "adaptive_layer_height_threshold description"
 msgid "Target horizontal distance between two adjacent layers. Reducing this setting causes thinner layers to be used to bring the edges of the layers closer together."
-msgstr "Distancia horizontal objetivo entre dos capas adyacentes. Si se reduce este ajuste, se tendrán que utilizar capas más finas para acercar más los bordes"
-" de las capas."
+msgstr "Distancia horizontal objetivo entre dos capas adyacentes. Si se reduce este ajuste, se tendrán que utilizar capas más finas para acercar más los bordes de las capas."
 
 #: fdmprinter.def.json
 msgctxt "wall_overhang_angle label"
@@ -5844,8 +5840,7 @@ msgstr "Ángulo de voladizo de pared"
 #: fdmprinter.def.json
 msgctxt "wall_overhang_angle description"
 msgid "Walls that overhang more than this angle will be printed using overhanging wall settings. When the value is 90, no walls will be treated as overhanging. Overhang that gets supported by support will not be treated as overhang either."
-msgstr "Las paredes con un ángulo de voladizo mayor que este se imprimirán con los ajustes de voladizo de pared. Cuando el valor sea 90, no se aplicará la condición"
-" de voladizo a la pared. El voladizo que se apoya en el soporte tampoco se tratará como voladizo."
+msgstr "Las paredes con un ángulo de voladizo mayor que este se imprimirán con los ajustes de voladizo de pared. Cuando el valor sea 90, no se aplicará la condición de voladizo a la pared. El voladizo que se apoya en el soporte tampoco se tratará como voladizo."
 
 #: fdmprinter.def.json
 msgctxt "wall_overhang_speed_factor label"
@@ -6235,8 +6230,7 @@ msgstr "Velocidad de la capa inicial de partes pequeñas"
 #: fdmprinter.def.json
 msgctxt "small_feature_speed_factor_0 description"
 msgid "Small features on the first layer will be printed at this percentage of their normal print speed. Slower printing can help with adhesion and accuracy."
-msgstr "Las pequeñas partes de la primera capa se imprimirán a este porcentaje de su velocidad de impresión normal. Una impresión más lenta puede mejorar la adhesión"
-" y la precisión."
+msgstr "Las pequeñas partes de la primera capa se imprimirán a este porcentaje de su velocidad de impresión normal. Una impresión más lenta puede mejorar la adhesión y la precisión."
 
 #: fdmprinter.def.json
 msgctxt "command_line_settings label"

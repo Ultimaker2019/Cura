@@ -2434,7 +2434,7 @@ msgstr ""
 #: /home/ruben/Projects/Cura/plugins/SliceInfoPlugin/MoreInfoWindow.qml:74
 msgctxt "@text:window"
 msgid ""
-"Ultimaker Cura collects anonymous data in order to improve the print quality "
+"L-DEVO Cura collects anonymous data in order to improve the print quality "
 "and user experience. Below is an example of all the data that is shared:"
 msgstr ""
 
@@ -4176,8 +4176,8 @@ msgstr ""
 #: /home/ruben/Projects/Cura/resources/qml/Account/GeneralOperations.qml:51
 msgctxt "@text"
 msgid ""
-"- Send print jobs to Ultimaker printers outside your local network\n"
-"- Store your Ultimaker Cura settings in the cloud for use anywhere\n"
+"- Send print jobs to L-DEVO printers outside your local network\n"
+"- Store your L-DEVO Cura settings in the cloud for use anywhere\n"
 "- Get exclusive access to print profiles from leading brands"
 msgstr ""
 
@@ -4199,6 +4199,11 @@ msgstr ""
 #: /home/ruben/Projects/Cura/resources/qml/ActionPanel/OutputProcessWidget.qml:127
 msgctxt "@button"
 msgid "Preview"
+msgstr ""
+
+#: /home/ruben/Projects/Cura/resources/qml/ActionPanel/ConnectToPrintActionButton.qml:47
+msgctxt "@button"
+msgid "Connect to print"
 msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/ActionPanel/SliceProcessWidget.qml:55
@@ -4499,7 +4504,7 @@ msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/Cura.qml:24
 msgctxt "@title:window"
-msgid "Ultimaker Cura"
+msgid "L-DEVO Cura"
 msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/Cura.qml:232
@@ -4913,13 +4918,13 @@ msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/DataCollectionsContent.qml:24
 msgctxt "@label"
-msgid "Help us to improve Ultimaker Cura"
+msgid "Help us to improve L-DEVO Cura"
 msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/DataCollectionsContent.qml:57
 msgctxt "@text"
 msgid ""
-"Ultimaker Cura collects anonymous data to improve print quality and user "
+"L-DEVO Cura collects anonymous data to improve print quality and user "
 "experience, including:"
 msgstr ""
 
@@ -4946,7 +4951,7 @@ msgstr ""
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/DataCollectionsContent.qml:102
 msgctxt "@text"
 msgid ""
-"Data collected by Ultimaker Cura will not contain any personal information."
+"Data collected by L-DEVO Cura will not contain any personal information."
 msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/DataCollectionsContent.qml:103
@@ -4956,7 +4961,7 @@ msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/WhatsNewContent.qml:24
 msgctxt "@label"
-msgid "What's new in Ultimaker Cura"
+msgid "What's new in L-DEVO Cura"
 msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/AddNetworkPrinterScrollView.qml:42
@@ -4991,7 +4996,7 @@ msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/CloudContent.qml:36
 msgctxt "@label"
-msgid "Ultimaker Cloud"
+msgid "L-DEVO Cloud"
 msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/CloudContent.qml:77
@@ -5001,12 +5006,12 @@ msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/CloudContent.qml:94
 msgctxt "@text"
-msgid "- Send print jobs to Ultimaker printers outside your local network"
+msgid "- Send print jobs to L-DEVO printers outside your local network"
 msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/CloudContent.qml:97
 msgctxt "@text"
-msgid "- Store your Ultimaker Cura settings in the cloud for use anywhere"
+msgid "- Store your L-DEVO Cura settings in the cloud for use anywhere"
 msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/CloudContent.qml:100
@@ -5026,14 +5031,14 @@ msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/WelcomeContent.qml:29
 msgctxt "@label"
-msgid "Welcome to Ultimaker Cura"
+msgid "Welcome to L-DEVO Cura"
 msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/WelcomeContent.qml:47
 msgctxt "@text"
 msgid ""
 "Please follow these steps to set up\n"
-"Ultimaker Cura. This will only take a few moments."
+"L-DEVO Cura. This will only take a few moments."
 msgstr ""
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/WelcomeContent.qml:58

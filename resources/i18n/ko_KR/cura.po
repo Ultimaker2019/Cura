@@ -2,11 +2,11 @@
 # Copyright (C) 2019 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
 # Ruben Dulek <r.dulek@ultimaker.com>, 2019.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.4\n"
-"Report-Msgid-Bugs-To: r.dulek@ultimaker.com\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-05 13:13+0100\n"
 "PO-Revision-Date: 2019-09-23 14:16+0200\n"
 "Last-Translator: Lionbridge <info@lionbridge.com>\n"
@@ -2360,8 +2360,8 @@ msgstr "익명 데이터 수집에 대한 추가 정보"
 
 #: /home/ruben/Projects/Cura/plugins/SliceInfoPlugin/MoreInfoWindow.qml:74
 msgctxt "@text:window"
-msgid "Ultimaker Cura collects anonymous data in order to improve the print quality and user experience. Below is an example of all the data that is shared:"
-msgstr "Ultimaker Cura는 인쇄 품질과 사용자 경험을 개선하기 위해 익명 데이터를 수집합니다. 공유되는 모든 데이터의 예는 다음과 같습니다:"
+msgid "L-DEVO Cura collects anonymous data in order to improve the print quality and user experience. Below is an example of all the data that is shared:"
+msgstr "L-DEVO Cura는 인쇄 품질과 사용자 경험을 개선하기 위해 익명 데이터를 수집합니다. 공유되는 모든 데이터의 예는 다음과 같습니다:"
 
 #: /home/ruben/Projects/Cura/plugins/SliceInfoPlugin/MoreInfoWindow.qml:109
 msgctxt "@text:window"
@@ -4030,12 +4030,12 @@ msgstr "차세대 3D 인쇄 워크플로"
 #: /home/ruben/Projects/Cura/resources/qml/Account/GeneralOperations.qml:51
 msgctxt "@text"
 msgid ""
-"- Send print jobs to Ultimaker printers outside your local network\n"
-"- Store your Ultimaker Cura settings in the cloud for use anywhere\n"
+"- Send print jobs to L-DEVO printers outside your local network\n"
+"- Store your L-DEVO Cura settings in the cloud for use anywhere\n"
 "- Get exclusive access to print profiles from leading brands"
 msgstr ""
-"- 인쇄 작업을 로컬 네트워크 외부의 Ultimaker 프린터로 전송하십시오\n"
-"- Ultimaker Cura 설정을 어디에서든 사용할 수 있도록 Cloud에 저장하십시오\n"
+"- 인쇄 작업을 로컬 네트워크 외부의 L-DEVO 프린터로 전송하십시오\n"
+"- L-DEVO Cura 설정을 어디에서든 사용할 수 있도록 Cloud에 저장하십시오\n"
 "- 유수 브랜드의 인쇄 프로파일에 대한 독점적 액세스 권한을 얻으십시오"
 
 #: /home/ruben/Projects/Cura/resources/qml/Account/GeneralOperations.qml:78
@@ -4057,6 +4057,11 @@ msgstr "비용 추산 이용 불가"
 msgctxt "@button"
 msgid "Preview"
 msgstr "미리 보기"
+
+#: /home/ruben/Projects/Cura/resources/qml/ActionPanel/ConnectToPrintActionButton.qml:47
+msgctxt "@button"
+msgid "Connect to print"
+msgstr "Connect to print"
 
 #: /home/ruben/Projects/Cura/resources/qml/ActionPanel/SliceProcessWidget.qml:55
 msgctxt "@label:PrintjobStatus"
@@ -4353,8 +4358,8 @@ msgstr "&시장"
 
 #: /home/ruben/Projects/Cura/resources/qml/Cura.qml:24
 msgctxt "@title:window"
-msgid "Ultimaker Cura"
-msgstr "Ultimaker Cura"
+msgid "L-DEVO Cura"
+msgstr "L-DEVO Cura"
 
 #: /home/ruben/Projects/Cura/resources/qml/Cura.qml:232
 msgctxt "@label"
@@ -4760,13 +4765,13 @@ msgstr "거절 및 닫기"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/DataCollectionsContent.qml:24
 msgctxt "@label"
-msgid "Help us to improve Ultimaker Cura"
-msgstr "Ultimaker Cura를 개선하는 데 도움을 주십시오"
+msgid "Help us to improve L-DEVO Cura"
+msgstr "L-DEVO Cura를 개선하는 데 도움을 주십시오"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/DataCollectionsContent.qml:57
 msgctxt "@text"
-msgid "Ultimaker Cura collects anonymous data to improve print quality and user experience, including:"
-msgstr "Ultimaker Cura는 인쇄 품질과 사용자 경험을 개선하기 위해 다음과 같은 익명 데이터를 수집합니다:"
+msgid "L-DEVO Cura collects anonymous data to improve print quality and user experience, including:"
+msgstr "L-DEVO Cura는 인쇄 품질과 사용자 경험을 개선하기 위해 다음과 같은 익명 데이터를 수집합니다:"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/DataCollectionsContent.qml:71
 msgctxt "@text"
@@ -4790,8 +4795,8 @@ msgstr "인쇄 설정"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/DataCollectionsContent.qml:102
 msgctxt "@text"
-msgid "Data collected by Ultimaker Cura will not contain any personal information."
-msgstr "Ultimaker Cura가 수집하는 데이터에는 개인 정보가 포함되어 있지 않습니다."
+msgid "Data collected by L-DEVO Cura will not contain any personal information."
+msgstr "L-DEVO Cura가 수집하는 데이터에는 개인 정보가 포함되어 있지 않습니다."
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/DataCollectionsContent.qml:103
 msgctxt "@text"
@@ -4800,8 +4805,8 @@ msgstr "추가 정보"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/WhatsNewContent.qml:24
 msgctxt "@label"
-msgid "What's new in Ultimaker Cura"
-msgstr "Ultimaker Cura의 새로운 기능"
+msgid "What's new in L-DEVO Cura"
+msgstr "L-DEVO Cura의 새로운 기능"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/AddNetworkPrinterScrollView.qml:42
 msgctxt "@label"
@@ -4835,8 +4840,8 @@ msgstr "프린터의 이름을 설정하십시오"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/CloudContent.qml:36
 msgctxt "@label"
-msgid "Ultimaker Cloud"
-msgstr "Ultimaker Cloud"
+msgid "L-DEVO Cloud"
+msgstr "L-DEVO Cloud"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/CloudContent.qml:77
 msgctxt "@text"
@@ -4845,13 +4850,13 @@ msgstr "차세대 3D 인쇄 워크플로"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/CloudContent.qml:94
 msgctxt "@text"
-msgid "- Send print jobs to Ultimaker printers outside your local network"
-msgstr "- 로컬 네트워크 외부의 Ultimaker 프린터로 인쇄 작업 전송"
+msgid "- Send print jobs to L-DEVO printers outside your local network"
+msgstr "- 로컬 네트워크 외부의 L-DEVO 프린터로 인쇄 작업 전송"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/CloudContent.qml:97
 msgctxt "@text"
-msgid "- Store your Ultimaker Cura settings in the cloud for use anywhere"
-msgstr "- 어디에서든 사용할 수 있도록 클라우드에 Ultimaker Cura 설정 저장"
+msgid "- Store your L-DEVO Cura settings in the cloud for use anywhere"
+msgstr "- 어디에서든 사용할 수 있도록 클라우드에 L-DEVO Cura 설정 저장"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/CloudContent.qml:100
 msgctxt "@text"
@@ -4870,15 +4875,15 @@ msgstr "계정 생성"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/WelcomeContent.qml:29
 msgctxt "@label"
-msgid "Welcome to Ultimaker Cura"
-msgstr "Ultimaker Cura에 오신 것을 환영합니다"
+msgid "Welcome to L-DEVO Cura"
+msgstr "L-DEVO Cura에 오신 것을 환영합니다"
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/WelcomeContent.qml:47
 msgctxt "@text"
 msgid ""
 "Please follow these steps to set up\n"
-"Ultimaker Cura. This will only take a few moments."
-msgstr "Ultimaker Cura를 설정하려면 다음 단계를 따르십시오. 오래 걸리지 않습니다."
+"L-DEVO Cura. This will only take a few moments."
+msgstr "L-DEVO Cura를 설정하려면 다음 단계를 따르십시오. 오래 걸리지 않습니다."
 
 #: /home/ruben/Projects/Cura/resources/qml/WelcomePages/WelcomeContent.qml:58
 msgctxt "@button"
