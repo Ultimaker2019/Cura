@@ -33,7 +33,7 @@ Item
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
         horizontalAlignment: Text.AlignHCenter
-        text: catalog.i18nc("@label", "Ultimaker Cloud")
+        text: catalog.i18nc("@label", "L-DEVO Cloud")
         color: UM.Theme.getColor("primary_button")
         font: UM.Theme.getFont("huge")
         renderType: Text.NativeRendering
@@ -91,10 +91,10 @@ Item
                     var full_text = ""
                     var t = ""
 
-                    t = catalog.i18nc("@text", "- Send print jobs to Ultimaker printers outside your local network")
+                    t = catalog.i18nc("@text", "- Send print jobs to L-DEVO printers outside your local network")
                     full_text += "<p>" + t + "</p>"
 
-                    t = catalog.i18nc("@text", "- Store your Ultimaker Cura settings in the cloud for use anywhere")
+                    t = catalog.i18nc("@text", "- Store your L-DEVO Cura settings in the cloud for use anywhere")
                     full_text += "<p>" + t + "</p>"
 
                     t = catalog.i18nc("@text", "- Get exclusive access to print profiles from leading brands")
