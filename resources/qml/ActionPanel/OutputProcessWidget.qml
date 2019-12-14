@@ -142,20 +142,4 @@ Column
             height: UM.Theme.getSize("action_button").height
         }
     }
-
-    Item
-    {
-        id: buttonRow1
-        anchors.right: parent.right
-        anchors.left: parent.left
-        height: UM.Theme.getSize("action_button").height
-
-        Cura.ConnectToPrintActionButton
-        {
-            id: outputDevicesButton1
-            anchors.right: parent.right
-            width: previewStageShortcut.visible ? UM.Theme.getSize("action_button").width : parent.width
-            height: UM.Theme.getSize("action_button").height
-        }
-    }
 }
