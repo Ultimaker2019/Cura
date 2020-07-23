@@ -1,0 +1,16 @@
+{
+    "id": "l_devo_F2030TP_PLUS_single_extruder_0",
+    "version": 2,
+    "name": "Extruder 1",
+    "inherits": "fdmextruder",
+    "metadata": {
+        "machine": "l_devo_F2030TP_PLUS_single",
+        "position": "0"
+    },
+
+    "overrides": {
+        "extruder_nr": { "default_value": 0 },
+        "machine_nozzle_size": { "default_value": 0.4 },
+        "material_diameter": { "default_value": 1.75 }
+    }
+}
