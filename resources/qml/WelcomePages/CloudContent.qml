@@ -33,7 +33,7 @@ Item
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
         horizontalAlignment: Text.AlignHCenter
-        text: catalog.i18nc("@label", "Ultimaker Account")
+        text: catalog.i18nc("@label", "L-DEVO Account")
         color: UM.Theme.getColor("primary_button")
         font: UM.Theme.getFont("huge")
         renderType: Text.NativeRendering
@@ -97,7 +97,7 @@ Item
                     t = catalog.i18nc("@text", "- Stay flexible by syncing your setup and loading it anywhere")
                     full_text += "<p>" + t + "</p>"
 
-                    t = catalog.i18nc("@text", "- Increase efficiency with a remote workflow on Ultimaker printers")
+                    t = catalog.i18nc("@text", "- Increase efficiency with a remote workflow on L-DEVO printers")
                     full_text += "<p>" + t + "</p>"
 
                     return full_text
