@@ -1,7 +1,7 @@
 # Cura
 # Copyright (C) 2020 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.6\n"
@@ -1257,8 +1257,7 @@ msgstr "Horizontalloch-Erweiterung"
 #: fdmprinter.def.json
 msgctxt "hole_xy_offset description"
 msgid "Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes."
-msgstr "Versatz, der auf die Löcher in jeder Schicht angewandt wird. Bei positiven Werten werden die Löcher vergrößert; bei negativen Werten werden die Löcher"
-" verkleinert."
+msgstr "Versatz, der auf die Löcher in jeder Schicht angewandt wird. Bei positiven Werten werden die Löcher vergrößert; bei negativen Werten werden die Löcher verkleinert."
 
 #: fdmprinter.def.json
 msgctxt "z_seam_type label"
@@ -2222,8 +2221,7 @@ msgstr "Ausspüldauer am Ende des Filaments"
 #: fdmprinter.def.json
 msgctxt "material_end_of_filament_purge_length description"
 msgid "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material."
-msgstr "Materialmenge (Filamentlänge), die erforderlich ist, um das letzte Material aus der Düse zu entfernen, wenn eine leere Spule durch eine neue Spule mit"
-" dem selben Material ersetzt wird."
+msgstr "Materialmenge (Filamentlänge), die erforderlich ist, um das letzte Material aus der Düse zu entfernen, wenn eine leere Spule durch eine neue Spule mit dem selben Material ersetzt wird."
 
 #: fdmprinter.def.json
 msgctxt "material_maximum_park_duration label"
@@ -2243,8 +2241,7 @@ msgstr "Faktor für Bewegung ohne Ladung"
 #: fdmprinter.def.json
 msgctxt "material_no_load_move_factor description"
 msgid "A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch."
-msgstr "Ein Faktor, der angibt, wie stark das Filament zwischen dem Feeder und der Düsenkammer komprimiert wird; hilft zu bestimmen, wie weit das Material für"
-" einen Filamentwechsel bewegt werden muss."
+msgstr "Ein Faktor, der angibt, wie stark das Filament zwischen dem Feeder und der Düsenkammer komprimiert wird; hilft zu bestimmen, wie weit das Material für einen Filamentwechsel bewegt werden muss."
 
 #: fdmprinter.def.json
 msgctxt "material_flow label"

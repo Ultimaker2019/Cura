@@ -1,7 +1,7 @@
 # Cura
 # Copyright (C) 2020 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.6\n"
@@ -848,8 +848,11 @@ msgid ""
 "- Fit within the build volume\n"
 "- Are assigned to an enabled extruder\n"
 "- Are not all set as modifier meshes"
-msgstr "Veuillez vérifier les paramètres et si vos modèles :\n- S'intègrent dans le volume de fabrication\n- Sont affectés à un extrudeur activé\n- N sont pas"
-" tous définis comme des mailles de modificateur"
+msgstr ""
+"Veuillez vérifier les paramètres et si vos modèles :\n"
+"- S'intègrent dans le volume de fabrication\n"
+"- Sont affectés à un extrudeur activé\n"
+"- N sont pas tous définis comme des mailles de modificateur"
 
 #: /home/trin/Gedeeld/Projects/Cura/plugins/CuraEngineBackend/ProcessSlicedLayersJob.py:50
 #: /home/trin/Gedeeld/Projects/Cura/plugins/CuraEngineBackend/ProcessSlicedLayersJob.py:256
@@ -2970,8 +2973,10 @@ msgid ""
 "- Customize your experience with more print profiles and plugins\n"
 "- Stay flexible by syncing your setup and loading it anywhere\n"
 "- Increase efficiency with a remote workflow on Ultimaker printers"
-msgstr "- Personnalisez votre expérience avec plus de profils d'impression et de plug-ins\n- Restez flexible en synchronisant votre configuration et en la chargeant"
-" n'importe où\n- Augmentez l'efficacité grâce à un flux de travail à distance sur les imprimantes Ultimaker"
+msgstr ""
+"- Personnalisez votre expérience avec plus de profils d'impression et de plug-ins\n"
+"- Restez flexible en synchronisant votre configuration et en la chargeant n'importe où\n"
+"- Augmentez l'efficacité grâce à un flux de travail à distance sur les imprimantes Ultimaker"
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/Account/GeneralOperations.qml:78
 msgctxt "@button"

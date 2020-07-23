@@ -1,7 +1,7 @@
 # Cura
 # Copyright (C) 2020 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.6\n"
@@ -1291,8 +1291,7 @@ msgstr "Expansão horizontal de buraco"
 #: fdmprinter.def.json
 msgctxt "hole_xy_offset description"
 msgid "Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes."
-msgstr "Quantidade de desvio aplicado a todos os buracos em cada camada. Valores positivos aumentam o tamanho dos buracos; valores negativos reduzem o tamanho"
-" dos buracos."
+msgstr "Quantidade de desvio aplicado a todos os buracos em cada camada. Valores positivos aumentam o tamanho dos buracos; valores negativos reduzem o tamanho dos buracos."
 
 #: fdmprinter.def.json
 msgctxt "z_seam_type label"
@@ -2285,8 +2284,7 @@ msgstr "Comprimento da purga do fim do filamento"
 #: fdmprinter.def.json
 msgctxt "material_end_of_filament_purge_length description"
 msgid "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material."
-msgstr "A quantidade de material que deve usar para purgar o material anterior para fora do bocal (em comprimento de filamento) ao substituir uma bobina vazia"
-" por uma bobina nova do mesmo material."
+msgstr "A quantidade de material que deve usar para purgar o material anterior para fora do bocal (em comprimento de filamento) ao substituir uma bobina vazia por uma bobina nova do mesmo material."
 
 #: fdmprinter.def.json
 msgctxt "material_maximum_park_duration label"
@@ -2306,8 +2304,7 @@ msgstr "Fator do movimento sem carregamento"
 #: fdmprinter.def.json
 msgctxt "material_no_load_move_factor description"
 msgid "A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch."
-msgstr "Um factor que indica a dimensão da compressão dos filamentos entre o alimentador e a câmara do bocal, utilizado para determinar a distância a que se deve"
-" mover o material para efetuar uma substituição de filamentos."
+msgstr "Um factor que indica a dimensão da compressão dos filamentos entre o alimentador e a câmara do bocal, utilizado para determinar a distância a que se deve mover o material para efetuar uma substituição de filamentos."
 
 #: fdmprinter.def.json
 msgctxt "material_flow label"

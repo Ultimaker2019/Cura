@@ -1,7 +1,7 @@
 # Cura
 # Copyright (C) 2020 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.6\n"
@@ -2221,8 +2221,7 @@ msgstr "Afvoerduur einde van filament"
 #: fdmprinter.def.json
 msgctxt "material_end_of_filament_purge_length description"
 msgid "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material."
-msgstr "Hoeveel materiaal moet worden gebruikt om het vorige materiaal uit de nozzle te verwijderen (in lengte filament) bij het vervangen van een lege spoel door"
-" een nieuwe spoel van hetzelfde materiaal."
+msgstr "Hoeveel materiaal moet worden gebruikt om het vorige materiaal uit de nozzle te verwijderen (in lengte filament) bij het vervangen van een lege spoel door een nieuwe spoel van hetzelfde materiaal."
 
 #: fdmprinter.def.json
 msgctxt "material_maximum_park_duration label"
@@ -2242,8 +2241,7 @@ msgstr "Verplaatsingsfactor zonder lading"
 #: fdmprinter.def.json
 msgctxt "material_no_load_move_factor description"
 msgid "A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch."
-msgstr "Een factor die aangeeft hoeveel het filament wordt samengedrukt tussen de feeder en de nozzlekamer, om te bepalen hoe ver het materiaal moet worden verplaatst"
-" voor het verwisselen van filament."
+msgstr "Een factor die aangeeft hoeveel het filament wordt samengedrukt tussen de feeder en de nozzlekamer, om te bepalen hoe ver het materiaal moet worden verplaatst voor het verwisselen van filament."
 
 #: fdmprinter.def.json
 msgctxt "material_flow label"

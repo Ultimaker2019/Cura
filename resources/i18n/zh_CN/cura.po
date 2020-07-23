@@ -1,7 +1,7 @@
 # Cura
 # Copyright (C) 2020 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.6\n"
@@ -848,7 +848,11 @@ msgid ""
 "- Fit within the build volume\n"
 "- Are assigned to an enabled extruder\n"
 "- Are not all set as modifier meshes"
-msgstr "请检查设置并检查您的模型是否：\n- 适合构建体积\n- 分配给了已启用的挤出器\n- 尚未全部设置为修改器网格"
+msgstr ""
+"请检查设置并检查您的模型是否：\n"
+"- 适合构建体积\n"
+"- 分配给了已启用的挤出器\n"
+"- 尚未全部设置为修改器网格"
 
 #: /home/trin/Gedeeld/Projects/Cura/plugins/CuraEngineBackend/ProcessSlicedLayersJob.py:50
 #: /home/trin/Gedeeld/Projects/Cura/plugins/CuraEngineBackend/ProcessSlicedLayersJob.py:256
@@ -2966,7 +2970,10 @@ msgid ""
 "- Customize your experience with more print profiles and plugins\n"
 "- Stay flexible by syncing your setup and loading it anywhere\n"
 "- Increase efficiency with a remote workflow on Ultimaker printers"
-msgstr "- 借助更多的打印配置文件和插件定制您的体验\n- 通过同步设置并将其加载到任何位置保持灵活性\n- 使用 Ultimaker 打印机上的远程工作流提高效率"
+msgstr ""
+"- 借助更多的打印配置文件和插件定制您的体验\n"
+"- 通过同步设置并将其加载到任何位置保持灵活性\n"
+"- 使用 Ultimaker 打印机上的远程工作流提高效率"
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/Account/GeneralOperations.qml:78
 msgctxt "@button"

@@ -1,7 +1,7 @@
 # Cura
 # Copyright (C) 2020 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.6\n"
@@ -2222,8 +2222,7 @@ msgstr "Длина выдавливания заканчивающегося м�
 #: fdmprinter.def.json
 msgctxt "material_end_of_filament_purge_length description"
 msgid "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material."
-msgstr "Объем материала, используемый для выдавливания предыдущего материала из сопла (измеряется длиной нити) при замене пустой катушки на новую катушку с тем"
-" же материалом."
+msgstr "Объем материала, используемый для выдавливания предыдущего материала из сопла (измеряется длиной нити) при замене пустой катушки на новую катушку с тем же материалом."
 
 #: fdmprinter.def.json
 msgctxt "material_maximum_park_duration label"

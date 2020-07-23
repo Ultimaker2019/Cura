@@ -1,7 +1,7 @@
 # Cura
 # Copyright (C) 2020 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.6\n"
@@ -848,8 +848,11 @@ msgid ""
 "- Fit within the build volume\n"
 "- Are assigned to an enabled extruder\n"
 "- Are not all set as modifier meshes"
-msgstr "Controleer de instellingen en zorg ervoor dat uw modellen:\n- binnen het werkvolume passen\n- zijn toegewezen aan een ingeschakelde extruder\n- niet allemaal"
-" zijn ingesteld als modificatierasters"
+msgstr ""
+"Controleer de instellingen en zorg ervoor dat uw modellen:\n"
+"- binnen het werkvolume passen\n"
+"- zijn toegewezen aan een ingeschakelde extruder\n"
+"- niet allemaal zijn ingesteld als modificatierasters"
 
 #: /home/trin/Gedeeld/Projects/Cura/plugins/CuraEngineBackend/ProcessSlicedLayersJob.py:50
 #: /home/trin/Gedeeld/Projects/Cura/plugins/CuraEngineBackend/ProcessSlicedLayersJob.py:256
@@ -2971,8 +2974,10 @@ msgid ""
 "- Customize your experience with more print profiles and plugins\n"
 "- Stay flexible by syncing your setup and loading it anywhere\n"
 "- Increase efficiency with a remote workflow on Ultimaker printers"
-msgstr "- Pas uw ervaring aan met meer printprofielen en plug-ins\n- Blijf flexibel door uw instellingen te synchroniseren en overal te laden\n- Verhoog de efficiëntie"
-" met een externe workflow op Ultimaker-printers"
+msgstr ""
+"- Pas uw ervaring aan met meer printprofielen en plug-ins\n"
+"- Blijf flexibel door uw instellingen te synchroniseren en overal te laden\n"
+"- Verhoog de efficiëntie met een externe workflow op Ultimaker-printers"
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/Account/GeneralOperations.qml:78
 msgctxt "@button"

@@ -1,7 +1,7 @@
 # Cura
 # Copyright (C) 2020 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.6\n"
@@ -1257,8 +1257,7 @@ msgstr "Expansion horizontale des trous"
 #: fdmprinter.def.json
 msgctxt "hole_xy_offset description"
 msgid "Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes."
-msgstr "Le décalage appliqué à tous les trous dans chaque couche. Les valeurs positives augmentent la taille des trous ; les valeurs négatives réduisent la taille"
-" des trous."
+msgstr "Le décalage appliqué à tous les trous dans chaque couche. Les valeurs positives augmentent la taille des trous ; les valeurs négatives réduisent la taille des trous."
 
 #: fdmprinter.def.json
 msgctxt "z_seam_type label"
@@ -2222,8 +2221,7 @@ msgstr "Longueur de purge de l'extrémité du filament"
 #: fdmprinter.def.json
 msgctxt "material_end_of_filament_purge_length description"
 msgid "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material."
-msgstr "La quantité de matériau à utiliser pour purger le matériau précédent de la buse (en longueur de filament) lors du remplacement d'une bobine vide par une"
-" nouvelle bobine du même matériau."
+msgstr "La quantité de matériau à utiliser pour purger le matériau précédent de la buse (en longueur de filament) lors du remplacement d'une bobine vide par une nouvelle bobine du même matériau."
 
 #: fdmprinter.def.json
 msgctxt "material_maximum_park_duration label"
@@ -2243,8 +2241,7 @@ msgstr "Facteur de déplacement sans chargement"
 #: fdmprinter.def.json
 msgctxt "material_no_load_move_factor description"
 msgid "A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch."
-msgstr "Un facteur indiquant la quantité de filament compressée entre le chargeur et la chambre de la buse ; utilisé pour déterminer jusqu'où faire avancer le"
-" matériau pour changer de filament."
+msgstr "Un facteur indiquant la quantité de filament compressée entre le chargeur et la chambre de la buse ; utilisé pour déterminer jusqu'où faire avancer le matériau pour changer de filament."
 
 #: fdmprinter.def.json
 msgctxt "material_flow label"

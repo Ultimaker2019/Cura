@@ -1,7 +1,7 @@
 # Cura
 # Copyright (C) 2020 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura 4.6\n"
@@ -2221,8 +2221,7 @@ msgstr "Lunghezza di svuotamento di fine filamento"
 #: fdmprinter.def.json
 msgctxt "material_end_of_filament_purge_length description"
 msgid "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material."
-msgstr "Quantità di materiale da utilizzare per svuotare il materiale precedente dall'ugello (in lunghezza del filamento) durante la sostituzione di una bobina"
-" vuota con una nuova dello stesso materiale."
+msgstr "Quantità di materiale da utilizzare per svuotare il materiale precedente dall'ugello (in lunghezza del filamento) durante la sostituzione di una bobina vuota con una nuova dello stesso materiale."
 
 #: fdmprinter.def.json
 msgctxt "material_maximum_park_duration label"
@@ -2242,8 +2241,7 @@ msgstr "Fattore di spostamento senza carico"
 #: fdmprinter.def.json
 msgctxt "material_no_load_move_factor description"
 msgid "A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch."
-msgstr "Fattore indicante la quantità di filamento che viene compressa tra l'alimentatore e la camera dell'ugello, usato per stabilire a quale distanza spostare"
-" il materiale per un cambio di filamento."
+msgstr "Fattore indicante la quantità di filamento che viene compressa tra l'alimentatore e la camera dell'ugello, usato per stabilire a quale distanza spostare il materiale per un cambio di filamento."
 
 #: fdmprinter.def.json
 msgctxt "material_flow label"
