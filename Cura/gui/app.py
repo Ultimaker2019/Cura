@@ -115,9 +115,9 @@ class CuraApp(wx.App):
 				otherCuraInstalls = profile.getAlternativeBasePaths()
 				for path in otherCuraInstalls[::-1]:
 					try:
-						print 'Loading old settings from %s' % (path)
-						profile.loadPreferences(os.path.join(path, 'preferences.ini'))
-						profile.loadProfile(os.path.join(path, 'current_profile.ini'))
+						#print 'Loading old settings from %s' % (path)
+						#profile.loadPreferences(os.path.join(path, 'preferences.ini'))
+						#profile.loadProfile(os.path.join(path, 'current_profile.ini'))
 						break
 					except:
 						import traceback
@@ -129,12 +129,15 @@ class CuraApp(wx.App):
 		#If we haven't run it before, run the configuration wizard.
 		if profile.getMachineSetting('machine_type') == 'unknown':
 			#Check if we need to copy our examples
-			exampleFile = os.path.normpath(os.path.join(resources.resourceBasePath, 'example', 'UltimakerRobot_support.stl'))
+			exampleFile = os.path.normpath(os.path.join(resources.resourceBasePath, 'example', '20mm_Calibration_Box.stl'))
 
 			self.loadFiles = [exampleFile]
 			if self.splash is not None:
 				self.splash.Show(False)
-			configWizard.ConfigWizard()
+			#configWizard.configWizard()
+			profile.putMachineSetting('machine_name', 'X5_Dual', 0)
+			profile.putMachineSetting('machine_type', 'MakerPi', 0)
+			profile.putMachineSetting('extruder_amount', 2, 0)
 
 		if profile.getPreference('check_for_updates') == 'True':
 			newVersion = version.checkForNewerVersion()
