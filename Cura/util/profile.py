@@ -175,29 +175,29 @@ class setting(object):
 def _(n):
 	return n
 
-setting('layer_height',              0.1, float, 'basic',    _('Quality')).setRange(0.0001).setLabel(_("Layer height (mm)"), _("Layer height in millimeters.\nThis is the most important setting to determine the quality of your print. Normal quality prints are 0.1mm, high quality is 0.06mm. You can go up to 0.25mm with an Ultimaker for very fast prints at low quality."))
+setting('layer_height',              0.2, float, 'basic',    _('Quality')).setRange(0.0001).setLabel(_("Layer height (mm)"), _("Layer height in millimeters.\nThis is the most important setting to determine the quality of your print. Normal quality prints are 0.1mm, high quality is 0.06mm. You can go up to 0.25mm with an Ultimaker for very fast prints at low quality."))
 setting('wall_thickness',            0.8, float, 'basic',    _('Quality')).setRange(0.0).setLabel(_("Shell thickness (mm)"), _("Thickness of the outside shell in the horizontal direction.\nThis is used in combination with the nozzle size to define the number\nof perimeter lines and the thickness of those perimeter lines."))
 setting('retraction_enable',        True, bool,  'basic',    _('Quality')).setExpertSubCategory(_('Retraction')).setLabel(_("Enable retraction"), _("Retract the filament when the nozzle is moving over a none-printed area. Details about the retraction can be configured in the advanced tab."))
 setting('solid_layer_thickness',     0.6, float, 'basic',    _('Fill')).setRange(0).setLabel(_("Bottom/Top thickness (mm)"), _("This controls the thickness of the bottom and top layers, the amount of solid layers put down is calculated by the layer thickness and this value.\nHaving this value a multiple of the layer thickness makes sense. And keep it near your wall thickness to make an evenly strong part."))
 setting('fill_density',               20, float, 'basic',    _('Fill')).setExpertSubCategory(_('Infill')).setRange(0, 100).setLabel(_("Fill Density (%)"), _("This controls how densely filled the insides of your print will be. For a solid part use 100%, for an empty part use 0%. A value around 20% is usually enough.\nThis won't affect the outside of the print and only adjusts how strong the part becomes."))
 setting('nozzle_size',               0.4, float, 'advanced', _('Machine')).setRange(0.1,10).setLabel(_("Nozzle size (mm)"), _("The nozzle size is very important, this is used to calculate the line width of the infill, and used to calculate the amount of outside wall lines and thickness for the wall thickness you entered in the print settings."))
-setting('print_speed',                50, float, 'basic',    _('Speed and Temperature')).setRange(1).setLabel(_("Print speed (mm/s)"), _("Speed at which printing happens. A well adjusted Ultimaker can reach 150mm/s, but for good quality prints you want to print slower. Printing speed depends on a lot of factors. So you will be experimenting with optimal settings for this."))
-setting('print_temperature',         210, int,   'basic',    _('Speed and Temperature')).setRange(0,340).setLabel(_("Printing temperature (C)"), _("Temperature used for printing. Set at 0 to pre-heat yourself.\nFor PLA a value of 210C is usually used.\nFor ABS a value of 230C or higher is required."))
-setting('print_temperature2',          0, int,   'basic',    _('Speed and Temperature')).setRange(0,340).setLabel(_("2nd nozzle temperature (C)"), _("Temperature used for printing. Set at 0 to pre-heat yourself.\nFor PLA a value of 210C is usually used.\nFor ABS a value of 230C or higher is required."))
-setting('print_temperature3',          0, int,   'basic',    _('Speed and Temperature')).setRange(0,340).setLabel(_("3th nozzle temperature (C)"), _("Temperature used for printing. Set at 0 to pre-heat yourself.\nFor PLA a value of 210C is usually used.\nFor ABS a value of 230C or higher is required."))
-setting('print_temperature4',          0, int,   'basic',    _('Speed and Temperature')).setRange(0,340).setLabel(_("4th nozzle temperature (C)"), _("Temperature used for printing. Set at 0 to pre-heat yourself.\nFor PLA a value of 210C is usually used.\nFor ABS a value of 230C or higher is required."))
+setting('print_speed',                40, float, 'basic',    _('Speed and Temperature')).setRange(1).setLabel(_("Print speed (mm/s)"), _("Speed at which printing happens. A well adjusted Ultimaker can reach 150mm/s, but for good quality prints you want to print slower. Printing speed depends on a lot of factors. So you will be experimenting with optimal settings for this."))
+setting('print_temperature',         200, int,   'basic',    _('Speed and Temperature')).setRange(0,340).setLabel(_("Printing temperature (C)"), _("Temperature used for printing. Set at 0 to pre-heat yourself.\nFor PLA a value of 210C is usually used.\nFor ABS a value of 230C or higher is required."))
+setting('print_temperature2',        200, int,   'basic',    _('Speed and Temperature')).setRange(0,340).setLabel(_("2nd nozzle temperature (C)"), _("Temperature used for printing. Set at 0 to pre-heat yourself.\nFor PLA a value of 210C is usually used.\nFor ABS a value of 230C or higher is required."))
+setting('print_temperature3',        200, int,   'basic',    _('Speed and Temperature')).setRange(0,340).setLabel(_("3th nozzle temperature (C)"), _("Temperature used for printing. Set at 0 to pre-heat yourself.\nFor PLA a value of 210C is usually used.\nFor ABS a value of 230C or higher is required."))
+setting('print_temperature4',        200, int,   'basic',    _('Speed and Temperature')).setRange(0,340).setLabel(_("4th nozzle temperature (C)"), _("Temperature used for printing. Set at 0 to pre-heat yourself.\nFor PLA a value of 210C is usually used.\nFor ABS a value of 230C or higher is required."))
 setting('print_temperature5',          0, int,   'basic',    _('Speed and Temperature')).setRange(0,340).setLabel(_("5th nozzle temperature (C)"), _("Temperature used for printing. Set at 0 to pre-heat yourself.\nFor PLA a value of 210C is usually used.\nFor ABS a value of 230C or higher is required."))
 setting('print_bed_temperature',      70, int,   'basic',    _('Speed and Temperature')).setRange(0,340).setLabel(_("Bed temperature (C)"), _("Temperature used for the heated printer bed. Set at 0 to pre-heat yourself."))
 setting('support',                'None', [_('None'), _('Touching buildplate'), _('Everywhere')], 'basic', _('Support')).setExpertSubCategory(_('Support')).setLabel(_("Support type"), _("Type of support structure build.\n\"Touching buildplate\" is the most commonly used support setting.\n\nNone does not do any support.\nTouching buildplate only creates support where the support structure will touch the build platform.\nEverywhere creates support even on top of parts of the model."))
 setting('platform_adhesion',      'None', [_('None'), _('Brim'), _('Raft')], 'basic', _('Support')).setExpertSubCategory([_('Skirt'), _('Brim'), _('Raft')]).setLabel(_("Platform adhesion type"), _("Different options that help in preventing corners from lifting due to warping.\nBrim adds a single layer thick flat area around your object which is easy to cut off afterwards, and it is the recommended option.\nRaft adds a thick raster below the object and a thin interface between this and your object.\n(Note that enabling the brim or raft disables the skirt)"))
-setting('support_dual_extrusion',  'Both', [_('Both'), _('First extruder'), _('Second extruder')], 'basic', _('Support')).setLabel(_("Support dual extrusion"), _("Which extruder to use for support material, for break-away support you can use both extruders.\nBut if one of the materials is more expensive then the other you could select an extruder to use for support material. This causes more extruder switches.\nYou can also use the 2nd extruder for soluble support materials."))
+setting('support_dual_extrusion',  'Second extruder', [_('Both'), _('First extruder'), _('Second extruder')], 'basic', _('Support')).setLabel(_("Support dual extrusion"), _("Which extruder to use for support material, for break-away support you can use both extruders.\nBut if one of the materials is more expensive then the other you could select an extruder to use for support material. This causes more extruder switches.\nYou can also use the 2nd extruder for soluble support materials."))
 setting('wipe_tower',              False, bool,  'basic',    _('Dual extrusion')).setLabel(_("Wipe&prime tower"), _("The wipe-tower is a tower printed on every layer when switching between nozzles.\nThe old nozzle is wiped off on the tower before the new nozzle is used to print the 2nd color."))
 setting('wipe_tower_volume',          15, float, 'expert',   _('Dual extrusion')).setLabel(_("Wipe&prime tower volume per layer (mm3)"), _("The amount of material put in the wipe/prime tower.\nThis is done in volume because in general you want to extrude a\ncertain amount of volume to get the extruder going, independent on the layer height.\nThis means that with thinner layers, your tower gets bigger."))
-setting('ooze_shield',             False, bool,  'basic',    _('Dual extrusion')).setLabel(_("Ooze shield"), _("The ooze shield is a 1 line thick shell around the object which stands a few mm from the object.\nThis shield catches any oozing from the unused nozzle in dual-extrusion."))
-setting('filament_diameter',        2.85, float, 'basic',    _('Filament')).setRange(1).setLabel(_("Diameter (mm)"), _("Diameter of your filament, as accurately as possible.\nIf you cannot measure this value you will have to calibrate it, a higher number means less extrusion, a smaller number generates more extrusion."))
-setting('filament_diameter2',          0, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter2 (mm)"), _("Diameter of your filament for the 2nd nozzle. Use 0 to use the same diameter as for nozzle 1."))
-setting('filament_diameter3',          0, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter3 (mm)"), _("Diameter of your filament for the 3th nozzle. Use 0 to use the same diameter as for nozzle 1."))
-setting('filament_diameter4',          0, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter4 (mm)"), _("Diameter of your filament for the 4th nozzle. Use 0 to use the same diameter as for nozzle 1."))
+setting('ooze_shield',              True, bool,  'basic',    _('Dual extrusion')).setLabel(_("Ooze shield"), _("The ooze shield is a 1 line thick shell around the object which stands a few mm from the object.\nThis shield catches any oozing from the unused nozzle in dual-extrusion."))
+setting('filament_diameter',        1.75, float, 'basic',    _('Filament')).setRange(1).setLabel(_("Diameter (mm)"), _("Diameter of your filament, as accurately as possible.\nIf you cannot measure this value you will have to calibrate it, a higher number means less extrusion, a smaller number generates more extrusion."))
+setting('filament_diameter2',       1.75, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter2 (mm)"), _("Diameter of your filament for the 2nd nozzle. Use 0 to use the same diameter as for nozzle 1."))
+setting('filament_diameter3',       1.75, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter3 (mm)"), _("Diameter of your filament for the 3th nozzle. Use 0 to use the same diameter as for nozzle 1."))
+setting('filament_diameter4',       1.75, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter4 (mm)"), _("Diameter of your filament for the 4th nozzle. Use 0 to use the same diameter as for nozzle 1."))
 setting('filament_diameter5',          0, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter5 (mm)"), _("Diameter of your filament for the 5th nozzle. Use 0 to use the same diameter as for nozzle 1."))
 setting('filament_flow',            100., float, 'basic',    _('Filament')).setRange(5,300).setLabel(_("Flow (%)"), _("Flow compensation, the amount of material extruded is multiplied by this value"))
 setting('retraction_speed',         40.0, float, 'advanced', _('Retraction')).setRange(0.1).setLabel(_("Speed (mm/s)"), _("Speed at which the filament is retracted, a higher retraction speed works better. But a very high retraction speed can lead to filament grinding."))
@@ -212,7 +212,7 @@ setting('layer0_width_factor',       100, float, 'advanced', _('Quality')).setRa
 setting('object_sink',               0.0, float, 'advanced', _('Quality')).setRange(0).setLabel(_("Cut off object bottom (mm)"), _("Sinks the object into the platform, this can be used for objects that do not have a flat bottom and thus create a too small first layer."))
 #setting('enable_skin',             False, bool,  'advanced', _('Quality')).setLabel(_("Duplicate outlines"), _("Skin prints the outer lines of the prints twice, each time with half the thickness. This gives the illusion of a higher print quality."))
 setting('overlap_dual',             0.15, float, 'advanced', _('Quality')).setLabel(_("Dual extrusion overlap (mm)"), _("Add a certain amount of overlapping extrusion on dual-extrusion prints. This bonds the different colors together."))
-setting('travel_speed',            150.0, float, 'advanced', _('Speed')).setRange(0.1).setLabel(_("Travel speed (mm/s)"), _("Speed at which travel moves are done, a well built Ultimaker can reach speeds of 250mm/s. But some machines might miss steps then."))
+setting('travel_speed',            120.0, float, 'advanced', _('Speed')).setRange(0.1).setLabel(_("Travel speed (mm/s)"), _("Speed at which travel moves are done, a well built Ultimaker can reach speeds of 250mm/s. But some machines might miss steps then."))
 setting('bottom_layer_speed',         20, float, 'advanced', _('Speed')).setRange(0.1).setLabel(_("Bottom layer speed (mm/s)"), _("Print speed for the bottom layer, you want to print the first layer slower so it sticks better to the printer bed."))
 setting('infill_speed',              0.0, float, 'advanced', _('Speed')).setRange(0.0).setLabel(_("Infill speed (mm/s)"), _("Speed at which infill parts are printed. If set to 0 then the print speed is used for the infill. Printing the infill faster can greatly reduce printing time, but this can negatively affect print quality."))
 setting('solidarea_speed',           0.0, float, 'advanced', _('Speed')).setRange(0.0).setLabel(_("Top/bottom speed (mm/s)"), _("Speed at which top/bottom parts are printed. If set to 0 then the print speed is used for the infill. Printing the top/bottom faster can greatly reduce printing time, but this can negatively affect print quality."))
@@ -221,10 +221,10 @@ setting('insetx_speed',              0.0, float, 'advanced', _('Speed')).setRang
 setting('cool_min_layer_time',         5, float, 'advanced', _('Cool')).setRange(0).setLabel(_("Minimal layer time (sec)"), _("Minimum time spent in a layer, gives the layer time to cool down before the next layer is put on top. If the layer will be placed down too fast the printer will slow down to make sure it has spent at least this amount of seconds printing this layer."))
 setting('fan_enabled',              True, bool,  'advanced', _('Cool')).setExpertSubCategory(_('Cool')).setLabel(_("Enable cooling fan"), _("Enable the cooling fan during the print. The extra cooling from the cooling fan is essential during faster prints."))
 
-setting('skirt_line_count',            1, int,   'expert', _('Skirt')).setRange(0).setLabel(_("Line count"), _("The skirt is a line drawn around the object at the first layer. This helps to prime your extruder, and to see if the object fits on your platform.\nSetting this to 0 will disable the skirt. Multiple skirt lines can help priming your extruder better for small objects."))
+setting('skirt_line_count',            0, int,   'expert', _('Skirt')).setRange(0).setLabel(_("Line count"), _("The skirt is a line drawn around the object at the first layer. This helps to prime your extruder, and to see if the object fits on your platform.\nSetting this to 0 will disable the skirt. Multiple skirt lines can help priming your extruder better for small objects."))
 setting('skirt_gap',                 3.0, float, 'expert', _('Skirt')).setRange(0).setLabel(_("Start distance (mm)"), _("The distance between the skirt and the first layer.\nThis is the minimal distance, multiple skirt lines will be put outwards from this distance."))
 setting('skirt_minimal_length',    150.0, float, 'expert', _('Skirt')).setRange(0).setLabel(_("Minimal length (mm)"), _("The minimal length of the skirt, if this minimal length is not reached it will add more skirt lines to reach this minimal lenght.\nNote: If the line count is set to 0 this is ignored."))
-setting('fan_full_height',           0.5, float, 'expert',   _('Cool')).setRange(0).setLabel(_("Fan full on at height (mm)"), _("The height at which the fan is turned on completely. For the layers below this the fan speed is scaled linearly with the fan off at layer 0."))
+setting('fan_full_height',             0, float, 'expert',   _('Cool')).setRange(0).setLabel(_("Fan full on at height (mm)"), _("The height at which the fan is turned on completely. For the layers below this the fan speed is scaled linearly with the fan off at layer 0."))
 setting('fan_speed',                 100, int,   'expert',   _('Cool')).setRange(0,100).setLabel(_("Fan speed min (%)"), _("When the fan is turned on, it is enabled at this speed setting. If cool slows down the layer, the fan is adjusted between the min and max speed. Minimal fan speed is used if the layer is not slowed down due to cooling."))
 setting('fan_speed_max',             100, int,   'expert',   _('Cool')).setRange(0,100).setLabel(_("Fan speed max (%)"), _("When the fan is turned on, it is enabled at this speed setting. If cool slows down the layer, the fan is adjusted between the min and max speed. Maximal fan speed is used if the layer is slowed down due to cooling by more than 200%."))
 setting('cool_min_feedrate',          10, float, 'expert',   _('Cool')).setRange(0).setLabel(_("Minimum speed (mm/s)"), _("The minimal layer time can cause the print to slow down so much it starts to ooze. The minimal feedrate protects against this. Even if a print gets slowed down it will never be slower than this minimal speed."))
@@ -276,7 +276,7 @@ M107       ;start with the fan off
 G28 X0 Y0  ;move X/Y to min endstops
 G28 Z0     ;move Z to min endstops
 
-G1 Z15.0 F{travel_speed} ;move the platform down 15mm
+G1 Z1.5 F{travel_speed} ;move the platform down 1.5mm
 
 G92 E0                  ;zero the extruded length
 G1 F200 E3              ;extrude 3mm of feed stock
@@ -295,7 +295,7 @@ G1 E-1 F300                            ;retract the filament a bit before liftin
 G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
 G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
 
-M84                         ;steppers off
+M84 X Y E                   ;steppers off
 G90                         ;absolute positioning
 ;{profile_string}
 """, str, 'alteration', 'alteration')
@@ -316,7 +316,7 @@ M107       ;start with the fan off
 G28 X0 Y0  ;move X/Y to min endstops
 G28 Z0     ;move Z to min endstops
 
-G1 Z15.0 F{travel_speed} ;move the platform down 15mm
+G1 Z1.5 F{travel_speed} ;move the platform down 1.5mm
 
 T1                      ;Switch to the 2nd extruder
 G92 E0                  ;zero the extruded length
@@ -343,7 +343,7 @@ G1 E-1 F300                            ;retract the filament a bit before liftin
 G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
 G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
 
-M84                         ;steppers off
+M84 X Y E                   ;steppers off
 G90                         ;absolute positioning
 ;{profile_string}
 """, str, 'alteration', 'alteration')
@@ -364,7 +364,7 @@ M107       ;start with the fan off
 G28 X0 Y0  ;move X/Y to min endstops
 G28 Z0     ;move Z to min endstops
 
-G1 Z15.0 F{travel_speed} ;move the platform down 15mm
+G1 Z1.5 F{travel_speed} ;move the platform down 1.5mm
 
 T2                      ;Switch to the 2nd extruder
 G92 E0                  ;zero the extruded length
@@ -398,7 +398,7 @@ G1 E-1 F300                            ;retract the filament a bit before liftin
 G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
 G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
 
-M84                         ;steppers off
+M84 X Y E                   ;steppers off
 G90                         ;absolute positioning
 ;{profile_string}
 """, str, 'alteration', 'alteration')
@@ -419,7 +419,7 @@ M107       ;start with the fan off
 G28 X0 Y0  ;move X/Y to min endstops
 G28 Z0     ;move Z to min endstops
 
-G1 Z15.0 F{travel_speed} ;move the platform down 15mm
+G1 Z1.5 F{travel_speed} ;move the platform down 1.5mm
 
 T3                      ;Switch to the 4th extruder
 G92 E0                  ;zero the extruded length
@@ -460,7 +460,7 @@ G1 E-1 F300                            ;retract the filament a bit before liftin
 G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
 G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
 
-M84                         ;steppers off
+M84 X Y E                   ;steppers off
 G90                         ;absolute positioning
 ;{profile_string}
 """, str, 'alteration', 'alteration')
@@ -478,7 +478,7 @@ setting('postSwitchExtruder.gcode', """;Switch between the current extruder and 
 ;This code is added after the T(n)
 """, str, 'alteration', 'alteration')
 
-setting('startMode', 'Simple', ['Simple', 'Normal'], 'preference', 'hidden')
+setting('startMode', 'Normal', ['Simple', 'Normal'], 'preference', 'hidden')
 setting('simpleModeProfile', '2_normal', str, 'preference', 'hidden')
 setting('simpleModeMaterial', '1_pla', str, 'preference', 'hidden')
 setting('oneAtATime', 'True', bool, 'preference', 'hidden')
@@ -527,15 +527,15 @@ setting('machine_name', '', str, 'machine', 'hidden')
 setting('machine_type', 'unknown', str, 'machine', 'hidden') #Ultimaker, Ultimaker2, RepRap
 setting('machine_width', '205', float, 'machine', 'hidden').setLabel(_("Maximum width (mm)"), _("Size of the machine in mm"))
 setting('machine_depth', '205', float, 'machine', 'hidden').setLabel(_("Maximum depth (mm)"), _("Size of the machine in mm"))
-setting('machine_height', '200', float, 'machine', 'hidden').setLabel(_("Maximum height (mm)"), _("Size of the machine in mm"))
+setting('machine_height', '480', float, 'machine', 'hidden').setLabel(_("Maximum height (mm)"), _("Size of the machine in mm"))
 setting('machine_center_is_zero', 'False', bool, 'machine', 'hidden').setLabel(_("Machine center 0,0"), _("Machines firmware defines the center of the bed as 0,0 instead of the front left corner."))
 setting('machine_shape', 'Square', ['Square','Circular'], 'machine', 'hidden').setLabel(_("Build area shape"), _("The shape of machine build area."))
 setting('ultimaker_extruder_upgrade', 'False', bool, 'machine', 'hidden')
-setting('has_heated_bed', 'False', bool, 'machine', 'hidden').setLabel(_("Heated bed"), _("If you have an heated bed, this enabled heated bed settings (requires restart)"))
-setting('gcode_flavor', 'RepRap (Marlin/Sprinter)', ['RepRap (Marlin/Sprinter)', 'RepRap (Volumetric)', 'UltiGCode', 'MakerBot', 'BFB', 'Mach3/LinuxCNC'], 'machine', 'hidden').setLabel(_("GCode Flavor"), _("Flavor of generated GCode.\nRepRap is normal 5D GCode which works on Marlin/Sprinter based firmwares.\nUltiGCode is a variation of the RepRap GCode which puts more settings in the machine instead of the slicer.\nMakerBot GCode has a few changes in the way GCode is generated, but still requires MakerWare to generate to X3G.\nBFB style generates RPM based code.\nMach3 uses A,B,C instead of E for extruders."))
+setting('has_heated_bed', 'True', bool, 'machine', 'hidden').setLabel(_("Heated bed"), _("If you have an heated bed, this enabled heated bed settings (requires restart)"))
+setting('gcode_flavor', 'RepRap (Marlin/Sprinter)', ['RepRap (Marlin/Sprinter)', 'RepRap (Volumetric)', 'UltiGCode', 'MakerBot', 'BFB', 'Mach3'], 'machine', 'hidden').setLabel(_("GCode Flavor"), _("Flavor of generated GCode.\nRepRap is normal 5D GCode which works on Marlin/Sprinter based firmwares.\nUltiGCode is a variation of the RepRap GCode which puts more settings in the machine instead of the slicer.\nMakerBot GCode has a few changes in the way GCode is generated, but still requires MakerWare to generate to X3G.\nBFB style generates RPM based code.\nMach3 uses A,B,C instead of E for extruders."))
 setting('extruder_amount', '1', ['1','2','3','4','5'], 'machine', 'hidden').setLabel(_("Extruder count"), _("Amount of extruders in your machine."))
-setting('extruder_offset_x1', '0.0', float, 'machine', 'hidden').setLabel(_("Offset X"), _("The offset of your secondary extruder compared to the primary."))
-setting('extruder_offset_y1', '21.6', float, 'machine', 'hidden').setLabel(_("Offset Y"), _("The offset of your secondary extruder compared to the primary."))
+setting('extruder_offset_x1', '30.0', float, 'machine', 'hidden').setLabel(_("Offset X"), _("The offset of your secondary extruder compared to the primary."))
+setting('extruder_offset_y1', '0.0', float, 'machine', 'hidden').setLabel(_("Offset Y"), _("The offset of your secondary extruder compared to the primary."))
 setting('extruder_offset_x2', '0.0', float, 'machine', 'hidden').setLabel(_("Offset X"), _("The offset of your tertiary extruder compared to the primary."))
 setting('extruder_offset_y2', '0.0', float, 'machine', 'hidden').setLabel(_("Offset Y"), _("The offset of your tertiary extruder compared to the primary."))
 setting('extruder_offset_x3', '0.0', float, 'machine', 'hidden').setLabel(_("Offset X"), _("The offset of your forth extruder compared to the primary."))
@@ -548,11 +548,11 @@ setting('serial_port_auto', '', str, 'machine', 'hidden')
 setting('serial_baud', 'AUTO', str, 'machine', 'hidden').setLabel(_("Baudrate"), _("Speed of the serial port communication\nNeeds to match your firmware settings\nCommon values are 250000, 115200, 57600"))
 setting('serial_baud_auto', '', int, 'machine', 'hidden')
 
-setting('extruder_head_size_min_x', '0.0', float, 'machine', 'hidden').setLabel(_("Head size towards X min (mm)"), _("The head size when printing multiple objects, measured from the tip of the nozzle towards the outer part of the head. 75mm for an Ultimaker if the fan is on the left side."))
-setting('extruder_head_size_min_y', '0.0', float, 'machine', 'hidden').setLabel(_("Head size towards Y min (mm)"), _("The head size when printing multiple objects, measured from the tip of the nozzle towards the outer part of the head. 18mm for an Ultimaker if the fan is on the left side."))
-setting('extruder_head_size_max_x', '0.0', float, 'machine', 'hidden').setLabel(_("Head size towards X max (mm)"), _("The head size when printing multiple objects, measured from the tip of the nozzle towards the outer part of the head. 18mm for an Ultimaker if the fan is on the left side."))
-setting('extruder_head_size_max_y', '0.0', float, 'machine', 'hidden').setLabel(_("Head size towards Y max (mm)"), _("The head size when printing multiple objects, measured from the tip of the nozzle towards the outer part of the head. 35mm for an Ultimaker if the fan is on the left side."))
-setting('extruder_head_size_height', '0.0', float, 'machine', 'hidden').setLabel(_("Printer gantry height (mm)"), _("The height of the gantry holding up the printer head. If an object is higher then this then you cannot print multiple objects one for one. 60mm for an Ultimaker."))
+setting('extruder_head_size_min_x', '75.0', float, 'machine', 'hidden').setLabel(_("Head size towards X min (mm)"), _("The head size when printing multiple objects, measured from the tip of the nozzle towards the outer part of the head. 75mm for an Ultimaker if the fan is on the left side."))
+setting('extruder_head_size_min_y', '18.0', float, 'machine', 'hidden').setLabel(_("Head size towards Y min (mm)"), _("The head size when printing multiple objects, measured from the tip of the nozzle towards the outer part of the head. 18mm for an Ultimaker if the fan is on the left side."))
+setting('extruder_head_size_max_x', '18.0', float, 'machine', 'hidden').setLabel(_("Head size towards X max (mm)"), _("The head size when printing multiple objects, measured from the tip of the nozzle towards the outer part of the head. 18mm for an Ultimaker if the fan is on the left side."))
+setting('extruder_head_size_max_y', '35.0', float, 'machine', 'hidden').setLabel(_("Head size towards Y max (mm)"), _("The head size when printing multiple objects, measured from the tip of the nozzle towards the outer part of the head. 35mm for an Ultimaker if the fan is on the left side."))
+setting('extruder_head_size_height', '60.0', float, 'machine', 'hidden').setLabel(_("Printer gantry height (mm)"), _("The height of the gantry holding up the printer head. If an object is higher then this then you cannot print multiple objects one for one. 60mm for an Ultimaker."))
 
 validators.warningAbove(settingsDictionary['filament_flow'], 150, _("More flow than 150% is rare and usually not recommended."))
 validators.warningBelow(settingsDictionary['filament_flow'], 50, _("Less flow than 50% is rare and usually not recommended."))
@@ -802,7 +802,7 @@ def resetProfile():
 			continue
 		set.setValue(set.getDefault())
 
-	if getMachineSetting('machine_type') == 'ultimaker':
+	if getMachineSetting('machine_type') == 'ultimaker' or getMachineSetting('machine_type') == 'MakerPi':
 		putProfileSetting('nozzle_size', '0.4')
 		if getMachineSetting('ultimaker_extruder_upgrade') == 'True':
 			putProfileSetting('retraction_enable', 'True')
