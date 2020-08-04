@@ -104,8 +104,8 @@ class SceneView(openglGui.glGuiPanel):
 
 		self.viewSelection = openglGui.glComboButton(self, _("View mode"), [7,19,11,15,23], [_("Normal"), _("Overhang"), _("Transparent"), _("X-Ray"), _("Layers")], (-1,0), self.OnViewChange)
 
-		self.youMagineButton = openglGui.glButton(self, 26, _("Share on YouMagine"), (2,0), lambda button: youmagineGui.youmagineManager(self.GetTopLevelParent(), self._scene))
-		self.youMagineButton.setDisabled(True)
+		#self.youMagineButton = openglGui.glButton(self, 26, _("Share on YouMagine"), (2,0), lambda button: youmagineGui.youmagineManager(self.GetTopLevelParent(), self._scene))
+		#self.youMagineButton.setDisabled(True)
 
 		self.notification = openglGui.glNotification(self, (0, 0))
 
@@ -134,11 +134,11 @@ class SceneView(openglGui.glGuiPanel):
 		self.printButton.setBottomText('')
 		self.viewSelection.setValue(4)
 		self.printButton.setDisabled(False)
-		self.youMagineButton.setDisabled(True)
+		#self.youMagineButton.setDisabled(True)
 		self.OnViewChange()
 
 	def loadSceneFiles(self, filenames):
-		self.youMagineButton.setDisabled(False)
+		#self.youMagineButton.setDisabled(False)
 		#if self.viewSelection.getValue() == 4:
 		#	self.viewSelection.setValue(0)
 		#	self.OnViewChange()
@@ -1347,6 +1347,9 @@ class SceneView(openglGui.glGuiPanel):
 				texture_name = 'UltimakerPlusbackplate.png'
 			elif machine_type == 'ultimaker':
 				filename = resources.getPathForMesh('ultimaker_platform.stl')
+				offset = [0,0,2.5]
+			elif machine_type == 'MakerPi':
+				filename = resources.getPathForMesh('MakerPi_platform.stl')
 				offset = [0,0,2.5]
 			elif machine_type == 'Witbox':
 				filename = resources.getPathForMesh('Witbox_platform.stl')
