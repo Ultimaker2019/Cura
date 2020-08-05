@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-04 18:20+0800\n"
+"POT-Creation-Date: 2020-08-05 09:18+0800\n"
 "PO-Revision-Date: 2015-01-07 17:30+0900\n"
 "Last-Translator: Jinbuhm Kim <Jinbuhm.Kim@gmail.com>\n"
 "Language-Team: Korean <Jinbuhm.Kim@gmail.com>\n"
@@ -18,22 +18,6 @@ msgstr ""
 "X-Generator: Poedit 1.7.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-
-#: Cura/gui/aboutMakerPiWindow.py:8
-msgid "About"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:20
-msgid "MakerPi"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "Website"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "http://www.makerpi.org"
-msgstr ""
 
 #: Cura/gui/app.py:147 Cura/gui/mainWindow.py:642
 msgid "A new version of Cura is available, would you like to download?"
@@ -880,14 +864,6 @@ msgstr "자세한 설정으로 전환..."
 msgid "Open expert settings...\tCTRL+E"
 msgstr "전문가 설정 열기...\tCTRL+E"
 
-#: Cura/gui/mainWindow.py:184
-msgid "Run bed leveling wizard..."
-msgstr "베드 수평맞추기 마법사 실행..."
-
-#: Cura/gui/mainWindow.py:186
-msgid "Run head offset wizard..."
-msgstr "헤드 옵셋 마법사 실행..."
-
 #: Cura/gui/mainWindow.py:189
 msgid "Expert"
 msgstr "전문가 설정 "
@@ -911,14 +887,6 @@ msgstr ""
 #: Cura/gui/mainWindow.py:390
 msgid "One at a time warning"
 msgstr "한번에 하나씩 프린팅 경고"
-
-#: Cura/gui/mainWindow.py:486
-msgid "Install default firmware..."
-msgstr "기본 펌웨어 설치..."
-
-#: Cura/gui/mainWindow.py:489
-msgid "Install custom firmware..."
-msgstr "사용자 정의 펌웨어 설치..."
 
 #: Cura/gui/mainWindow.py:493
 msgid "Select profile file to load"
@@ -996,10 +964,6 @@ msgstr "기본"
 #: Cura/gui/mainWindow.py:694
 msgid "Advanced"
 msgstr "고급"
-
-#: Cura/gui/mainWindow.py:700
-msgid "Plugins"
-msgstr "플러그인"
 
 #: Cura/gui/pluginPanel.py:31
 msgid "Plugins:"
@@ -3047,6 +3011,21 @@ msgstr "%d 시 %d 분"
 #, python-format
 msgid "%0.2f meter %0.0f gram"
 msgstr "%0.2f 미터 %0.0f 그램"
+
+#~ msgid "Run bed leveling wizard..."
+#~ msgstr "베드 수평맞추기 마법사 실행..."
+
+#~ msgid "Run head offset wizard..."
+#~ msgstr "헤드 옵셋 마법사 실행..."
+
+#~ msgid "Install default firmware..."
+#~ msgstr "기본 펌웨어 설치..."
+
+#~ msgid "Install custom firmware..."
+#~ msgstr "사용자 정의 펌웨어 설치..."
+
+#~ msgid "Plugins"
+#~ msgstr "플러그인"
 
 #~ msgid "Online documentation..."
 #~ msgstr "온라인 문서..."

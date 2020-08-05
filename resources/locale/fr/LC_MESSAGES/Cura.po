@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-04 18:20+0800\n"
+"POT-Creation-Date: 2020-08-05 09:18+0800\n"
 "PO-Revision-Date: 2014-10-21 22:35+0100\n"
 "Last-Translator: Jeremie FRANCOIS <jeremie.francois@gmail.com>\n"
 "Language-Team:  <LL@li.org>\n"
@@ -16,22 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
-
-#: Cura/gui/aboutMakerPiWindow.py:8
-msgid "About"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:20
-msgid "MakerPi"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "Website"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "http://www.makerpi.org"
-msgstr ""
 
 #: Cura/gui/app.py:147 Cura/gui/mainWindow.py:642
 msgid "A new version of Cura is available, would you like to download?"
@@ -901,14 +885,6 @@ msgstr "Basculer en mode complet..."
 msgid "Open expert settings...\tCTRL+E"
 msgstr "Configuration experte..."
 
-#: Cura/gui/mainWindow.py:184
-msgid "Run bed leveling wizard..."
-msgstr "Assistant de mise a niveau du plateau..."
-
-#: Cura/gui/mainWindow.py:186
-msgid "Run head offset wizard..."
-msgstr "Assistant de décalage des têtes..."
-
 #: Cura/gui/mainWindow.py:189
 msgid "Expert"
 msgstr "Expert"
@@ -932,14 +908,6 @@ msgstr ""
 #: Cura/gui/mainWindow.py:390
 msgid "One at a time warning"
 msgstr "Avertissement un objet à la fois"
-
-#: Cura/gui/mainWindow.py:486
-msgid "Install default firmware..."
-msgstr "Installer le firmware Marlin par défaut"
-
-#: Cura/gui/mainWindow.py:489
-msgid "Install custom firmware..."
-msgstr "Installer un firmware maison"
 
 #: Cura/gui/mainWindow.py:493
 msgid "Select profile file to load"
@@ -1017,10 +985,6 @@ msgstr "Simple"
 #: Cura/gui/mainWindow.py:694
 msgid "Advanced"
 msgstr "Avancé"
-
-#: Cura/gui/mainWindow.py:700
-msgid "Plugins"
-msgstr "Extensions"
 
 #: Cura/gui/pluginPanel.py:31
 msgid "Plugins:"
@@ -3152,6 +3116,21 @@ msgstr "%d heures %d minutes"
 #, python-format
 msgid "%0.2f meter %0.0f gram"
 msgstr "%0.2f mètres %0.0f grammes"
+
+#~ msgid "Run bed leveling wizard..."
+#~ msgstr "Assistant de mise a niveau du plateau..."
+
+#~ msgid "Run head offset wizard..."
+#~ msgstr "Assistant de décalage des têtes..."
+
+#~ msgid "Install default firmware..."
+#~ msgstr "Installer le firmware Marlin par défaut"
+
+#~ msgid "Install custom firmware..."
+#~ msgstr "Installer un firmware maison"
+
+#~ msgid "Plugins"
+#~ msgstr "Extensions"
 
 #~ msgid "Online documentation..."
 #~ msgstr "Documentation en ligne..."

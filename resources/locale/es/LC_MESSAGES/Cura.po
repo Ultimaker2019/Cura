@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-04 18:20+0800\n"
+"POT-Creation-Date: 2020-08-05 09:18+0800\n"
 "PO-Revision-Date: 2015-01-06 16:05-0300\n"
 "Last-Translator: Ernesto Bazzano <bazza@riseup.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,22 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
-
-#: Cura/gui/aboutMakerPiWindow.py:8
-msgid "About"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:20
-msgid "MakerPi"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "Website"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "http://www.makerpi.org"
-msgstr ""
 
 #: Cura/gui/app.py:147 Cura/gui/mainWindow.py:642
 msgid "A new version of Cura is available, would you like to download?"
@@ -896,14 +880,6 @@ msgstr "Cambiar a ajustes completos..."
 msgid "Open expert settings...\tCTRL+E"
 msgstr "Abrir ajustes experto...\tCTRL+E"
 
-#: Cura/gui/mainWindow.py:184
-msgid "Run bed leveling wizard..."
-msgstr "Iniciar asistente para calibración de la cama..."
-
-#: Cura/gui/mainWindow.py:186
-msgid "Run head offset wizard..."
-msgstr "Iniciar asistente de distancia entre extrusores..."
-
 #: Cura/gui/mainWindow.py:189
 msgid "Expert"
 msgstr "Experto"
@@ -927,14 +903,6 @@ msgstr ""
 #: Cura/gui/mainWindow.py:390
 msgid "One at a time warning"
 msgstr "Advertencia de uno por vez"
-
-#: Cura/gui/mainWindow.py:486
-msgid "Install default firmware..."
-msgstr "Instalar el firmware por defecto..."
-
-#: Cura/gui/mainWindow.py:489
-msgid "Install custom firmware..."
-msgstr "Instalar firmware personalizado..."
 
 #: Cura/gui/mainWindow.py:493
 msgid "Select profile file to load"
@@ -1015,10 +983,6 @@ msgstr "Basico"
 #: Cura/gui/mainWindow.py:694
 msgid "Advanced"
 msgstr "Avanzado"
-
-#: Cura/gui/mainWindow.py:700
-msgid "Plugins"
-msgstr "Complementos"
 
 #: Cura/gui/pluginPanel.py:31
 msgid "Plugins:"
@@ -3131,6 +3095,21 @@ msgstr "%d hora %d minutos"
 #, python-format
 msgid "%0.2f meter %0.0f gram"
 msgstr "%0.2f metros %0.0f gramos"
+
+#~ msgid "Run bed leveling wizard..."
+#~ msgstr "Iniciar asistente para calibración de la cama..."
+
+#~ msgid "Run head offset wizard..."
+#~ msgstr "Iniciar asistente de distancia entre extrusores..."
+
+#~ msgid "Install default firmware..."
+#~ msgstr "Instalar el firmware por defecto..."
+
+#~ msgid "Install custom firmware..."
+#~ msgstr "Instalar firmware personalizado..."
+
+#~ msgid "Plugins"
+#~ msgstr "Complementos"
 
 #~ msgid "Online documentation..."
 #~ msgstr "Documentación en la red..."

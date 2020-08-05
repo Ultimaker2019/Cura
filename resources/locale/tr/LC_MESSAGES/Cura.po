@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-04 18:20+0800\n"
+"POT-Creation-Date: 2020-08-05 09:18+0800\n"
 "PO-Revision-Date: 2014-06-30 16:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,22 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.5\n"
-
-#: Cura/gui/aboutMakerPiWindow.py:8
-msgid "About"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:20
-msgid "MakerPi"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "Website"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "http://www.makerpi.org"
-msgstr ""
 
 #: Cura/gui/app.py:147 Cura/gui/mainWindow.py:642
 msgid "A new version of Cura is available, would you like to download?"
@@ -890,14 +874,6 @@ msgstr "Tam ayarlara geç..."
 msgid "Open expert settings...\tCTRL+E"
 msgstr "Gelişmiş ayarları aç...\tCTRL+E"
 
-#: Cura/gui/mainWindow.py:184
-msgid "Run bed leveling wizard..."
-msgstr "Baskı levhası hizalama yazılımını aç..."
-
-#: Cura/gui/mainWindow.py:186
-msgid "Run head offset wizard..."
-msgstr ""
-
 #: Cura/gui/mainWindow.py:189
 msgid "Expert"
 msgstr "Gelişmiş"
@@ -921,14 +897,6 @@ msgstr ""
 #: Cura/gui/mainWindow.py:390
 msgid "One at a time warning"
 msgstr "Her seferinde bir uyarı"
-
-#: Cura/gui/mainWindow.py:486
-msgid "Install default firmware..."
-msgstr "Varsayılan firmware'ı kur..."
-
-#: Cura/gui/mainWindow.py:489
-msgid "Install custom firmware..."
-msgstr "Özel firmware yükle..."
 
 #: Cura/gui/mainWindow.py:493
 msgid "Select profile file to load"
@@ -1008,10 +976,6 @@ msgstr ""
 #: Cura/gui/mainWindow.py:694
 msgid "Advanced"
 msgstr ""
-
-#: Cura/gui/mainWindow.py:700
-msgid "Plugins"
-msgstr "Eklentiler"
 
 #: Cura/gui/pluginPanel.py:31
 msgid "Plugins:"
@@ -3112,6 +3076,18 @@ msgstr ""
 #, python-format
 msgid "%0.2f meter %0.0f gram"
 msgstr ""
+
+#~ msgid "Run bed leveling wizard..."
+#~ msgstr "Baskı levhası hizalama yazılımını aç..."
+
+#~ msgid "Install default firmware..."
+#~ msgstr "Varsayılan firmware'ı kur..."
+
+#~ msgid "Install custom firmware..."
+#~ msgstr "Özel firmware yükle..."
+
+#~ msgid "Plugins"
+#~ msgstr "Eklentiler"
 
 #~ msgid "Online documentation..."
 #~ msgstr "Çevrimiçi belgeleme..."

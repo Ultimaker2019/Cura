@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-04 18:20+0800\n"
+"POT-Creation-Date: 2020-08-05 09:18+0800\n"
 "PO-Revision-Date: 2015-02-17 13:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: Deutsch <mischa.fuerst@gmail.com>\n"
@@ -18,22 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: Cura/gui/aboutMakerPiWindow.py:8
-msgid "About"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:20
-msgid "MakerPi"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "Website"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "http://www.makerpi.org"
-msgstr ""
 
 #: Cura/gui/app.py:147 Cura/gui/mainWindow.py:642
 msgid "A new version of Cura is available, would you like to download?"
@@ -906,14 +890,6 @@ msgstr "Wechseln zum Expertenmodus..."
 msgid "Open expert settings...\tCTRL+E"
 msgstr "Öffne Experten-Einstellungen...\tSTRG + E"
 
-#: Cura/gui/mainWindow.py:184
-msgid "Run bed leveling wizard..."
-msgstr "Drucktisch-Ausrichtungs Assistent aufrufen..."
-
-#: Cura/gui/mainWindow.py:186
-msgid "Run head offset wizard..."
-msgstr "Assistent für den Druckkopfversatz aufrufen..."
-
 #: Cura/gui/mainWindow.py:189
 msgid "Expert"
 msgstr "Experte"
@@ -937,14 +913,6 @@ msgstr ""
 #: Cura/gui/mainWindow.py:390
 msgid "One at a time warning"
 msgstr "nacheinander Drucken Warnung"
-
-#: Cura/gui/mainWindow.py:486
-msgid "Install default firmware..."
-msgstr "Installiere Standard Marlin Firmware..."
-
-#: Cura/gui/mainWindow.py:489
-msgid "Install custom firmware..."
-msgstr "Installiere benutzerdefinierte Firmware..."
 
 #: Cura/gui/mainWindow.py:493
 msgid "Select profile file to load"
@@ -1025,10 +993,6 @@ msgstr "Grundlegend"
 #: Cura/gui/mainWindow.py:694
 msgid "Advanced"
 msgstr "Fortgeschritten"
-
-#: Cura/gui/mainWindow.py:700
-msgid "Plugins"
-msgstr "Erweiterungen"
 
 #: Cura/gui/pluginPanel.py:31
 msgid "Plugins:"
@@ -3194,6 +3158,21 @@ msgstr "%d Stunden %d Minuten"
 #, python-format
 msgid "%0.2f meter %0.0f gram"
 msgstr "%0.2f Meter %0.0f Gramm"
+
+#~ msgid "Run bed leveling wizard..."
+#~ msgstr "Drucktisch-Ausrichtungs Assistent aufrufen..."
+
+#~ msgid "Run head offset wizard..."
+#~ msgstr "Assistent für den Druckkopfversatz aufrufen..."
+
+#~ msgid "Install default firmware..."
+#~ msgstr "Installiere Standard Marlin Firmware..."
+
+#~ msgid "Install custom firmware..."
+#~ msgstr "Installiere benutzerdefinierte Firmware..."
+
+#~ msgid "Plugins"
+#~ msgstr "Erweiterungen"
 
 #~ msgid "Online documentation..."
 #~ msgstr "Online-Dokumentation..."

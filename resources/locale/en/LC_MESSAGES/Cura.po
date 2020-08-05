@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-04 18:20+0800\n"
+"POT-Creation-Date: 2020-08-05 09:18+0800\n"
 "PO-Revision-Date: 2013-09-27 09:41+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,22 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
-
-#: Cura/gui/aboutMakerPiWindow.py:8
-msgid "About"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:20
-msgid "MakerPi"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "Website"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "http://www.makerpi.org"
-msgstr ""
 
 #: Cura/gui/app.py:147 Cura/gui/mainWindow.py:642
 msgid "A new version of Cura is available, would you like to download?"
@@ -812,14 +796,6 @@ msgstr ""
 msgid "Open expert settings...\tCTRL+E"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:184
-msgid "Run bed leveling wizard..."
-msgstr ""
-
-#: Cura/gui/mainWindow.py:186
-msgid "Run head offset wizard..."
-msgstr ""
-
 #: Cura/gui/mainWindow.py:189
 msgid "Expert"
 msgstr ""
@@ -840,14 +816,6 @@ msgstr ""
 
 #: Cura/gui/mainWindow.py:390
 msgid "One at a time warning"
-msgstr ""
-
-#: Cura/gui/mainWindow.py:486
-msgid "Install default firmware..."
-msgstr ""
-
-#: Cura/gui/mainWindow.py:489
-msgid "Install custom firmware..."
 msgstr ""
 
 #: Cura/gui/mainWindow.py:493
@@ -917,10 +885,6 @@ msgstr ""
 
 #: Cura/gui/mainWindow.py:694
 msgid "Advanced"
-msgstr ""
-
-#: Cura/gui/mainWindow.py:700
-msgid "Plugins"
 msgstr ""
 
 #: Cura/gui/pluginPanel.py:31

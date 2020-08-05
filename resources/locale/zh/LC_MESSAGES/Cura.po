@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-04 18:20+0800\n"
+"POT-Creation-Date: 2020-08-05 09:18+0800\n"
 "PO-Revision-Date: 2015-01-13 12:42+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,22 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.7.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: Cura/gui/aboutMakerPiWindow.py:8
-msgid "About"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:20
-msgid "MakerPi"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "Website"
-msgstr ""
-
-#: Cura/gui/aboutMakerPiWindow.py:24
-msgid "http://www.makerpi.org"
-msgstr ""
 
 #: Cura/gui/app.py:147 Cura/gui/mainWindow.py:642
 msgid "A new version of Cura is available, would you like to download?"
@@ -820,14 +804,6 @@ msgstr "切换到完整配置模式..."
 msgid "Open expert settings...\tCTRL+E"
 msgstr "额外设置...\tCTRL+E"
 
-#: Cura/gui/mainWindow.py:184
-msgid "Run bed leveling wizard..."
-msgstr "运行平台调平向导..."
-
-#: Cura/gui/mainWindow.py:186
-msgid "Run head offset wizard..."
-msgstr "运行多喷头校正向导..."
-
 #: Cura/gui/mainWindow.py:189
 msgid "Expert"
 msgstr "专业设置"
@@ -849,14 +825,6 @@ msgstr ""
 #: Cura/gui/mainWindow.py:390
 msgid "One at a time warning"
 msgstr ""
-
-#: Cura/gui/mainWindow.py:486
-msgid "Install default firmware..."
-msgstr "安装默认固件..."
-
-#: Cura/gui/mainWindow.py:489
-msgid "Install custom firmware..."
-msgstr "安装自定义固件..."
 
 #: Cura/gui/mainWindow.py:493
 msgid "Select profile file to load"
@@ -926,10 +894,6 @@ msgstr "基本"
 #: Cura/gui/mainWindow.py:694
 msgid "Advanced"
 msgstr "高级"
-
-#: Cura/gui/mainWindow.py:700
-msgid "Plugins"
-msgstr "插件"
 
 #: Cura/gui/pluginPanel.py:31
 msgid "Plugins:"
@@ -2932,6 +2896,21 @@ msgstr ""
 #, python-format
 msgid "%0.2f meter %0.0f gram"
 msgstr ""
+
+#~ msgid "Run bed leveling wizard..."
+#~ msgstr "运行平台调平向导..."
+
+#~ msgid "Run head offset wizard..."
+#~ msgstr "运行多喷头校正向导..."
+
+#~ msgid "Install default firmware..."
+#~ msgstr "安装默认固件..."
+
+#~ msgid "Install custom firmware..."
+#~ msgstr "安装自定义固件..."
+
+#~ msgid "Plugins"
+#~ msgstr "插件"
 
 #~ msgid "Online documentation..."
 #~ msgstr "在线文档..."
