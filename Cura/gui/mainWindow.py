@@ -180,11 +180,11 @@ class mainWindow(wx.Frame):
 		i = expertMenu.Append(-1, _("Open expert settings...\tCTRL+E"))
 		self.normalModeOnlyItems.append(i)
 		self.Bind(wx.EVT_MENU, self.OnExpertOpen, i)
-		expertMenu.AppendSeparator()
-		self.bedLevelWizardMenuItem = expertMenu.Append(-1, _("Run bed leveling wizard..."))
-		self.Bind(wx.EVT_MENU, self.OnBedLevelWizard, self.bedLevelWizardMenuItem)
-		self.headOffsetWizardMenuItem = expertMenu.Append(-1, _("Run head offset wizard..."))
-		self.Bind(wx.EVT_MENU, self.OnHeadOffsetWizard, self.headOffsetWizardMenuItem)
+		#expertMenu.AppendSeparator()
+		#self.bedLevelWizardMenuItem = expertMenu.Append(-1, _("Run bed leveling wizard..."))
+		#self.Bind(wx.EVT_MENU, self.OnBedLevelWizard, self.bedLevelWizardMenuItem)
+		#self.headOffsetWizardMenuItem = expertMenu.Append(-1, _("Run head offset wizard..."))
+		#self.Bind(wx.EVT_MENU, self.OnHeadOffsetWizard, self.headOffsetWizardMenuItem)
 
 		self.menubar.Append(expertMenu, _("Expert"))
 
@@ -285,12 +285,12 @@ class mainWindow(wx.Frame):
 		if Publisher is not None:
 			Publisher().subscribe(self.onPluginUpdate, "pluginupdate")
 
-		pluginCount = self.normalSettingsPanel.pluginPanel.GetActivePluginCount()
-		if pluginCount == 1:
-			self.scene.notification.message("Warning: 1 plugin from the previous session is still active.")
+		#pluginCount = self.normalSettingsPanel.pluginPanel.GetActivePluginCount()
+		#if pluginCount == 1:
+		#	self.scene.notification.message("Warning: 1 plugin from the previous session is still active.")
 
-		if pluginCount > 1:
-			self.scene.notification.message("Warning: %i plugins from the previous session are still active." % pluginCount)
+		#if pluginCount > 1:
+		#	self.scene.notification.message("Warning: %i plugins from the previous session are still active." % pluginCount)
 
 	def onPluginUpdate(self,msg): #receives commands from the plugin thread
 		cmd = str(msg.data).split(";")
@@ -375,7 +375,7 @@ class mainWindow(wx.Frame):
 			self.splitter.SetSashPosition(self.normalSashPos, True)
 			# Enabled sash
 			self.splitter.SetSashSize(4)
-		self.defaultFirmwareInstallMenuItem.Enable(firmwareInstall.getDefaultFirmware() is not None)
+		#self.defaultFirmwareInstallMenuItem.Enable(firmwareInstall.getDefaultFirmware() is not None)
 		if profile.getMachineSetting('machine_type').startswith('ultimaker2'):
 			self.bedLevelWizardMenuItem.Enable(False)
 			self.headOffsetWizardMenuItem.Enable(False)
@@ -481,13 +481,13 @@ class mainWindow(wx.Frame):
 		self.Bind(wx.EVT_MENU, self.OnMachineSettings, i)
 
 		#Add tools for machines.
-		self.machineMenu.AppendSeparator()
+		#self.machineMenu.AppendSeparator()
 
-		self.defaultFirmwareInstallMenuItem = self.machineMenu.Append(-1, _("Install default firmware..."))
-		self.Bind(wx.EVT_MENU, self.OnDefaultMarlinFirmware, self.defaultFirmwareInstallMenuItem)
+		#self.defaultFirmwareInstallMenuItem = self.machineMenu.Append(-1, _("Install default firmware..."))
+		#self.Bind(wx.EVT_MENU, self.OnDefaultMarlinFirmware, self.defaultFirmwareInstallMenuItem)
 
-		i = self.machineMenu.Append(-1, _("Install custom firmware..."))
-		self.Bind(wx.EVT_MENU, self.OnCustomFirmware, i)
+		#i = self.machineMenu.Append(-1, _("Install custom firmware..."))
+		#self.Bind(wx.EVT_MENU, self.OnCustomFirmware, i)
 
 	def OnLoadProfile(self, e):
 		dlg=wx.FileDialog(self, _("Select profile file to load"), os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_OPEN|wx.FD_FILE_MUST_EXIST)
@@ -696,8 +696,8 @@ class normalSettingsPanel(configBase.configPanelBase):
 		self.SizeLabelWidths(left, right)
 
 		#Plugin page
-		self.pluginPanel = pluginPanel.pluginPanel(self.nb, callback)
-		self.nb.AddPage(self.pluginPanel, _("Plugins"))
+		#self.pluginPanel = pluginPanel.pluginPanel(self.nb, callback)
+		#self.nb.AddPage(self.pluginPanel, _("Plugins"))
 
 		#Alteration page
 		if profile.getMachineSetting('gcode_flavor') == 'UltiGCode':
@@ -791,4 +791,4 @@ class normalSettingsPanel(configBase.configPanelBase):
 		super(normalSettingsPanel, self).updateProfileToControls()
 		if self.alterationPanel is not None:
 			self.alterationPanel.updateProfileToControls()
-		self.pluginPanel.updateProfileToControls()
+		#self.pluginPanel.updateProfileToControls()
