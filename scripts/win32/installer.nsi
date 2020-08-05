@@ -141,13 +141,19 @@ Section "Cura ${VERSION}"
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Cura_${VERSION}" "NoModify" 1
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Cura_${VERSION}" "NoRepair" 1
   WriteUninstaller "uninstall.exe"
-
+  
+  ; Administrator permissions
+  WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" "$INSTDIR\python\pythonw.exe" "RUNASADMIN"
+  
   ; Write start menu entries for all users
   SetShellVarContext all
   
   CreateDirectory "$SMPROGRAMS\Cura ${VERSION}"
   CreateShortCut "$SMPROGRAMS\Cura ${VERSION}\Uninstall Cura ${VERSION}.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
   CreateShortCut "$SMPROGRAMS\Cura ${VERSION}\Cura ${VERSION}.lnk" "$INSTDIR\python\pythonw.exe" '-m "Cura.cura"' "$INSTDIR\resources\cura.ico" 0
+  
+  ; Give all users write permissions in the install directory, so they can read/write profile and preferences files.
+  AccessControl::GrantOnFile "$INSTDIR" "(S-1-5-32-545)" "FullAccess"
   
 SectionEnd
 
