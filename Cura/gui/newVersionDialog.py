@@ -19,7 +19,8 @@ class newVersionDialog(wx.Dialog):
 		s = wx.BoxSizer(wx.VERTICAL)
 		p.SetSizer(s)
 
-		title = wx.StaticText(p, -1, 'Cura - ' + version.getVersion())
+		versionInfo = version.getVersion(False).split('-')
+		title = wx.StaticText(p, -1, 'Cura - ' + versionInfo[0])
 		title.SetFont(wx.Font(18, wx.SWISS, wx.NORMAL, wx.BOLD))
 		s.Add(title, flag=wx.ALIGN_CENTRE|wx.EXPAND|wx.BOTTOM, border=5)
 		s.Add(wx.StaticText(p, -1, 'Welcome to the new version of Cura.'))
