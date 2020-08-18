@@ -1015,6 +1015,13 @@ class UltimakerCalibrateStepsPerEPage(InfoPage):
 	def StoreData(self):
 		profile.putPreference('steps_per_e', self.stepsPerEInput.GetValue())
 
+class MakerPiReadyPage(InfoPage):
+	def __init__(self, parent):
+		super(MakerPiReadyPage, self).__init__(parent, _("Cura"))
+		self.AddText(_('Congratulations on your the purchase of your brand new Cura.'))
+		self.AddText(_('Cura is now ready to be used with your Cura.'))
+		self.AddSeperator()
+
 class Ultimaker2ReadyPage(InfoPage):
 	def __init__(self, parent):
 		super(Ultimaker2ReadyPage, self).__init__(parent, _("Ultimaker2"))
@@ -1041,31 +1048,32 @@ class ConfigWizard(wx.wizard.Wizard):
 		self.Bind(wx.wizard.EVT_WIZARD_CANCEL, self.OnCancel)
 
 		self.firstInfoPage = FirstInfoPage(self, addNew)
-		self.machineSelectPage = MachineSelectPage(self)
-		self.ultimakerSelectParts = SelectParts(self)
-		self.ultimakerFirmwareUpgradePage = UltimakerFirmwareUpgradePage(self)
-		self.ultimakerCheckupPage = UltimakerCheckupPage(self)
-		self.ultimakerCalibrationPage = UltimakerCalibrationPage(self)
-		self.ultimakerCalibrateStepsPerEPage = UltimakerCalibrateStepsPerEPage(self)
-		self.bedLevelPage = bedLevelWizardMain(self)
-		self.headOffsetCalibration = headOffsetCalibrationPage(self)
-		self.printrbotSelectType = PrintrbotPage(self)
-		self.otherMachineSelectPage = OtherMachineSelectPage(self)
-		self.customRepRapInfoPage = CustomRepRapInfoPage(self)
-		self.otherMachineInfoPage = OtherMachineInfoPage(self)
+#		self.machineSelectPage = MachineSelectPage(self)
+#		self.ultimakerSelectParts = SelectParts(self)
+#		self.ultimakerFirmwareUpgradePage = UltimakerFirmwareUpgradePage(self)
+#		self.ultimakerCheckupPage = UltimakerCheckupPage(self)
+#		self.ultimakerCalibrationPage = UltimakerCalibrationPage(self)
+#		self.ultimakerCalibrateStepsPerEPage = UltimakerCalibrateStepsPerEPage(self)
+#		self.bedLevelPage = bedLevelWizardMain(self)
+#		self.headOffsetCalibration = headOffsetCalibrationPage(self)
+#		self.printrbotSelectType = PrintrbotPage(self)
+#		self.otherMachineSelectPage = OtherMachineSelectPage(self)
+#		self.customRepRapInfoPage = CustomRepRapInfoPage(self)
+#		self.otherMachineInfoPage = OtherMachineInfoPage(self)
 
-		self.ultimaker2ReadyPage = Ultimaker2ReadyPage(self)
-		self.lulzbotReadyPage = LulzbotReadyPage(self)
+#		self.ultimaker2ReadyPage = Ultimaker2ReadyPage(self)
+#		self.lulzbotReadyPage = LulzbotReadyPage(self)
+		self.makerpiReadyPage = MakerPiReadyPage(self)
 
-		wx.wizard.WizardPageSimple.Chain(self.firstInfoPage, self.machineSelectPage)
+		wx.wizard.WizardPageSimple.Chain(self.firstInfoPage, self.makerpiReadyPage)
 		#wx.wizard.WizardPageSimple.Chain(self.machineSelectPage, self.ultimaker2ReadyPage)
-		wx.wizard.WizardPageSimple.Chain(self.machineSelectPage, self.ultimakerSelectParts)
-		wx.wizard.WizardPageSimple.Chain(self.ultimakerSelectParts, self.ultimakerFirmwareUpgradePage)
-		wx.wizard.WizardPageSimple.Chain(self.ultimakerFirmwareUpgradePage, self.ultimakerCheckupPage)
-		wx.wizard.WizardPageSimple.Chain(self.ultimakerCheckupPage, self.bedLevelPage)
+#		wx.wizard.WizardPageSimple.Chain(self.machineSelectPage, self.ultimakerSelectParts)
+#		wx.wizard.WizardPageSimple.Chain(self.ultimakerSelectParts, self.ultimakerFirmwareUpgradePage)
+#		wx.wizard.WizardPageSimple.Chain(self.ultimakerFirmwareUpgradePage, self.ultimakerCheckupPage)
+#		wx.wizard.WizardPageSimple.Chain(self.ultimakerCheckupPage, self.bedLevelPage)
 		#wx.wizard.WizardPageSimple.Chain(self.ultimakerCalibrationPage, self.ultimakerCalibrateStepsPerEPage)
-		wx.wizard.WizardPageSimple.Chain(self.printrbotSelectType, self.otherMachineInfoPage)
-		wx.wizard.WizardPageSimple.Chain(self.otherMachineSelectPage, self.customRepRapInfoPage)
+#		wx.wizard.WizardPageSimple.Chain(self.printrbotSelectType, self.otherMachineInfoPage)
+#		wx.wizard.WizardPageSimple.Chain(self.otherMachineSelectPage, self.customRepRapInfoPage)
 
 		self.FitToPage(self.firstInfoPage)
 		self.GetPageAreaSizer().Add(self.firstInfoPage)
