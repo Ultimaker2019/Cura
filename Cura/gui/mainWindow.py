@@ -81,7 +81,7 @@ class mainWindow(wx.Frame):
 		self.fileMenu.AppendSeparator()
 		i = self.fileMenu.Append(-1, _("Print...\tCTRL+P"))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.OnPrintButton(1), i)
-		i = self.fileMenu.Append(-1, _("Save GCode..."))
+		i = self.fileMenu.Append(-1, _("Save GCode...\tCTRL+G"))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.showSaveGCode(), i)
 		i = self.fileMenu.Append(-1, _("Show slice engine log..."))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene._showEngineLog(), i)
@@ -180,23 +180,23 @@ class mainWindow(wx.Frame):
 		i = expertMenu.Append(-1, _("Open expert settings...\tCTRL+E"))
 		self.normalModeOnlyItems.append(i)
 		self.Bind(wx.EVT_MENU, self.OnExpertOpen, i)
-		expertMenu.AppendSeparator()
-		self.bedLevelWizardMenuItem = expertMenu.Append(-1, _("Run bed leveling wizard..."))
-		self.Bind(wx.EVT_MENU, self.OnBedLevelWizard, self.bedLevelWizardMenuItem)
-		self.headOffsetWizardMenuItem = expertMenu.Append(-1, _("Run head offset wizard..."))
-		self.Bind(wx.EVT_MENU, self.OnHeadOffsetWizard, self.headOffsetWizardMenuItem)
+#		expertMenu.AppendSeparator()
+#		self.bedLevelWizardMenuItem = expertMenu.Append(-1, _("Run bed leveling wizard..."))
+#		self.Bind(wx.EVT_MENU, self.OnBedLevelWizard, self.bedLevelWizardMenuItem)
+#		self.headOffsetWizardMenuItem = expertMenu.Append(-1, _("Run head offset wizard..."))
+#		self.Bind(wx.EVT_MENU, self.OnHeadOffsetWizard, self.headOffsetWizardMenuItem)
 
 		self.menubar.Append(expertMenu, _("Expert"))
 
 		helpMenu = wx.Menu()
-		i = helpMenu.Append(-1, _("Online documentation..."))
-		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('http://daid.github.com/Cura'), i)
-		i = helpMenu.Append(-1, _("Report a problem..."))
-		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('https://github.com/daid/Cura/issues'), i)
-		i = helpMenu.Append(-1, _("Check for update..."))
-		self.Bind(wx.EVT_MENU, self.OnCheckForUpdate, i)
-		i = helpMenu.Append(-1, _("Open YouMagine website..."))
-		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('https://www.youmagine.com/'), i)
+#		i = helpMenu.Append(-1, _("Online documentation..."))
+#		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('http://daid.github.com/Cura'), i)
+#		i = helpMenu.Append(-1, _("Report a problem..."))
+#		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('https://github.com/daid/Cura/issues'), i)
+#		i = helpMenu.Append(-1, _("Check for update..."))
+#		self.Bind(wx.EVT_MENU, self.OnCheckForUpdate, i)
+#		i = helpMenu.Append(-1, _("Open YouMagine website..."))
+#		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('https://www.youmagine.com/'), i)
 		i = helpMenu.Append(-1, _("About Cura..."))
 		self.Bind(wx.EVT_MENU, self.OnAbout, i)
 		self.menubar.Append(helpMenu, _("Help"))
@@ -375,12 +375,12 @@ class mainWindow(wx.Frame):
 			self.splitter.SetSashPosition(self.normalSashPos, True)
 			# Enabled sash
 			self.splitter.SetSashSize(4)
-		self.defaultFirmwareInstallMenuItem.Enable(firmwareInstall.getDefaultFirmware() is not None)
+#		self.defaultFirmwareInstallMenuItem.Enable(firmwareInstall.getDefaultFirmware() is not None)
 		if profile.getMachineSetting('machine_type').startswith('ultimaker2'):
 			self.bedLevelWizardMenuItem.Enable(False)
 			self.headOffsetWizardMenuItem.Enable(False)
-		if int(profile.getMachineSetting('extruder_amount')) < 2:
-			self.headOffsetWizardMenuItem.Enable(False)
+#		if int(profile.getMachineSetting('extruder_amount')) < 2:
+#			self.headOffsetWizardMenuItem.Enable(False)
 		self.scene.updateProfileToControls()
 		self.scene._scene.pushFree()
 
@@ -475,16 +475,16 @@ class mainWindow(wx.Frame):
 			self.Bind(wx.EVT_MENU, lambda e: self.OnSelectMachine(e.GetId() - 0x1000), i)
 
 		self.machineMenu.AppendSeparator()
-		i = self.machineMenu.Append(-1, _("Add new machine..."))
-		self.Bind(wx.EVT_MENU, self.OnAddNewMachine, i)
+#		i = self.machineMenu.Append(-1, _("Add new machine..."))
+#		self.Bind(wx.EVT_MENU, self.OnAddNewMachine, i)
 		i = self.machineMenu.Append(-1, _("Machine settings..."))
 		self.Bind(wx.EVT_MENU, self.OnMachineSettings, i)
 
 		#Add tools for machines.
 		self.machineMenu.AppendSeparator()
 
-		self.defaultFirmwareInstallMenuItem = self.machineMenu.Append(-1, _("Install default firmware..."))
-		self.Bind(wx.EVT_MENU, self.OnDefaultMarlinFirmware, self.defaultFirmwareInstallMenuItem)
+#		self.defaultFirmwareInstallMenuItem = self.machineMenu.Append(-1, _("Install default firmware..."))
+#		self.Bind(wx.EVT_MENU, self.OnDefaultMarlinFirmware, self.defaultFirmwareInstallMenuItem)
 
 		i = self.machineMenu.Append(-1, _("Install custom firmware..."))
 		self.Bind(wx.EVT_MENU, self.OnCustomFirmware, i)
@@ -697,7 +697,8 @@ class normalSettingsPanel(configBase.configPanelBase):
 
 		#Plugin page
 		self.pluginPanel = pluginPanel.pluginPanel(self.nb, callback)
-		self.nb.AddPage(self.pluginPanel, _("Plugins"))
+		#self.nb.AddPage(self.pluginPanel, _("Plugins"))
+		self.pluginPanel.Hide()
 
 		#Alteration page
 		if profile.getMachineSetting('gcode_flavor') == 'UltiGCode':
