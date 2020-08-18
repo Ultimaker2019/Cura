@@ -178,12 +178,14 @@ class Scene(object):
 					self._oneAtATime = False
 					if self._lastResultOneAtATime:
 						if self._sceneView:
-							self._sceneView.notification.message("Info: Print one at a time mode disabled. Object too tall.")
+							#self._sceneView.notification.message("Info: Print one at a time mode disabled. Object too tall.")
+							pass
 						break
 
 		if self._lastOneAtATime and self._oneAtATime and not self._lastResultOneAtATime:
 			if self._sceneView:
-				self._sceneView.notification.message("Info: Print one at a time mode re-enabled.")
+				#self._sceneView.notification.message("Info: Print one at a time mode re-enabled.")
+				pass
 
 		self._lastResultOneAtATime = self._oneAtATime
 		self._lastOneAtATime = printOneAtATime

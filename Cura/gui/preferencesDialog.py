@@ -118,8 +118,8 @@ class machineSettingsDialog(wx.Dialog):
 			configBase.SettingRow(left, 'extruder_amount', index=idx)
 			configBase.SettingRow(left, 'has_heated_bed', index=idx)
 			configBase.SettingRow(left, 'machine_center_is_zero', index=idx)
-			configBase.SettingRow(left, 'machine_shape', index=idx)
-			configBase.SettingRow(left, 'gcode_flavor', index=idx)
+			#configBase.SettingRow(left, 'machine_shape', index=idx)
+			#configBase.SettingRow(left, 'gcode_flavor', index=idx)
 
 			configBase.TitleRow(right, _("Printer head size"))
 			configBase.SettingRow(right, 'extruder_head_size_min_x', index=idx)
@@ -149,13 +149,13 @@ class machineSettingsDialog(wx.Dialog):
 		self.okButton.Bind(wx.EVT_BUTTON, lambda e: self.Close())
 		self.buttonPanel.GetSizer().Add(self.okButton, flag=wx.ALL, border=5)
 
-		self.addButton = wx.Button(self.buttonPanel, -1, _('Add new machine'))
-		self.addButton.Bind(wx.EVT_BUTTON, self.OnAddMachine)
-		self.buttonPanel.GetSizer().Add(self.addButton, flag=wx.ALL, border=5)
+		#self.addButton = wx.Button(self.buttonPanel, -1, _('Add new machine'))
+		#self.addButton.Bind(wx.EVT_BUTTON, self.OnAddMachine)
+		#self.buttonPanel.GetSizer().Add(self.addButton, flag=wx.ALL, border=5)
 
-		self.remButton = wx.Button(self.buttonPanel, -1, _('Remove machine'))
-		self.remButton.Bind(wx.EVT_BUTTON, self.OnRemoveMachine)
-		self.buttonPanel.GetSizer().Add(self.remButton, flag=wx.ALL, border=5)
+		#self.remButton = wx.Button(self.buttonPanel, -1, _('Remove machine'))
+		#self.remButton.Bind(wx.EVT_BUTTON, self.OnRemoveMachine)
+		#self.buttonPanel.GetSizer().Add(self.remButton, flag=wx.ALL, border=5)
 
 		self.renButton = wx.Button(self.buttonPanel, -1, _('Change machine name'))
 		self.renButton.Bind(wx.EVT_BUTTON, self.OnRenameMachine)
