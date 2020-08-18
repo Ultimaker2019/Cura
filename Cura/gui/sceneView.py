@@ -8,7 +8,14 @@ import traceback
 import threading
 import math
 import sys
-import cStringIO as StringIO
+
+# MemoryError: out of memory 
+# Save big gcode file memory overflow in the Windows platform
+import platform
+if platform.system() == "Windows":
+	import StringIO as StringIO
+else:
+	import cStringIO as StringIO
 
 import OpenGL
 OpenGL.ERROR_CHECKING = False
