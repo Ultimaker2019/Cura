@@ -84,10 +84,12 @@ def setupLocalization(selectedLanguage = None):
 def getLanguageOptions():
 	return [
 		['en', 'English'],
-		['de', 'Deutsch'],
-		['fr', 'French'],
-		['tr', 'Turkish'],
-		['ru', 'Russian'],
+		['zh-CN', _('SimpChinese')],
+		['zh-TW', _('TradChinese')],
+		# ['de', 'Deutsch'],
+		# ['fr', 'French'],
+		# ['tr', 'Turkish'],
+		# ['ru', 'Russian'],
 		# ['ko', 'Korean'],
 		# ['zh', 'Chinese'],
 		# ['nl', 'Nederlands'],

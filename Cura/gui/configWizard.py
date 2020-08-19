@@ -253,8 +253,15 @@ class FirstInfoPage(InfoPage):
 
 	def StoreData(self):
 		if self._language_option is not None:
-			profile.putPreference('language', self._language_option.GetValue())
-			resources.setupLocalization(self._language_option.GetValue())
+			if self._language_option.GetValue() == _('SimpChinese'):
+				profile.putPreference('language', 'SimpChinese')
+				resources.setupLocalization('SimpChinese')
+			elif self._language_option.GetValue() == _('TradChinese'):
+				profile.putPreference('language', 'TradChinese')
+				resources.setupLocalization('TradChinese')
+			else:
+				profile.putPreference('language', self._language_option.GetValue())
+				resources.setupLocalization(self._language_option.GetValue())
 
 class PrintrbotPage(InfoPage):
 	def __init__(self, parent):
