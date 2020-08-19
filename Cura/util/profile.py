@@ -899,7 +899,7 @@ def getPreferencesString():
 	return ret
 
 
-def getProfileSetting(name):
+def getProfileSetting(name, index = None):
 	"""
 		Get the value of an profile setting.
 	:param name: Name of the setting to retrieve.
@@ -909,7 +909,7 @@ def getProfileSetting(name):
 		return tempOverride[name]
 	global settingsDictionary
 	if name in settingsDictionary and settingsDictionary[name].isProfile():
-		return settingsDictionary[name].getValue()
+		return settingsDictionary[name].getValue(index)
 	traceback.print_stack()
 	sys.stderr.write('Error: "%s" not found in profile settings\n' % (name))
 	return ''
@@ -921,11 +921,11 @@ def getProfileSettingFloat(name):
 	except:
 		return 0.0
 
-def putProfileSetting(name, value):
+def putProfileSetting(name, value, index = None):
 	""" Store a certain value in a profile setting. """
 	global settingsDictionary
 	if name in settingsDictionary and settingsDictionary[name].isProfile():
-		settingsDictionary[name].setValue(value)
+		settingsDictionary[name].setValue(value, index)
 
 def isProfileSetting(name):
 	""" Check if a certain key name is actually a profile value. """
@@ -1021,21 +1021,21 @@ def savePreferences(filename):
 	except:
 		print "Failed to write preferences file: %s" % (filename)
 
-def getPreference(name):
+def getPreference(name, index = None):
 	if name in tempOverride:
 		return tempOverride[name]
 	global settingsDictionary
 	if name in settingsDictionary and settingsDictionary[name].isPreference():
-		return settingsDictionary[name].getValue()
+		return settingsDictionary[name].getValue(index)
 	traceback.print_stack()
 	sys.stderr.write('Error: "%s" not found in preferences\n' % (name))
 	return ''
 
-def putPreference(name, value):
+def putPreference(name, value, index = None):
 	#Check if we have a configuration file loaded, else load the default.
 	global settingsDictionary
 	if name in settingsDictionary and settingsDictionary[name].isPreference():
-		settingsDictionary[name].setValue(value)
+		settingsDictionary[name].setValue(value, index)
 		savePreferences(getPreferencePath())
 		return
 	traceback.print_stack()
