@@ -128,7 +128,7 @@ class Scene(object):
 
 	# update the physical machine dimensions
 	def updateMachineDimensions(self):
-		self._machineSize = numpy.array([profile.getMachineSettingFloat('machine_width'), profile.getMachineSettingFloat('machine_depth'), profile.getMachineSettingFloat('machine_height')])
+		self._machineSize = profile.getMachineSize()
 		self._machinePolygons = profile.getMachineSizePolygons()
 		self.updateHeadSize()
 

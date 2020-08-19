@@ -1206,10 +1206,22 @@ def getMachineCenterCoords():
 		return [0, 0]
 	return [getMachineSettingFloat('machine_width') / 2, getMachineSettingFloat('machine_depth') / 2]
 
+def getMachineSize():
+	if getProfileSetting('platform_adhesion') == 'Raft':
+		_machine_width = getMachineSettingFloat('machine_width') - (2 * getProfileSettingFloat('raft_margin'))
+		_machine_depth = getMachineSettingFloat('machine_depth') - (2 * getProfileSettingFloat('raft_margin'))
+		_machine_height = getMachineSettingFloat('machine_height') - (getProfileSettingFloat('raft_base_thickness') + getProfileSettingFloat('raft_surface_layers') * getProfileSettingFloat('raft_interface_thickness'))
+	else:
+		_machine_width = getMachineSettingFloat('machine_width')
+		_machine_depth = getMachineSettingFloat('machine_depth')
+		_machine_height = getMachineSettingFloat('machine_height')
+	size = numpy.array([_machine_width - 3, _machine_depth - 3, _machine_height - 3], numpy.float32)
+	return size
+
 #Returns a list of convex polygons, first polygon is the allowed area of the machine,
 # the rest of the polygons are the dis-allowed areas of the machine.
 def getMachineSizePolygons():
-	size = numpy.array([getMachineSettingFloat('machine_width'), getMachineSettingFloat('machine_depth'), getMachineSettingFloat('machine_height')], numpy.float32)
+	size = getMachineSize()
 	ret = []
 	if getMachineSetting('machine_shape') == 'Circular':
 		# Circle platform for delta printers...

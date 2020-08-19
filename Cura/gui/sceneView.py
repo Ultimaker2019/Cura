@@ -739,7 +739,7 @@ class SceneView(openglGui.glGuiPanel):
 			self._scene.arrangeAll()
 			self.sceneUpdated()
 		self._scene.updateSizeOffsets(True)
-		self._machineSize = numpy.array([profile.getMachineSettingFloat('machine_width'), profile.getMachineSettingFloat('machine_depth'), profile.getMachineSettingFloat('machine_height')])
+		self._machineSize = profile.getMachineSize()
 		self._objColors[0] = profile.getPreferenceColour('model_colour')
 		self._objColors[1] = profile.getPreferenceColour('model_colour2')
 		self._objColors[2] = profile.getPreferenceColour('model_colour3')
@@ -1343,7 +1343,7 @@ class SceneView(openglGui.glGuiPanel):
 		glEnable(GL_CULL_FACE)
 		glEnable(GL_BLEND)
 
-		size = [profile.getMachineSettingFloat('machine_width'), profile.getMachineSettingFloat('machine_depth'), profile.getMachineSettingFloat('machine_height')]
+		size = profile.getMachineSize()
 
 		machine_type = profile.getMachineSetting('machine_type')
 		if machine_type not in self._platformMesh:
