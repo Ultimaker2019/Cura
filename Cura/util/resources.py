@@ -81,6 +81,9 @@ def setupLocalization(selectedLanguage = None):
 	#translation.ugettext = lambda message: u'#' + message
 	translation.install(unicode=True)
 
+def _(n):
+	return n
+
 def getLanguageOptions():
 	return [
 		['en', 'English'],
