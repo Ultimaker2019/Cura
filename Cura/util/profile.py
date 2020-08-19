@@ -1,3 +1,4 @@
+#coding:utf8
 """
 The profile module contains all the settings for Cura.
 These settings can be globally accessed and modified.
@@ -291,7 +292,7 @@ M107       ;start with the fan off
 G28 X0 Y0  ;move X/Y to min endstops
 G28 Z0     ;move Z to min endstops
 
-G1 Z15.0 F{travel_speed} ;move the platform down 15mm
+G1 Z1.50 F{travel_speed} ;move the platform down 1.5mm
 
 G92 E0                  ;zero the extruded length
 G1 F200 E3              ;extrude 3mm of feed stock
@@ -310,7 +311,7 @@ G1 E-1 F300                            ;retract the filament a bit before liftin
 G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
 G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
 
-M84                         ;steppers off
+M84 X Y E B                 ;steppers off
 G90                         ;absolute positioning
 ;{profile_string}
 """, str, 'alteration', 'alteration')
@@ -331,7 +332,7 @@ M107       ;start with the fan off
 G28 X0 Y0  ;move X/Y to min endstops
 G28 Z0     ;move Z to min endstops
 
-G1 Z15.0 F{travel_speed} ;move the platform down 15mm
+G1 Z1.50 F{travel_speed} ;move the platform down 1.5mm
 
 T1                      ;Switch to the 2nd extruder
 G92 E0                  ;zero the extruded length
@@ -358,7 +359,7 @@ G1 E-1 F300                            ;retract the filament a bit before liftin
 G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
 G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
 
-M84                         ;steppers off
+M84 X Y E B                 ;steppers off
 G90                         ;absolute positioning
 ;{profile_string}
 """, str, 'alteration', 'alteration')
@@ -379,7 +380,7 @@ M107       ;start with the fan off
 G28 X0 Y0  ;move X/Y to min endstops
 G28 Z0     ;move Z to min endstops
 
-G1 Z15.0 F{travel_speed} ;move the platform down 15mm
+G1 Z1.50 F{travel_speed} ;move the platform down 1.5mm
 
 T2                      ;Switch to the 2nd extruder
 G92 E0                  ;zero the extruded length
@@ -413,7 +414,7 @@ G1 E-1 F300                            ;retract the filament a bit before liftin
 G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
 G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
 
-M84                         ;steppers off
+M84 X Y E B                 ;steppers off
 G90                         ;absolute positioning
 ;{profile_string}
 """, str, 'alteration', 'alteration')
@@ -434,7 +435,7 @@ M107       ;start with the fan off
 G28 X0 Y0  ;move X/Y to min endstops
 G28 Z0     ;move Z to min endstops
 
-G1 Z15.0 F{travel_speed} ;move the platform down 15mm
+G1 Z1.50 F{travel_speed} ;move the platform down 1.5mm
 
 T3                      ;Switch to the 4th extruder
 G92 E0                  ;zero the extruded length
@@ -475,7 +476,7 @@ G1 E-1 F300                            ;retract the filament a bit before liftin
 G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
 G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
 
-M84                         ;steppers off
+M84 X Y E B                 ;steppers off
 G90                         ;absolute positioning
 ;{profile_string}
 """, str, 'alteration', 'alteration')

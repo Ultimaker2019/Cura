@@ -361,8 +361,8 @@ class SceneView(openglGui.glGuiPanel):
 		threading.Thread(target=self._saveGCode,args=(filename,)).start()
 
 	def _saveGCode(self, targetFilename, ejectDrive = False):
-		gcode = self._engine.getResult().getGCode()
 		try:
+			gcode = self._engine.getResult().getGCode()
 			size = float(len(gcode))
 			read_pos = 0
 			with open(targetFilename, 'wb') as fdst:
@@ -374,10 +374,22 @@ class SceneView(openglGui.glGuiPanel):
 					fdst.write(buf)
 					self.printButton.setProgressBar(read_pos / size)
 					self._queueRefresh()
-		except:
-			import sys, traceback
-			traceback.print_exc()
-			self.notification.message("Failed to save")
+		except:	
+			fileLineCount = float(self._engine.getResult().getGCodeDataCount())
+			count = 0
+			try:
+				with open(os.path.join(os.getenv("APPDATA"), "cura", "temp.gcode"), 'r') as inputData:
+					with open(targetFilename, 'wb') as fdst:
+						for line in inputData:
+							if line != '\n':
+								fdst.writelines(line)
+							count += 1
+							self.printButton.setProgressBar(float(count) / fileLineCount)
+							self._queueRefresh()
+			except:
+				import sys, traceback
+				traceback.print_exc()
+				self.notification.message("Failed to save")
 		else:
 			if ejectDrive:
 				self.notification.message("Saved as %s" % (targetFilename), lambda : self._doEjectSD(ejectDrive), 31, 'Eject')

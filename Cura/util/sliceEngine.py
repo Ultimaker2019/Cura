@@ -68,6 +68,7 @@ class EngineResult(object):
 		self._gcodeInterpreter = gcodeInterpreter.gcode()
 		self._gcodeLoadThread = None
 		self._finished = False
+		self._gcodeDataCount = 0
 
 	def getFilamentWeight(self, e=0):
 		#Calculates the weight of the filament in kg
@@ -172,6 +173,9 @@ class EngineResult(object):
 		except:
 			import traceback
 			traceback.print_exc()
+
+	def getGCodeDataCount(self):
+		return self._gcodeDataCount
 
 class Engine(object):
 	"""
@@ -404,11 +408,30 @@ class Engine(object):
 
 		try:
 			data = self._process.stdout.read(4096)
-			while len(data) > 0:
-				if self._thread != threading.currentThread():
-					self._process.terminate()
-				self._result._gcodeData.write(data)
-				data = self._process.stdout.read(4096)
+			try:
+				os.mkdir(os.path.join(os.getenv("APPDATA"), "cura"))
+				f = open(os.path.join(os.getenv("APPDATA"), "cura", "temp.gcode"), 'wb') 
+				while len(data) > 0:
+					if self._thread != threading.currentThread():
+						self._process.terminate()
+					self._result._gcodeData.write(data)
+					data.replace('\n\n','\n')
+					f.write(data)
+					self._result._gcodeDataCount += data.count('\n')
+					data = self._process.stdout.read(4096)
+				f.close()
+			except OSError:
+				while len(data) > 0:
+					if self._thread != threading.currentThread():
+						self._process.terminate()
+					self._result._gcodeData.write(data)
+					data = self._process.stdout.read(4096)
+			except IOError:
+				while len(data) > 0:
+					if self._thread != threading.currentThread():
+						self._process.terminate()
+					self._result._gcodeData.write(data)
+					data = self._process.stdout.read(4096)
 
 			returnCode = self._process.wait()
 			logThread.join()
