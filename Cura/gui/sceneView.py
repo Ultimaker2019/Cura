@@ -1308,7 +1308,7 @@ class SceneView(openglGui.glGuiPanel):
 			openglHelpers.glDrawStringCenter(_("Overhang view not working due to lack of OpenGL shaders support."))
 			glPopMatrix()
 
-	def _renderObject(self, obj, brightness = 0, addSink = True):
+	def _renderObject(self, obj, brightness = 0, addSink = True, isMesh = False):
 		glPushMatrix()
 		if addSink:
 			glTranslate(obj.getPosition()[0], obj.getPosition()[1], obj.getSize()[2] / 2 - profile.getProfileSettingFloat('object_sink'))
@@ -1325,8 +1325,14 @@ class SceneView(openglGui.glGuiPanel):
 
 		n = 0
 		for m in obj._meshList:
+			if isMesh == True:
+				m.vbo = None
 			if m.vbo is None:
-				m.vbo = openglHelpers.GLVBO(GL_TRIANGLES, m.vertexes, m.normal)
+				if isMesh == True:
+					factor = profile.getMachineSettingFloat('machine_width') / 205.1
+					m.vbo = openglHelpers.GLVBO(GL_TRIANGLES, m.vertexes * factor, m.normal * factor)
+				else:
+					m.vbo = openglHelpers.GLVBO(GL_TRIANGLES, m.vertexes, m.normal)
 			if brightness != 0:
 				glColor4fv(map(lambda idx: idx * brightness, self._objColors[n]))
 				n += 1
@@ -1388,7 +1394,7 @@ class SceneView(openglGui.glGuiPanel):
 			mesh = self._platformMesh[machine_type]
 			glColor4f(1,1,1,0.5)
 			self._objectShader.bind()
-			self._renderObject(mesh, False, False)
+			self._renderObject(mesh, False, False, True)
 			self._objectShader.unbind()
 
 			#For the Ultimaker 2 render the texture on the back plate to show the Ultimaker2 text.
