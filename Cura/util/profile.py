@@ -200,6 +200,17 @@ setting('filament_diameter2',       1.75, float, 'basic',    _('Filament')).setR
 setting('filament_diameter3',       1.75, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter3 (mm)"), _("Diameter of your filament for the 3th nozzle. Use 0 to use the same diameter as for nozzle 1."))
 setting('filament_diameter4',       1.75, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter4 (mm)"), _("Diameter of your filament for the 4th nozzle. Use 0 to use the same diameter as for nozzle 1."))
 setting('filament_diameter5',       1.75, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter5 (mm)"), _("Diameter of your filament for the 5th nozzle. Use 0 to use the same diameter as for nozzle 1."))
+#cololMix
+setting('is_2_in_1_out_nozzle',     False, bool, 'hidden',    'hidden').setLabel(_("Is 2 in 1 out nozzle"), _("Is it two in one out nozzle?"))
+setting('color_mix_type', 'Gradient', [_('Gradient'), _('Fixed Proportion')], 'basic', _('Color Mix Type')).setLabel(_("ColorMixType"), _("ColorMixType:\n1¡¢Gradient\n2¡¢Fixed Proportion"))
+setting('color_mix_type_bak', 'Gradient', [_('Gradient'), _('Fixed Proportion')], 'hidden', _('Color Mix Type Bak')).setLabel(_("ColorMixTypeBak"), _("ColorMixTypeBak"))
+setting('color_a',                     0, int,   'basic',    _('Gradient Color')).setRange(0,100).setLabel(_("ColorA"), _("ColorA"))
+setting('color_b',                   100, int,   'basic',    _('Gradient Color')).setRange(0,100).setLabel(_("ColorB"), _("ColorB"))
+setting('overlap_count',               1, int,   'basic',    _('Overlap Count')).setRange(0,50).setLabel(_("OverlapC"), _("Overlap Count"))
+
+setting('fixed_proportion_color_a',                     100, int,   'basic',    _('Fixed Proportion Color Mixing')).setRange(0,100).setLabel(_("Fixed Proportion ColorA"), _("Fixed Proportion ColorA, Fixed Proportion ColorB equals 100 minus Fixed Proportion ColorA"))
+setting('fixed_proportion_color_b',                   0, int,   'hidden',    _('Fixed Proportion Color Mixing')).setRange(0,100).setLabel(_("Fixed Proportion ColorB"), _("Fixed Proportion ColorB, Fixed Proportion ColorA equals 100 minus Fixed Proportion ColorB"))
+
 setting('filament_flow',            100., float, 'basic',    _('Filament')).setRange(5,300).setLabel(_("Flow (%)"), _("Flow compensation, the amount of material extruded is multiplied by this value"))
 setting('retraction_speed',         40.0, float, 'advanced', _('Retraction')).setRange(0.1).setLabel(_("Speed (mm/s)"), _("Speed at which the filament is retracted, a higher retraction speed works better. But a very high retraction speed can lead to filament grinding."))
 setting('retraction_amount',         4.5, float, 'advanced', _('Retraction')).setRange(0).setLabel(_("Distance (mm)"), _("Amount of retraction, set at 0 for no retraction at all. A value of 4.5mm seems to generate good results."))
@@ -629,6 +640,19 @@ settingsDictionary['print_bed_temperature'].addCondition(lambda : getMachineSett
 settingsDictionary['retraction_speed'].addCondition(lambda : getMachineSetting('gcode_flavor') != 'UltiGCode')
 settingsDictionary['retraction_amount'].addCondition(lambda : getMachineSetting('gcode_flavor') != 'UltiGCode')
 settingsDictionary['retraction_dual_amount'].addCondition(lambda : getMachineSetting('gcode_flavor') != 'UltiGCode')
+
+#Color Mixing
+#settingsDictionary['model_effects'].addCondition(lambda : getMachineSetting('color_mixing') == 'True' and getProfileSetting('is_2_in_1_out_nozzle') == 'True')
+settingsDictionary['color_mix_type'].addCondition(lambda : getMachineSetting('model_effects') == 'Gradient' and getProfileSetting('is_2_in_1_out_nozzle') == 'True')
+settingsDictionary['color_a'].addCondition(lambda : getMachineSetting('model_effects') == 'Gradient' and getProfileSetting('is_2_in_1_out_nozzle') == 'True')
+settingsDictionary['color_a'].addCondition(lambda : getProfileSetting('color_mix_type') == 'Gradient' and getProfileSetting('is_2_in_1_out_nozzle') == 'True')
+settingsDictionary['color_b'].addCondition(lambda : getMachineSetting('model_effects') == 'Gradient' and getProfileSetting('is_2_in_1_out_nozzle') == 'True')
+settingsDictionary['color_b'].addCondition(lambda : getProfileSetting('color_mix_type') == 'Gradient' and getProfileSetting('is_2_in_1_out_nozzle') == 'True')
+settingsDictionary['fixed_proportion_color_a'].addCondition(lambda : getMachineSetting('model_effects') and getProfileSetting('is_2_in_1_out_nozzle') == 'True')
+settingsDictionary['fixed_proportion_color_a'].addCondition(lambda : getProfileSetting('color_mix_type') == 'Fixed Proportion' and getProfileSetting('is_2_in_1_out_nozzle') == 'True')
+settingsDictionary['fixed_proportion_color_b'].addCondition(lambda : getMachineSetting('model_effects') and getProfileSetting('is_2_in_1_out_nozzle') == 'True')
+settingsDictionary['fixed_proportion_color_b'].addCondition(lambda : getProfileSetting('color_mix_type') == 'Fixed Proportion' and getProfileSetting('is_2_in_1_out_nozzle') == 'True')
+settingsDictionary['overlap_count'].addCondition(lambda : getMachineSetting('model_effects') == 'Overlap' and getProfileSetting('is_2_in_1_out_nozzle') == 'True')
 
 #Remove fake defined _() because later the localization will define a global _()
 del _

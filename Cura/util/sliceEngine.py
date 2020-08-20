@@ -633,6 +633,26 @@ class Engine(object):
 			settings['wipeTowerSize'] = int(math.sqrt(profile.getProfileSettingFloat('wipe_tower_volume') * 1000 * 1000 * 1000 / settings['layerThickness']))
 		if profile.getProfileSetting('ooze_shield') == 'True':
 			settings['enableOozeShield'] = 1
+		if profile.getProfileSetting('is_2_in_1_out_nozzle') == 'True':
+			if profile.getMachineSetting('model_effects') == 'Single':
+				settings['colorMixing'] = 4
+			elif profile.getMachineSetting('model_effects') == 'DualModel':
+				settings['colorMixing'] = 3
+			elif profile.getMachineSetting('model_effects') == 'Gradient':
+				settings['colorMixing'] = 2
+				settings['fixedProportionColorA'] = int(profile.getProfileSettingFloat('fixed_proportion_color_a'))
+				settings['fixedProportionColorB'] = int(profile.getProfileSettingFloat('fixed_proportion_color_b'))
+				if profile.getProfileSetting('color_mix_type') == 'Gradient':
+					settings['colorMixType'] = 0
+				elif profile.getProfileSetting('color_mix_type') == 'Fixed Proportion':
+					settings['colorMixType'] = 1
+				settings['colorA'] = int(profile.getProfileSettingFloat('color_a'))
+				settings['colorB'] = int(profile.getProfileSettingFloat('color_b'))
+			elif profile.getMachineSetting('model_effects') == 'Overlap':
+				settings['colorMixing'] = 1
+				settings['overlapCount'] = int(profile.getProfileSettingFloat('overlap_count'))
+			elif profile.getMachineSetting('model_effects') == 'None':
+				settings['colorMixing'] = 0
 		return settings
 
 	def _runEngineProcess(self, cmdList):

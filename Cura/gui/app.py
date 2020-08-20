@@ -259,6 +259,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_depth', 205.1, i)
 			profile.putMachineSetting('machine_height', 306.1, i)
 			profile.putMachineSetting('model_effects', 'Gradient', i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 10
 			profile.putMachineSetting('machine_name', _("X5_ColorMix"), i)
@@ -267,6 +268,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_depth', 205.1, i)
 			profile.putMachineSetting('machine_height', 306.1, i)
 			profile.putMachineSetting('model_effects', 'Gradient', i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 11
 			profile.putMachineSetting('machine_name', _("X5_OverLap"), i)
@@ -275,6 +277,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_depth', 205.1, i)
 			profile.putMachineSetting('machine_height', 306.1, i)
 			profile.putMachineSetting('model_effects', 'Overlap', i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 12
 			profile.putMachineSetting('machine_name', _("X5_Dual"), i)
@@ -284,6 +287,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_depth', 185.1, i)
 			profile.putMachineSetting('machine_height', 306.1, i)
 			profile.putMachineSetting('model_effects', 'DualModel', i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 13
 			profile.putMachineSetting('machine_name', _("X5_Single"), i)
@@ -292,6 +296,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_depth', 205.1, i)
 			profile.putMachineSetting('machine_height', 306.1, i)
 			profile.putMachineSetting('model_effects', 'Single', i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 14
 			profile.putMachineSetting('machine_name', _("M2030X_ColorMix"), i)
@@ -301,6 +306,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_height', 306.1, i)
 			profile.putMachineSetting('model_effects', 'Gradient', i)
 			profile.putMachineSetting('extruder_offset_x0', -19.0, i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 15
 			profile.putMachineSetting('machine_name', _("M2030X_OverLap"), i)
@@ -310,6 +316,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_height', 306.1, i)
 			profile.putMachineSetting('model_effects', 'Overlap', i)
 			profile.putMachineSetting('extruder_offset_x0', -19.0, i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 16
 			profile.putMachineSetting('machine_name', _("M2030X_Dual"), i)
@@ -320,6 +327,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_height', 306.1, i)
 			profile.putMachineSetting('extruder_offset_x0', -12.0, i)
 			profile.putMachineSetting('model_effects', 'DualModel', i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 17
 			profile.putMachineSetting('machine_name', _("M2030X_Single"), i)
@@ -329,6 +337,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_height', 306.1, i)
 			profile.putMachineSetting('extruder_offset_x0', -19.0, i)
 			profile.putMachineSetting('model_effects', 'Single', i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 18
 			profile.putMachineSetting('machine_name', _("M2048X_ColorMix"), i)
@@ -338,6 +347,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_height', 486.1, i)
 			profile.putMachineSetting('model_effects', 'Gradient', i)
 			profile.putMachineSetting('extruder_offset_x0', -19.0, i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 19
 			profile.putMachineSetting('machine_name', _("M2048X_OverLap"), i)
@@ -347,6 +357,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_height', 486.1, i)
 			profile.putMachineSetting('model_effects', 'Overlap', i)
 			profile.putMachineSetting('extruder_offset_x0', -19.0, i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 20
 			profile.putMachineSetting('machine_name', _("M2048X_Dual"), i)
@@ -357,6 +368,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_height', 486.1, i)
 			profile.putMachineSetting('extruder_offset_x0', -12.0, i)
 			profile.putMachineSetting('model_effects', 'DualModel', i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 21
 			profile.putMachineSetting('machine_name', _("M2048X_Single"), i)
@@ -366,6 +378,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_height', 486.1, i)
 			profile.putMachineSetting('extruder_offset_x0', -19.0, i)
 			profile.putMachineSetting('model_effects', 'Single', i)
+			profile.putProfileSetting('is_2_in_1_out_nozzle', True, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 
 		if profile.getPreference('check_for_updates') == 'True':
