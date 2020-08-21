@@ -1,4 +1,4 @@
-#coding:utf8
+#coding:utf-8
 """
 The profile module contains all the settings for Cura.
 These settings can be globally accessed and modified.
@@ -201,15 +201,16 @@ setting('filament_diameter3',       1.75, float, 'basic',    _('Filament')).setR
 setting('filament_diameter4',       1.75, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter4 (mm)"), _("Diameter of your filament for the 4th nozzle. Use 0 to use the same diameter as for nozzle 1."))
 setting('filament_diameter5',       1.75, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter5 (mm)"), _("Diameter of your filament for the 5th nozzle. Use 0 to use the same diameter as for nozzle 1."))
 #cololMix
-setting('is_2_in_1_out_nozzle',     False, bool, 'hidden',    'hidden').setLabel(_("Is 2 in 1 out nozzle"), _("Is it two in one out nozzle?"))
-setting('color_mix_type', 'Gradient', [_('Gradient'), _('Fixed Proportion')], 'basic', _('Color Mix Type')).setLabel(_("ColorMixType"), _("ColorMixType:\n1、Gradient\n2、Fixed Proportion"))
+setting('is_2_in_1_out_nozzle',    False, bool, 'hidden',    'hidden').setLabel(_("Is 2 in 1 out nozzle"), _("Is it two in one out nozzle?"))
+setting('color_mix_type',     'Gradient', [_('Gradient'), _('Fixed Proportion')], 'basic', _('Color Mix Type')).setLabel(_("ColorMixType"), _("ColorMixType:\n1、Gradient\n2、Fixed Proportion"))
 setting('color_mix_type_bak', 'Gradient', [_('Gradient'), _('Fixed Proportion')], 'hidden', _('Color Mix Type Bak')).setLabel(_("ColorMixTypeBak"), _("ColorMixTypeBak"))
 setting('color_a',                     0, int,   'basic',    _('Gradient Color')).setRange(0,100).setLabel(_("ColorA"), _("ColorA"))
 setting('color_b',                   100, int,   'basic',    _('Gradient Color')).setRange(0,100).setLabel(_("ColorB"), _("ColorB"))
 setting('overlap_count',               1, int,   'basic',    _('Overlap Count')).setRange(0,50).setLabel(_("OverlapC"), _("Overlap Count"))
 
-setting('fixed_proportion_color_a',                     100, int,   'basic',    _('Fixed Proportion Color Mixing')).setRange(0,100).setLabel(_("Fixed Proportion ColorA"), _("Fixed Proportion ColorA, Fixed Proportion ColorB equals 100 minus Fixed Proportion ColorA"))
-setting('fixed_proportion_color_b',                   0, int,   'hidden',    _('Fixed Proportion Color Mixing')).setRange(0,100).setLabel(_("Fixed Proportion ColorB"), _("Fixed Proportion ColorB, Fixed Proportion ColorA equals 100 minus Fixed Proportion ColorB"))
+setting('fixed_proportion_color_a',  100, int,   'basic',    _('Fixed Proportion Color Mixing')).setRange(0,100).setLabel(_("Fixed Proportion ColorA"), _("Fixed Proportion ColorA, Fixed Proportion ColorB equals 100 minus Fixed Proportion ColorA"))
+setting('fixed_proportion_color_b',    0, int,   'hidden',    _('Fixed Proportion Color Mixing')).setRange(0,100).setLabel(_("Fixed Proportion ColorB"), _("Fixed Proportion ColorB, Fixed Proportion ColorA equals 100 minus Fixed Proportion ColorB"))
+setting('model_effects',          'None', [_('None'), _('Gradient'), _('Overlap'), _('DualModel'), _('Single')], 'machine', 'hidden').setLabel(_("Model Effects"), _("Model Effects"))
 
 setting('filament_flow',            100., float, 'basic',    _('Filament')).setRange(5,300).setLabel(_("Flow (%)"), _("Flow compensation, the amount of material extruded is multiplied by this value"))
 setting('retraction_speed',         40.0, float, 'advanced', _('Retraction')).setRange(0.1).setLabel(_("Speed (mm/s)"), _("Speed at which the filament is retracted, a higher retraction speed works better. But a very high retraction speed can lead to filament grinding."))

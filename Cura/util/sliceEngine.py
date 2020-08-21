@@ -634,6 +634,7 @@ class Engine(object):
 		if profile.getProfileSetting('ooze_shield') == 'True':
 			settings['enableOozeShield'] = 1
 		if profile.getProfileSetting('is_2_in_1_out_nozzle') == 'True':
+			settings['is2In1OutNozzle'] = 1
 			if profile.getMachineSetting('model_effects') == 'Single':
 				settings['colorMixing'] = 4
 			elif profile.getMachineSetting('model_effects') == 'DualModel':
@@ -653,6 +654,8 @@ class Engine(object):
 				settings['overlapCount'] = int(profile.getProfileSettingFloat('overlap_count'))
 			elif profile.getMachineSetting('model_effects') == 'None':
 				settings['colorMixing'] = 0
+		else:
+			settings['is2In1OutNozzle'] = 0
 		return settings
 
 	def _runEngineProcess(self, cmdList):
