@@ -233,7 +233,7 @@ class GLVBO(GLReferenceCounter):
 
 	def __del__(self):
 		if self._buffers is not None and bool(glDeleteBuffers):
-			print "VBO was not properly released!"
+			pass#print "VBO was not properly released!"
 
 def glDrawStringCenter(s):
 	"""

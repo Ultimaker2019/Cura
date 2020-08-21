@@ -29,6 +29,10 @@ else:
 from Cura.util import version
 from Cura.util import validators
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 #The settings dictionary contains a key/value reference to all possible settings. With the setting name as key.
 settingsDictionary = {}
 #The settings list is used to keep a full list of all the settings. This is needed to keep the settings in the proper order,
@@ -90,7 +94,12 @@ class setting(object):
 		return _(self._label)
 
 	def getTooltip(self):
-		return _(self._tooltip)
+		ret = ""
+		try:
+			ret = _(self._tooltip)
+		except:
+			pass
+		return ret
 
 	def getCategory(self):
 		return self._category
