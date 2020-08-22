@@ -315,7 +315,7 @@ G28 Z0     ;move Z to min endstops
 
 G1 Z1.50 F{travel_speed} ;move the platform down 1.5mm
 
-M190 S{print_bed_temperature} ;Uncomment to add your own bed temperature line
+;M190 S{print_bed_temperature} ;Uncomment to add your own bed temperature line
 M109 S{print_temperature} ;Uncomment to add your own temperature line
 
 G92 E0                  ;zero the extruded length
@@ -1406,8 +1406,11 @@ def getAlterationFileContents(filename, extruderCount = 1):
 		gcode_parameter_key = 'S'
 		if getMachineSetting('gcode_flavor') == 'Mach3/LinuxCNC':
 			gcode_parameter_key = 'P'
-		if extruderCount > 1:
-			alterationContents = getAlterationFile("start%d.gcode" % (extruderCount))
+		if getMachineSetting('machine_name') == 'M1':
+			alterationContents = getAlterationFile("M1_start.gcode")
+		else :
+			if extruderCount > 1:
+				alterationContents = getAlterationFile("start%d.gcode" % (extruderCount))
 		#For the start code, hack the temperature and the steps per E value into it. So the temperature is reached before the start code extrusion.
 		#We also set our steps per E here, if configured.
 		eSteps = getMachineSettingFloat('steps_per_e')
@@ -1436,8 +1439,11 @@ def getAlterationFileContents(filename, extruderCount = 1):
 			else:
 				prefix += 'M109 %s%f\n' % (gcode_parameter_key, temp)
 	elif filename == 'end.gcode':
-		if extruderCount > 1:
-			alterationContents = getAlterationFile("end%d.gcode" % (extruderCount))
+		if getMachineSetting('machine_name') == 'M1':
+			alterationContents = getAlterationFile("M1_end.gcode")
+		else :
+			if extruderCount > 1:
+				alterationContents = getAlterationFile("end%d.gcode" % (extruderCount))
 		#Append the profile string to the end of the GCode, so we can load it from the GCode file later.
 		#postfix = ';CURA_PROFILE_STRING:%s\n' % (getProfileString())
 	return unicode(prefix + re.sub("(.)\{([^\}]*)\}", replaceTagMatch, alterationContents).rstrip() + '\n' + postfix).strip().encode('utf-8') + '\n'
