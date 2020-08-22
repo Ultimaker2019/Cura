@@ -651,12 +651,12 @@ settingsDictionary['retraction_dual_amount'].addCondition(lambda : getMachineSet
 
 #Color Mixing
 settingsDictionary['TIOON_type'].addCondition(lambda : getProfileSetting('TIOON_enable') == 'True')
-settingsDictionary['TIOON_mix_type'].addCondition(lambda : getProfileSetting('TIOON_type') == _('Gradient') and getProfileSetting('TIOON_enable') == 'True')
-settingsDictionary['TIOON_mix_a'].addCondition(lambda : getProfileSetting('TIOON_mix_type') == _('Gradient') and getProfileSetting('TIOON_type') == _('Gradient') and getProfileSetting('TIOON_enable') == 'True')
-settingsDictionary['TIOON_mix_b'].addCondition(lambda : getProfileSetting('TIOON_mix_type') == _('Gradient') and getProfileSetting('TIOON_type') == _('Gradient') and getProfileSetting('TIOON_enable') == 'True')
-settingsDictionary['TIOON_fixed_proportion_a'].addCondition(lambda : getProfileSetting('TIOON_mix_type') == _('Fixed Proportion') and getProfileSetting('TIOON_type') and getProfileSetting('TIOON_enable') == 'True')
-settingsDictionary['TIOON_fixed_proportion_b'].addCondition(lambda : getProfileSetting('TIOON_mix_type') == _('Fixed Proportion') and getProfileSetting('TIOON_type') and getProfileSetting('TIOON_enable') == 'True')
-settingsDictionary['TIOON_overlap_count'].addCondition(lambda : getProfileSetting('TIOON_type') == _('Overlap') and getProfileSetting('TIOON_enable') == 'True')
+settingsDictionary['TIOON_mix_type'].addCondition(lambda : getProfileSetting('TIOON_type') == 'Gradient' and getProfileSetting('TIOON_enable') == 'True')
+settingsDictionary['TIOON_mix_a'].addCondition(lambda : getProfileSetting('TIOON_mix_type') == 'Gradient' and getProfileSetting('TIOON_type') == 'Gradient' and getProfileSetting('TIOON_enable') == 'True')
+settingsDictionary['TIOON_mix_b'].addCondition(lambda : getProfileSetting('TIOON_mix_type') == 'Gradient' and getProfileSetting('TIOON_type') == 'Gradient' and getProfileSetting('TIOON_enable') == 'True')
+settingsDictionary['TIOON_fixed_proportion_a'].addCondition(lambda : getProfileSetting('TIOON_mix_type') == 'Fixed Proportion' and getProfileSetting('TIOON_type') == 'Gradient' and getProfileSetting('TIOON_enable') == 'True')
+settingsDictionary['TIOON_fixed_proportion_b'].addCondition(lambda : getProfileSetting('TIOON_mix_type') == 'Fixed Proportion' and getProfileSetting('TIOON_type') == 'Gradient' and getProfileSetting('TIOON_enable') == 'True')
+settingsDictionary['TIOON_overlap_count'].addCondition(lambda : getProfileSetting('TIOON_type') == 'Overlap' and getProfileSetting('TIOON_enable') == 'True')
 
 #Remove fake defined _() because later the localization will define a global _()
 del _
