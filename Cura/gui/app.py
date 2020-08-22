@@ -148,6 +148,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_max_x', '53', i)
 			profile.putMachineSetting('extruder_head_size_max_y', '35', i)
 			profile.putMachineSetting('extruder_head_size_height', '50', i)
+			profile.putProfileSetting('nozzle_type', 'V4', i)
 			profile.putProfileSetting('platform_adhesion', 'Raft', i)
 			profile.putProfileSetting('travel_speed', 80, i)
 			i = 1
@@ -163,6 +164,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_max_x', '53', i)
 			profile.putMachineSetting('extruder_head_size_max_y', '35', i)
 			profile.putMachineSetting('extruder_head_size_height', '50', i)
+			profile.putProfileSetting('nozzle_type', 'V4', i)
 			profile.putProfileSetting('platform_adhesion', 'Raft', i)
 			profile.putProfileSetting('travel_speed', 80, i)
 			i = 2
@@ -177,6 +179,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_max_x', '53', i)
 			profile.putMachineSetting('extruder_head_size_max_y', '35', i)
 			profile.putMachineSetting('extruder_head_size_height', '50', i)
+			profile.putProfileSetting('nozzle_type', 'V4', i)
 			i = 3
 			profile.putMachineSetting('machine_name', 'M2048', i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -189,6 +192,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_max_x', '53', i)
 			profile.putMachineSetting('extruder_head_size_max_y', '35', i)
 			profile.putMachineSetting('extruder_head_size_height', '50', i)
+			profile.putProfileSetting('nozzle_type', 'V4', i)
 			i = 4
 			profile.putMachineSetting('machine_name', 'K5/K6', i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -201,6 +205,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_max_x', '36.90', i)
 			profile.putMachineSetting('extruder_head_size_max_y', '62.60', i)
 			profile.putMachineSetting('extruder_head_size_height', '42.80', i)
+			profile.putProfileSetting('nozzle_type', 'V5', i)
 			profile.putProfileSetting('fill_overlap', 2, i)
 			profile.putProfileSetting('retraction_speed', 25.0, i)
 			profile.putProfileSetting('retraction_amount', 1.0, i)
@@ -216,6 +221,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_max_x', '48', i)
 			profile.putMachineSetting('extruder_head_size_max_y', '36', i)
 			profile.putMachineSetting('extruder_head_size_height', '57', i)
+			profile.putProfileSetting('nozzle_type', 'V5', i)
 			i = 6
 			profile.putMachineSetting('machine_name', 'K400/M4141/M41S', i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -228,6 +234,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_max_x', '13', i)
 			profile.putMachineSetting('extruder_head_size_max_y', '86', i)
 			profile.putMachineSetting('extruder_head_size_height', '50', i)
+			profile.putProfileSetting('nozzle_type', 'V4', i)
 			i = 7
 			profile.putMachineSetting('machine_name', 'S300/M3145S', i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -240,6 +247,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_max_x', '30', i)
 			profile.putMachineSetting('extruder_head_size_max_y', '76', i)
 			profile.putMachineSetting('extruder_head_size_height', '58', i)
+			profile.putProfileSetting('nozzle_type', 'V5', i)
 			i = 8
 			profile.putMachineSetting('machine_name', 'S400/S1', i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -252,6 +260,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_max_x', '13', i)
 			profile.putMachineSetting('extruder_head_size_max_y', '86', i)
 			profile.putMachineSetting('extruder_head_size_height', '50', i)
+			profile.putProfileSetting('nozzle_type', 'V4', i)
 			i = 9
 			profile.putMachineSetting('machine_name', _("X5/K5 MIX"), i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -260,6 +269,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_height', 306.1, i)
 			profile.putMachineSetting('TIOON_type', _('Gradient'), i)
 			profile.putProfileSetting('TIOON_enable', True, i)
+			profile.putProfileSetting('nozzle_type', 'V4', i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 10
 			profile.putMachineSetting('machine_name', _("M2030X"), i)
@@ -270,6 +280,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('TIOON_type', _('Gradient'), i)
 			profile.putMachineSetting('extruder_offset_x0', -19.0, i)
 			profile.putProfileSetting('TIOON_enable', True, i)
+			profile.putProfileSetting('nozzle_type', 'V4', i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i = 11
 			profile.putMachineSetting('machine_name', _("M2048X"), i)
@@ -280,6 +291,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('TIOON_type', _('Gradient'), i)
 			profile.putMachineSetting('extruder_offset_x0', -19.0, i)
 			profile.putProfileSetting('TIOON_enable', True, i)
+			profile.putProfileSetting('nozzle_type', 'V4', i)
 			profile.putProfileSetting('travel_speed', 100, i)
 
 		if profile.getPreference('check_for_updates') == 'True':

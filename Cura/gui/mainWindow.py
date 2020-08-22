@@ -300,12 +300,13 @@ class mainWindow(wx.Frame):
 
 		self.setting_TIOON_mix_type = profile.getProfileSetting('TIOON_mix_type')
 		self.setting_TIOON_type = profile.getProfileSetting('TIOON_type')
+		self.setting_nozzle_size = profile.getProfileSetting('nozzle_size')
 		self._updateSettingTimer = wx.Timer(self)
 		self.Bind(wx.EVT_TIMER, self._updateSettingPanel, self._updateSettingTimer)
 		self._updateSettingPanel(None)
 		self._updateSettingTimer.Start(100)
 
-	def _updateSettingPanel(self, e):
+	def _updateSettingTIOON(self):
 		if profile.getProfileSetting('TIOON_mix_type') != self.setting_TIOON_mix_type:
 			self.setting_TIOON_mix_type = profile.getProfileSetting('TIOON_mix_type')
 			self.reloadSettingPanels()
@@ -325,6 +326,119 @@ class mainWindow(wx.Frame):
 			else:
 				profile.putMachineSetting('extruder_amount', 1)
 			self.reloadSettingPanels()
+
+	def _updateSettingNozzleSize_02(self):
+		profile.putProfileSetting('layer_height', 0.1)
+		profile.putProfileSetting('wall_thickness', 0.4)
+		profile.putProfileSetting('bottom_thickness', 0.15)
+		profile.putProfileSetting('bottom_layer_speed', 20)
+		profile.putProfileSetting('raft_margin', 4)
+		profile.putProfileSetting('raft_line_spacing', 1)
+		profile.putProfileSetting('raft_base_linewidth', 1.0)
+		profile.putProfileSetting('raft_interface_thickness', 0.15)
+		profile.putProfileSetting('raft_interface_linewidth', 0.2)
+		profile.putProfileSetting('raft_airgap', 0.11)
+		profile.putProfileSetting('raft_surface_thickness', 0.1)
+		profile.putProfileSetting('support_surface_z_distance', 0.05)
+		profile.putProfileSetting('support_z_distance', 0.2)
+		profile.putProfileSetting('print_speed', 40)
+		profile.putProfileSetting('fill_density', 10)
+		profile.putProfileSetting('raft_surface_linewidth', 0.2)
+		profile.putProfileSetting('raft_base_thickness', 0.15)
+		profile.putProfileSetting('travel_speed', 80)
+		profile.putProfileSetting('solid_layer_thickness', 0.4)
+		profile.putProfileSetting('print_bed_temperature', 50)
+		profile.putProfileSetting('inset0_speed', 24)
+		profile.putProfileSetting('raft_airgap', 0.11)
+
+	def _updateSettingNozzleSize_04(self):
+		profile.putProfileSetting('layer_height', 0.2)
+		profile.putProfileSetting('wall_thickness', 0.8)
+		profile.putProfileSetting('bottom_thickness', 0.3)
+		profile.putProfileSetting('bottom_layer_speed', 20)
+		profile.putProfileSetting('raft_margin', 5)
+		profile.putProfileSetting('raft_line_spacing', 3.0)
+		profile.putProfileSetting('raft_base_linewidth', 1.0)
+		profile.putProfileSetting('raft_interface_thickness', 0.27)
+		profile.putProfileSetting('raft_interface_linewidth', 0.4)
+		profile.putProfileSetting('raft_airgap', 0.22)
+		profile.putProfileSetting('raft_surface_thickness', 0.27)
+		profile.putProfileSetting('support_surface_z_distance', 0.15)
+		profile.putProfileSetting('support_z_distance', 0.3)
+		profile.putProfileSetting('print_speed', 40)
+		profile.putProfileSetting('fill_density', 20)
+		profile.putProfileSetting('raft_surface_linewidth', 0.4)
+		profile.putProfileSetting('raft_base_thickness', 0.3)
+		profile.putProfileSetting('travel_speed', 80)
+		profile.putProfileSetting('solid_layer_thickness', 0.8)
+		profile.putProfileSetting('print_bed_temperature', 50)
+		profile.putProfileSetting('inset0_speed', 24)
+		profile.putProfileSetting('raft_airgap', 0.22)
+
+	def _updateSettingNozzleSize_06(self):
+		profile.putProfileSetting('layer_height', 0.3)
+		profile.putProfileSetting('wall_thickness', 1.2)
+		profile.putProfileSetting('bottom_thickness', 0.4)
+		profile.putProfileSetting('bottom_layer_speed', 20)
+		profile.putProfileSetting('raft_margin', 5)
+		profile.putProfileSetting('raft_line_spacing', 3.0)
+		profile.putProfileSetting('raft_base_linewidth', 1.0)
+		profile.putProfileSetting('raft_interface_thickness', 0.3)
+		profile.putProfileSetting('raft_interface_linewidth', 0.6)
+		profile.putProfileSetting('raft_airgap', 0.33)
+		profile.putProfileSetting('raft_surface_thickness', 0.3)
+		profile.putProfileSetting('support_surface_z_distance', 0.25)
+		profile.putProfileSetting('support_z_distance', 0.4)
+		profile.putProfileSetting('print_speed', 40)
+		profile.putProfileSetting('fill_density', 20)
+		profile.putProfileSetting('raft_surface_linewidth', 0.6)
+		profile.putProfileSetting('raft_base_thickness', 0.3)
+		profile.putProfileSetting('travel_speed', 80)
+		profile.putProfileSetting('solid_layer_thickness', 0.6)
+		profile.putProfileSetting('print_bed_temperature', 50)
+		profile.putProfileSetting('inset0_speed', 20)
+		profile.putProfileSetting('raft_airgap', 0.33)
+
+	def _updateSettingNozzleSize_08(self):
+		profile.putProfileSetting('layer_height', 0.3)
+		profile.putProfileSetting('wall_thickness', 1.6)
+		profile.putProfileSetting('bottom_thickness', 0.4)
+		profile.putProfileSetting('bottom_layer_speed', 20)
+		profile.putProfileSetting('raft_margin', 5)
+		profile.putProfileSetting('raft_line_spacing', 3.0)
+		profile.putProfileSetting('raft_base_linewidth', 1.0)
+		profile.putProfileSetting('raft_interface_thickness', 0.4)
+		profile.putProfileSetting('raft_interface_linewidth', 0.8)
+		profile.putProfileSetting('raft_airgap', 0.44)
+		profile.putProfileSetting('raft_surface_thickness', 0.4)
+		profile.putProfileSetting('support_surface_z_distance', 0.35)
+		profile.putProfileSetting('support_z_distance', 0.5)
+		profile.putProfileSetting('print_speed', 40)
+		profile.putProfileSetting('fill_density', 20)
+		profile.putProfileSetting('raft_surface_linewidth', 0.8)
+		profile.putProfileSetting('raft_base_thickness', 0.3)
+		profile.putProfileSetting('travel_speed', 80)
+		profile.putProfileSetting('solid_layer_thickness', 0.6)
+		profile.putProfileSetting('print_bed_temperature', 50)
+		profile.putProfileSetting('inset0_speed', 16)
+		profile.putProfileSetting('raft_airgap', 0.40)
+
+	def _updateSettingNozzleSize(self):
+		if profile.getProfileSetting('nozzle_size') != self.setting_nozzle_size:
+			if profile.getProfileSetting('nozzle_size') == '0.2':
+				self._updateSettingNozzleSize_02()
+			elif profile.getProfileSetting('nozzle_size') == '0.4':
+				self._updateSettingNozzleSize_04()
+			elif profile.getProfileSetting('nozzle_size') == '0.6':
+				self._updateSettingNozzleSize_06()
+			elif profile.getProfileSetting('nozzle_size') == '0.8':
+				self._updateSettingNozzleSize_08()
+			self.setting_nozzle_size = profile.getProfileSetting('nozzle_size')
+			self.reloadSettingPanels()
+
+	def _updateSettingPanel(self, e):
+		self._updateSettingTIOON()
+		self._updateSettingNozzleSize()
 
 	def onPluginUpdate(self,msg): #receives commands from the plugin thread
 		cmd = str(msg.data).split(";")
