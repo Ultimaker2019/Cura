@@ -13,15 +13,23 @@ class alterationPanel(wx.Panel):
 		self.alterationFileList = ['start.gcode', 'end.gcode']#, 'nextobject.gcode', 'replace.csv'
 		if profile.getMachineSetting('machine_name') == 'M1':
 			self.alterationFileList = ['M1_start.gcode', 'M1_end.gcode']#, 'nextobject.gcode', 'replace.csv'
-		if int(profile.getMachineSetting('extruder_amount')) > 1:
-			self.alterationFileList += ['preSwitchExtruder.gcode', 'postSwitchExtruder.gcode']
-			self.alterationFileList += ['start2.gcode', 'end2.gcode']
-		if int(profile.getMachineSetting('extruder_amount')) > 2:
-			self.alterationFileList += ['start3.gcode', 'end3.gcode']
-		if int(profile.getMachineSetting('extruder_amount')) > 3:
-			self.alterationFileList += ['start4.gcode', 'end4.gcode']
-		if int(profile.getMachineSetting('extruder_amount')) > 4:
-			self.alterationFileList += ['start5.gcode', 'end5.gcode']
+		elif profile.getProfileSetting('TIOON_enable') == 'True':
+			if int(profile.getMachineSetting('extruder_amount')) == 1:
+				self.alterationFileList = ['TIOON_start.gcode', 'TIOON_end.gcode']#, 'nextobject.gcode', 'replace.csv'
+			elif int(profile.getMachineSetting('extruder_amount')) == 2:
+				self.alterationFileList = ['TIOON_start2.gcode', 'TIOON_end2.gcode']#, 'nextobject.gcode', 'replace.csv'
+			if int(profile.getMachineSetting('extruder_amount')) > 1:
+				self.alterationFileList += ['preSwitchExtruder.gcode', 'postSwitchExtruder.gcode']
+		else:
+			if int(profile.getMachineSetting('extruder_amount')) > 1:
+				self.alterationFileList += ['preSwitchExtruder.gcode', 'postSwitchExtruder.gcode']
+				self.alterationFileList += ['start2.gcode', 'end2.gcode']
+			if int(profile.getMachineSetting('extruder_amount')) > 2:
+				self.alterationFileList += ['start3.gcode', 'end3.gcode']
+			if int(profile.getMachineSetting('extruder_amount')) > 3:
+				self.alterationFileList += ['start4.gcode', 'end4.gcode']
+			if int(profile.getMachineSetting('extruder_amount')) > 4:
+				self.alterationFileList += ['start5.gcode', 'end5.gcode']
 		self.currentFile = None
 
 		self.textArea = gcodeTextArea.GcodeTextArea(self)

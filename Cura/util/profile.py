@@ -213,7 +213,7 @@ setting('filament_diameter5',       1.75, float, 'basic',    _('Filament')).setR
 #TIOON two in one out nozzle
 setting('TIOON_enable',            False, bool, 'hidden',    'hidden').setLabel(_("Is 2 in 1 out nozzle"), _("Is it two in one out nozzle?"))
 setting('TIOON_type',         'Gradient', [_('Gradient'), _('Overlap'), _('DualModel'), _('Single')], 'basic', 'Print Setting Mode').setLabel(_("Print Mode"), _("Print Mode"))
-setting('TIOON_mix_type',     'Gradient', [_('Gradient'), _('Fixed Proportion')], 'basic', _('Print Setting Mode')).setLabel(_("Mix Type"), _("ColorMixType:\n1ã€Gradient\n2ã€Fixed Proportion"))
+setting('TIOON_mix_type',     'Gradient', [_('Gradient'), _('Fixed Proportion')], 'basic', _('Print Setting Mode')).setLabel(_("Mix Type"), _("ColorMixType:\n1¡¢Gradient\n2¡¢Fixed Proportion"))
 setting('TIOON_mix_a',                 0, int,   'basic',    _('Print Setting Mode')).setRange(0,100).setLabel(_("Gradient Color A"), _("Gradient Color A"))
 setting('TIOON_mix_b',               100, int,   'basic',    _('Print Setting Mode')).setRange(0,100).setLabel(_("Gradient Color B"), _("Gradient Color B"))
 setting('TIOON_fixed_proportion_a',  100, int,   'basic',    _('Print Setting Mode')).setRange(0,100).setLabel(_("Fixed Proportion Color A"), _("Fixed Proportion ColorA, Fixed Proportion ColorB equals 100 minus Fixed Proportion ColorA"))
@@ -335,6 +335,94 @@ G1 E-1 F300                            ;retract the filament a bit before liftin
 G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
 G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
 G1 X0 Y100
+M84 X Y E B                 ;steppers off
+G90                         ;absolute positioning
+;{profile_string}
+""", str, 'alteration', 'alteration')
+#######################################################################################
+setting('TIOON_start.gcode', """;Sliced at: {day} {date} {time}
+;Basic settings: Layer height: {layer_height} Walls: {wall_thickness} Fill: {fill_density}
+;Print time: {print_time}
+;Filament used: {filament_amount}m {filament_weight}g
+;Filament cost: {filament_cost}
+;M190 S{print_bed_temperature} ;Uncomment to add your own bed temperature line
+;M109 S{print_temperature} ;Uncomment to add your own temperature line
+G21        ;metric values
+G90        ;absolute positioning
+M82        ;set extruder to absolute mode
+M107       ;start with the fan off
+
+G28 X0 Y0  ;move X/Y to min endstops
+G28 Z0     ;move Z to min endstops
+
+G1 Z1.50 F{travel_speed} ;move the platform down 1.5mm
+
+G92 E0 B0                       ;zero the extruded length
+G1 F200 E4 B4                   ;extrude 8mm of feed stock
+G92 E0 B0                       ;zero the extruded length again
+G1 F{travel_speed}
+;Put printing message on LCD screen
+M117 Printing...
+""", str, 'alteration', 'alteration')
+#######################################################################################
+setting('TIOON_end.gcode', """;End GCode
+M104 S0                     ;extruder heater off
+M140 S0                     ;heated bed heater off (if you have it)
+
+G91                                    ;relative positioning
+G1 E-1 F300                            ;retract the filament a bit before lifting the nozzle, to release some of the pressure
+G1 Z+0.5 E-2.5 B-2.5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
+G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
+
+M84 X Y E B                 ;steppers off
+G90                         ;absolute positioning
+;{profile_string}
+""", str, 'alteration', 'alteration')
+
+#######################################################################################
+setting('TIOON_start2.gcode', """;Sliced at: {day} {date} {time}
+;Basic settings: Layer height: {layer_height} Walls: {wall_thickness} Fill: {fill_density}
+;Print time: {print_time}
+;Filament used: {filament_amount}m {filament_weight}g
+;Filament cost: {filament_cost}
+;M190 S{print_bed_temperature} ;Uncomment to add your own bed temperature line
+;M104 S{print_temperature} ;Uncomment to add your own temperature line
+;M109 T1 S{print_temperature2} ;Uncomment to add your own temperature line
+;M109 T0 S{print_temperature} ;Uncomment to add your own temperature line
+G21        ;metric values
+G90        ;absolute positioning
+M107       ;start with the fan off
+
+G28 X0 Y0  ;move X/Y to min endstops
+G28 Z0     ;move Z to min endstops
+
+G1 Z1.50 F{travel_speed} ;move the platform down 1.5mm
+
+T1                      ;Switch to the 2nd extruder
+G92 E0 B0                       ;zero the extruded length
+G1 F200 E5 B5                  ;extrude 10mm of feed stock
+G92 E0 B0                       ;zero the extruded length again
+G1 F200 E-{retraction_dual_amount}
+
+T0                      ;Switch to the first extruder
+G92 E0 B0                       ;zero the extruded length
+G1 F200 E5 B5                  ;extrude 10mm of feed stock
+G92 E0 B0                       ;zero the extruded length again
+G1 F{travel_speed}
+;Put printing message on LCD screen
+M117 Printing...
+""", str, 'alteration', 'alteration')
+#######################################################################################
+setting('TIOON_end2.gcode', """;End GCode
+M104 T0 S0                     ;extruder heater off
+M104 T1 S0                     ;extruder heater off
+M140 S0                     ;heated bed heater off (if you have it)
+
+G91                                    ;relative positioning
+G1 E-1 F300                            ;retract the filament a bit before lifting the nozzle, to release some of the pressure
+G1 Z+0.5 E-2.5 B-2.5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
+G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
+
 M84 X Y E B                 ;steppers off
 G90                         ;absolute positioning
 ;{profile_string}
@@ -1408,6 +1496,11 @@ def getAlterationFileContents(filename, extruderCount = 1):
 			gcode_parameter_key = 'P'
 		if getMachineSetting('machine_name') == 'M1':
 			alterationContents = getAlterationFile("M1_start.gcode")
+		elif getProfileSetting('TIOON_enable') == 'True':
+			if extruderCount == 1:
+				alterationContents = getAlterationFile("TIOON_start.gcode")
+			elif extruderCount == 2:
+				alterationContents = getAlterationFile("TIOON_start%d.gcode" % (extruderCount))
 		else :
 			if extruderCount > 1:
 				alterationContents = getAlterationFile("start%d.gcode" % (extruderCount))
@@ -1441,6 +1534,11 @@ def getAlterationFileContents(filename, extruderCount = 1):
 	elif filename == 'end.gcode':
 		if getMachineSetting('machine_name') == 'M1':
 			alterationContents = getAlterationFile("M1_end.gcode")
+		elif getProfileSetting('TIOON_enable') == 'True':
+			if extruderCount == 1:
+				alterationContents = getAlterationFile("TIOON_end.gcode")
+			elif extruderCount == 2:
+				alterationContents = getAlterationFile("TIOON_end%d.gcode" % (extruderCount))
 		else :
 			if extruderCount > 1:
 				alterationContents = getAlterationFile("end%d.gcode" % (extruderCount))

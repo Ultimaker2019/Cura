@@ -312,9 +312,9 @@ class mainWindow(wx.Frame):
 			self.reloadSettingPanels()
 		elif profile.getProfileSetting('TIOON_type') != self.setting_TIOON_type:
 			self.setting_TIOON_type = profile.getProfileSetting('TIOON_type')
-			if self.setting_TIOON_type == _('DualModel'):
+			if self.setting_TIOON_type == 'DualModel':
 				profile.putMachineSetting('extruder_amount', 2)
-			elif self.setting_TIOON_type == _('Single'):
+			elif self.setting_TIOON_type == 'Single':
 				profile.putMachineSetting('extruder_amount', 1)
 				import ctypes
 				if profile.getPreference('language') == 'TradChinese':
@@ -322,7 +322,7 @@ class mainWindow(wx.Frame):
 				elif profile.getPreference('language') == 'SimpChinese':
 					message = ctypes.windll.user32.MessageBoxA(0,u"单色模式需要两卷一样规格和颜色的耗材进行打印，请知悉".encode('gbk'),u"单色模式提醒".encode('gbk'),0)
 				else:
-					message = ctypes.windll.user32.MessageBoxA(0, _('Single mode requires two simultaneous rolls of the same color and consumables. '), _('Single Mode Tips'), 0)
+					message = ctypes.windll.user32.MessageBoxA(0, _('Single mode requires two simultaneous rolls of the same color and consumables. ').encode('utf-8'), _('Single Mode Tips').encode('utf-8'), 0)
 			else:
 				profile.putMachineSetting('extruder_amount', 1)
 			self.reloadSettingPanels()
