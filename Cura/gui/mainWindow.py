@@ -1,3 +1,4 @@
+#coding:utf-8
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
 import wx
@@ -30,6 +31,10 @@ try:
 	from wx.lib.pubsub import Publisher
 except:
 	Publisher = None
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 class mainWindow(wx.Frame):
 	def __init__(self):
@@ -308,6 +313,15 @@ class mainWindow(wx.Frame):
 			self.setting_TIOON_type = profile.getProfileSetting('TIOON_type')
 			if self.setting_TIOON_type == _('DualModel'):
 				profile.putMachineSetting('extruder_amount', 2)
+			elif self.setting_TIOON_type == _('Single'):
+				profile.putMachineSetting('extruder_amount', 1)
+				import ctypes
+				if profile.getPreference('language') == 'TradChinese':
+					message = ctypes.windll.user32.MessageBoxA(0,u"單色模式需要兩卷一樣規格和顏色的耗材進行列印，請知悉".encode('gbk'),u"單色模式提醒".encode('gbk'),0)
+				elif profile.getPreference('language') == 'SimpChinese':
+					message = ctypes.windll.user32.MessageBoxA(0,u"单色模式需要两卷一样规格和颜色的耗材进行打印，请知悉".encode('gbk'),u"单色模式提醒".encode('gbk'),0)
+				else:
+					message = ctypes.windll.user32.MessageBoxA(0, _('Single mode requires two simultaneous rolls of the same color and consumables. '), _('Single Mode Tips'), 0)
 			else:
 				profile.putMachineSetting('extruder_amount', 1)
 			self.reloadSettingPanels()
