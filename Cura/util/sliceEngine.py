@@ -633,29 +633,27 @@ class Engine(object):
 			settings['wipeTowerSize'] = int(math.sqrt(profile.getProfileSettingFloat('wipe_tower_volume') * 1000 * 1000 * 1000 / settings['layerThickness']))
 		if profile.getProfileSetting('ooze_shield') == 'True':
 			settings['enableOozeShield'] = 1
-		if profile.getProfileSetting('is_2_in_1_out_nozzle') == 'True':
-			settings['is2In1OutNozzle'] = 1
-			if profile.getMachineSetting('model_effects') == 'Single':
-				settings['colorMixing'] = 4
-			elif profile.getMachineSetting('model_effects') == 'DualModel':
-				settings['colorMixing'] = 3
-			elif profile.getMachineSetting('model_effects') == 'Gradient':
-				settings['colorMixing'] = 2
-				settings['fixedProportionColorA'] = int(profile.getProfileSettingFloat('fixed_proportion_color_a'))
-				settings['fixedProportionColorB'] = int(profile.getProfileSettingFloat('fixed_proportion_color_b'))
-				if profile.getProfileSetting('color_mix_type') == 'Gradient':
-					settings['colorMixType'] = 0
-				elif profile.getProfileSetting('color_mix_type') == 'Fixed Proportion':
-					settings['colorMixType'] = 1
-				settings['colorA'] = int(profile.getProfileSettingFloat('color_a'))
-				settings['colorB'] = int(profile.getProfileSettingFloat('color_b'))
-			elif profile.getMachineSetting('model_effects') == 'Overlap':
-				settings['colorMixing'] = 1
-				settings['overlapCount'] = int(profile.getProfileSettingFloat('overlap_count'))
-			elif profile.getMachineSetting('model_effects') == 'None':
-				settings['colorMixing'] = 0
+		if profile.getProfileSetting('TIOON_enable') == 'True':
+			settings['TIOON_enable'] = 1
+			if profile.getProfileSetting('TIOON_type') == _('Single'):
+				settings['TIOON_type'] = 4
+			elif profile.getProfileSetting('TIOON_type') == _('DualModel'):
+				settings['TIOON_type'] = 3
+			elif profile.getProfileSetting('TIOON_type') == _('Gradient'):
+				settings['TIOON_type'] = 2
+				settings['TIOON_fixed_proportion_a'] = int(profile.getProfileSettingFloat('TIOON_fixed_proportion_a'))
+				settings['TIOON_fixed_proportion_b'] = int(profile.getProfileSettingFloat('TIOON_fixed_proportion_b'))
+				if profile.getProfileSetting('TIOON_mix_type') == _('Gradient'):
+					settings['TIOON_mix_type'] = 0
+				elif profile.getProfileSetting('TIOON_mix_type') == _('Fixed Proportion'):
+					settings['TIOON_mix_type'] = 1
+				settings['TIOON_mix_a'] = int(profile.getProfileSettingFloat('TIOON_mix_a'))
+				settings['TIOON_mix_b'] = int(profile.getProfileSettingFloat('TIOON_mix_b'))
+			elif profile.getProfileSetting('TIOON_type') == _('Overlap'):
+				settings['TIOON_type'] = 1
+				settings['TIOON_overlap_count'] = int(profile.getProfileSettingFloat('TIOON_overlap_count'))
 		else:
-			settings['is2In1OutNozzle'] = 0
+			settings['TIOON_enable'] = 0
 		return settings
 
 	def _runEngineProcess(self, cmdList):

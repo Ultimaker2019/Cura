@@ -293,15 +293,23 @@ class mainWindow(wx.Frame):
 		if pluginCount > 1:
 			self.scene.notification.message("Warning: %i plugins from the previous session are still active." % pluginCount)
 
-		self.setting_color_mix_type = profile.getProfileSetting('color_mix_type')
+		self.setting_TIOON_mix_type = profile.getProfileSetting('TIOON_mix_type')
+		self.setting_TIOON_type = profile.getProfileSetting('TIOON_type')
 		self._updateSettingTimer = wx.Timer(self)
 		self.Bind(wx.EVT_TIMER, self._updateSettingPanel, self._updateSettingTimer)
 		self._updateSettingPanel(None)
 		self._updateSettingTimer.Start(100)
 
 	def _updateSettingPanel(self, e):
-		if profile.getProfileSetting('color_mix_type') != self.setting_color_mix_type:
-			self.setting_color_mix_type = profile.getProfileSetting('color_mix_type')
+		if profile.getProfileSetting('TIOON_mix_type') != self.setting_TIOON_mix_type:
+			self.setting_TIOON_mix_type = profile.getProfileSetting('TIOON_mix_type')
+			self.reloadSettingPanels()
+		elif profile.getProfileSetting('TIOON_type') != self.setting_TIOON_type:
+			self.setting_TIOON_type = profile.getProfileSetting('TIOON_type')
+			if self.setting_TIOON_type == _('DualModel'):
+				profile.putMachineSetting('extruder_amount', 2)
+			else:
+				profile.putMachineSetting('extruder_amount', 1)
 			self.reloadSettingPanels()
 
 	def onPluginUpdate(self,msg): #receives commands from the plugin thread
