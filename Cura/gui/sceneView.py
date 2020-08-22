@@ -280,6 +280,8 @@ class SceneView(openglGui.glGuiPanel):
 				else:
 					drive = drives[0]
 				filename = self._scene._objectList[0].getName() + profile.getGCodeExtension()
+				if profile.getMachineSetting('machine_name') == 'M1':
+					filename = '0.gcode'
 				
 				#check if the file is part of the root folder. If so, create folders on sd card to get the same folder hierarchy.
 				repDir = profile.getPreference("sdcard_rootfolder")
@@ -350,6 +352,8 @@ class SceneView(openglGui.glGuiPanel):
 			return
 		dlg=wx.FileDialog(self, _("Save toolpath"), os.path.dirname(profile.getPreference('lastFile')), style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
 		filename = self._scene._objectList[0].getName() + profile.getGCodeExtension()
+		if profile.getMachineSetting('machine_name') == 'M1':
+			filename = '0.gcode'
 		dlg.SetFilename(filename)
 		dlg.SetWildcard('Toolpath (*%s)|*%s;*%s' % (profile.getGCodeExtension(), profile.getGCodeExtension(), profile.getGCodeExtension()[0:2]))
 		if dlg.ShowModal() != wx.ID_OK:

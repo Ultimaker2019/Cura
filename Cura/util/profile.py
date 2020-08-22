@@ -213,7 +213,7 @@ setting('filament_diameter5',       1.75, float, 'basic',    _('Filament')).setR
 #TIOON two in one out nozzle
 setting('TIOON_enable',            False, bool, 'hidden',    'hidden').setLabel(_("Is 2 in 1 out nozzle"), _("Is it two in one out nozzle?"))
 setting('TIOON_type',         'Gradient', [_('Gradient'), _('Overlap'), _('DualModel'), _('Single')], 'basic', 'Print Setting Mode').setLabel(_("Print Mode"), _("Print Mode"))
-setting('TIOON_mix_type',     'Gradient', [_('Gradient'), _('Fixed Proportion')], 'basic', _('Print Setting Mode')).setLabel(_("Mix Type"), _("ColorMixType:\n1°¢Gradient\n2°¢Fixed Proportion"))
+setting('TIOON_mix_type',     'Gradient', [_('Gradient'), _('Fixed Proportion')], 'basic', _('Print Setting Mode')).setLabel(_("Mix Type"), _("ColorMixType:\n1„ÄÅGradient\n2„ÄÅFixed Proportion"))
 setting('TIOON_mix_a',                 0, int,   'basic',    _('Print Setting Mode')).setRange(0,100).setLabel(_("Gradient Color A"), _("Gradient Color A"))
 setting('TIOON_mix_b',               100, int,   'basic',    _('Print Setting Mode')).setRange(0,100).setLabel(_("Gradient Color B"), _("Gradient Color B"))
 setting('TIOON_fixed_proportion_a',  100, int,   'basic',    _('Print Setting Mode')).setRange(0,100).setLabel(_("Fixed Proportion Color A"), _("Fixed Proportion ColorA, Fixed Proportion ColorB equals 100 minus Fixed Proportion ColorA"))
@@ -297,6 +297,49 @@ setting('plugin_config', '', str, 'hidden', 'hidden')
 setting('object_center_x', -1, float, 'hidden', 'hidden')
 setting('object_center_y', -1, float, 'hidden', 'hidden')
 
+setting('M1_start.gcode', """;Sliced at: {day} {date} {time}
+;Basic settings: Layer height: {layer_height} Walls: {wall_thickness} Fill: {fill_density}
+;Print time: {print_time}
+;Filament used: {filament_amount}m {filament_weight}g
+;Filament cost: {filament_cost}
+;M190 S{print_bed_temperature} ;Uncomment to add your own bed temperature line
+;M109 S{print_temperature} ;Uncomment to add your own temperature line
+G21        ;metric values
+G90        ;absolute positioning
+M82        ;set extruder to absolute mode
+M106 S255  ;start with the fan on
+
+G28 X0 Y0  ;move X/Y to min endstops
+G1 F1200 X10
+G28 Z0     ;move Z to min endstops
+
+G1 Z1.50 F{travel_speed} ;move the platform down 1.5mm
+
+M190 S{print_bed_temperature} ;Uncomment to add your own bed temperature line
+M109 S{print_temperature} ;Uncomment to add your own temperature line
+
+G92 E0                  ;zero the extruded length
+G1 F200 E3              ;extrude 3mm of feed stock
+G92 E0                  ;zero the extruded length again
+G1 F{travel_speed}
+;Put printing message on LCD screen
+M117 Printing...
+""", str, 'alteration', 'alteration')
+#######################################################################################
+setting('M1_end.gcode', """;End GCode
+M104 S0                     ;extruder heater off
+M140 S0                     ;heated bed heater off (if you have it)
+
+G91                                    ;relative positioning
+G1 E-1 F300                            ;retract the filament a bit before lifting the nozzle, to release some of the pressure
+G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
+G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
+G1 X0 Y100
+M84 X Y E B                 ;steppers off
+G90                         ;absolute positioning
+;{profile_string}
+""", str, 'alteration', 'alteration')
+#######################################################################################
 setting('start.gcode', """;Sliced at: {day} {date} {time}
 ;Basic settings: Layer height: {layer_height} Walls: {wall_thickness} Fill: {fill_density}
 ;Print time: {print_time}
