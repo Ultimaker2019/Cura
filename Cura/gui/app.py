@@ -223,7 +223,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_height', '42.80', i)
 			profile.putProfileSetting('nozzle_type', 'V5', i)
 			profile.putProfileSetting('fill_overlap', 2, i)
-			profile.putProfileSetting('retraction_speed', 25.0, i)
+			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('retraction_amount', 1.0, i)
 			i += 1
 			profile.putMachineSetting('machine_name', 'K300/M3145K/M3145', i)
@@ -286,6 +286,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('TIOON_type', _('Gradient'), i)
 			profile.putProfileSetting('TIOON_enable', True, i)
 			profile.putProfileSetting('nozzle_type', 'V4', i)
+			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i += 1
 			profile.putMachineSetting('machine_name', _("M2030X"), i)
@@ -297,6 +298,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_offset_x0', -19.0, i)
 			profile.putProfileSetting('TIOON_enable', True, i)
 			profile.putProfileSetting('nozzle_type', 'V4', i)
+			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			i += 1
 			profile.putMachineSetting('machine_name', _("M2048X"), i)
@@ -308,6 +310,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_offset_x0', -19.0, i)
 			profile.putProfileSetting('TIOON_enable', True, i)
 			profile.putProfileSetting('nozzle_type', 'V4', i)
+			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 
 		if profile.getPreference('check_for_updates') == 'True':
