@@ -151,6 +151,7 @@ class CuraApp(wx.App):
 			#profile.putProfileSetting('raft_base_linewidth', 2.0, i)
 			profile.putProfileSetting('platform_adhesion', 'Raft', i)
 			profile.putProfileSetting('travel_speed', 80, i)
+			profile.putProfileSetting('fill_overlap', 4, i)
 			i += 1
 			profile.putMachineSetting('machine_name', 'M14', i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -225,6 +226,7 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('fill_overlap', 2, i)
 			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('retraction_amount', 1.0, i)
+			profile.putProfileSetting('fill_overlap', 4, i)
 			i += 1
 			profile.putMachineSetting('machine_name', 'K300/M3145K/M3145', i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -288,6 +290,7 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('nozzle_type', 'V4', i)
 			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('travel_speed', 100, i)
+			profile.putProfileSetting('fill_overlap', 4, i)
 			i += 1
 			profile.putMachineSetting('machine_name', _("M2030X"), i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
