@@ -115,7 +115,7 @@ class CuraApp(wx.App):
 				otherCuraInstalls = profile.getAlternativeBasePaths()
 				for path in otherCuraInstalls[::-1]:
 					try:
-						print 'Loading old settings from %s' % (path)
+						#print 'Loading old settings from %s' % (path)
 						#profile.loadPreferences(os.path.join(path, 'preferences.ini'))
 						#profile.loadProfile(os.path.join(path, 'current_profile.ini'))
 						break
@@ -134,7 +134,7 @@ class CuraApp(wx.App):
 			self.loadFiles = [exampleFile]
 			if self.splash is not None:
 				self.splash.Show(False)
-			configWizard.ConfigWizard()
+			#configWizard.ConfigWizard()
 			i = 0
 			profile.putMachineSetting('machine_name', 'M1', i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -291,6 +291,27 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			profile.putProfileSetting('fill_overlap', 4, i)
+			i += 1
+			profile.putMachineSetting('machine_name', _('X5 Dual'), 0)
+			profile.putMachineSetting('machine_type', 'MakerPi', 0)
+			profile.putMachineSetting('machine_width', 190.1, i)
+			profile.putMachineSetting('machine_depth', 205.1, i)
+			profile.putMachineSetting('machine_height', 306.1, i)
+			profile.putMachineSetting('extruder_amount', 2, 0)
+			profile.putMachineSetting('extruder_head_size_min_x', '75', i)
+			profile.putMachineSetting('extruder_head_size_min_y', '18', i)
+			profile.putMachineSetting('extruder_head_size_max_x', '18', i)
+			profile.putMachineSetting('extruder_head_size_max_y', '35', i)
+			profile.putMachineSetting('extruder_head_size_height', '50', i)
+			profile.putProfileSetting('nozzle_type', 'V4', i)
+			profile.putProfileSetting('travel_speed', 80, i)
+			profile.putProfileSetting('overlap_dual', 0.15, i)
+			profile.putProfileSetting('fill_overlap', 15, i)
+			profile.putProfileSetting('retraction_dual_amount', 16.5, i)
+			profile.putProfileSetting('solid_layer_thickness', 0.6, i)
+			profile.putProfileSetting('print_temperature', 190, i)
+			profile.putProfileSetting('wipe_tower', 'True', i)
+			profile.putProfileSetting('extruder_offset_x1', 12, i)
 			i += 1
 			profile.putMachineSetting('machine_name', _("M2030X"), i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)

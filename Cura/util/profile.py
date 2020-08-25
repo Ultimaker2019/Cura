@@ -239,7 +239,7 @@ setting('overlap_dual',                0, float, 'advanced', _('Quality')).setLa
 setting('travel_speed',             80.0, float, 'advanced', _('Speed')).setRange(0.1).setLabel(_("Travel speed (mm/s)"), _("Speed at which travel moves are done, a well built Ultimaker can reach speeds of 250mm/s. But some machines might miss steps then."))
 setting('bottom_layer_speed',         20, float, 'advanced', _('Speed')).setRange(0.1).setLabel(_("Bottom layer speed (mm/s)"), _("Print speed for the bottom layer, you want to print the first layer slower so it sticks better to the printer bed."))
 setting('infill_speed',              0.0, float, 'advanced', _('Speed')).setRange(0.0).setLabel(_("Infill speed (mm/s)"), _("Speed at which infill parts are printed. If set to 0 then the print speed is used for the infill. Printing the infill faster can greatly reduce printing time, but this can negatively affect print quality."))
-#setting('solidarea_speed',          24.0, float, 'advanced', _('Speed')).setRange(0.0).setLabel(_("Top/bottom speed (mm/s)"), _("Speed at which top/bottom parts are printed. If set to 0 then the print speed is used for the infill. Printing the top/bottom faster can greatly reduce printing time, but this can negatively affect print quality."))
+#setting('solidarea_speed',         24.0, float, 'advanced', _('Speed')).setRange(0.0).setLabel(_("Top/bottom speed (mm/s)"), _("Speed at which top/bottom parts are printed. If set to 0 then the print speed is used for the infill. Printing the top/bottom faster can greatly reduce printing time, but this can negatively affect print quality."))
 setting('solidarea_speed',          24.0, float, 'hidden', 'hidden').setRange(0.0).setLabel(_("Top/bottom speed (mm/s)"), _("Speed at which top/bottom parts are printed. If set to 0 then the print speed is used for the infill. Printing the top/bottom faster can greatly reduce printing time, but this can negatively affect print quality."))
 setting('inset0_speed',             24.0, float, 'advanced', _('Speed')).setRange(0.0).setLabel(_("Outer shell speed (mm/s)"), _("Speed at which outer shell is printed. If set to 0 then the print speed is used. Printing the outer shell at a lower speed improves the final skin quality. However, having a large difference between the inner shell speed and the outer shell speed will effect quality in a negative way."))
 setting('insetx_speed',              0.0, float, 'advanced', _('Speed')).setRange(0.0).setLabel(_("Inner shell speed (mm/s)"), _("Speed at which inner shells are printed. If set to 0 then the print speed is used. Printing the inner shell faster then the outer shell will reduce printing time. It is good to set this somewhere in between the outer shell speed and the infill/printing speed."))
@@ -486,10 +486,10 @@ G28 Z0     ;move Z to min endstops
 G1 Z1.50 F{travel_speed} ;move the platform down 1.5mm
 
 T1                      ;Switch to the 2nd extruder
-G92 E0                  ;zero the extruded length
-G1 F200 E10             ;extrude 10mm of feed stock
-G92 E0                  ;zero the extruded length again
-G1 F200 E-{retraction_dual_amount}
+G92 B0                  ;zero the extruded length
+G1 F200 B10             ;extrude 10mm of feed stock
+G92 B0                  ;zero the extruded length again
+G1 F200 B-{retraction_dual_amount}
 
 T0                      ;Switch to the first extruder
 G92 E0                  ;zero the extruded length
