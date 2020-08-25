@@ -291,12 +291,12 @@ class mainWindow(wx.Frame):
 		if Publisher is not None:
 			Publisher().subscribe(self.onPluginUpdate, "pluginupdate")
 
-		pluginCount = self.normalSettingsPanel.pluginPanel.GetActivePluginCount()
-		if pluginCount == 1:
-			self.scene.notification.message("Warning: 1 plugin from the previous session is still active.")
+#		pluginCount = self.normalSettingsPanel.pluginPanel.GetActivePluginCount()
+#		if pluginCount == 1:
+#			self.scene.notification.message("Warning: 1 plugin from the previous session is still active.")
 
-		if pluginCount > 1:
-			self.scene.notification.message("Warning: %i plugins from the previous session are still active." % pluginCount)
+#		if pluginCount > 1:
+#			self.scene.notification.message("Warning: %i plugins from the previous session are still active." % pluginCount)
 
 		self.setting_TIOON_mix_type = profile.getProfileSetting('TIOON_mix_type')
 		self.setting_TIOON_type = profile.getProfileSetting('TIOON_type')
@@ -940,4 +940,4 @@ class normalSettingsPanel(configBase.configPanelBase):
 		super(normalSettingsPanel, self).updateProfileToControls()
 		if self.alterationPanel is not None:
 			self.alterationPanel.updateProfileToControls()
-		self.pluginPanel.updateProfileToControls()
+#		self.pluginPanel.updateProfileToControls()
