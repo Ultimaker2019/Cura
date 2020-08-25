@@ -134,7 +134,7 @@ class CuraApp(wx.App):
 			self.loadFiles = [exampleFile]
 			if self.splash is not None:
 				self.splash.Show(False)
-			#configWizard.ConfigWizard()
+			configWizard.ConfigWizard()
 			i = 0
 			profile.putMachineSetting('machine_name', 'M1', i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -292,12 +292,12 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('travel_speed', 100, i)
 			profile.putProfileSetting('fill_overlap', 4, i)
 			i += 1
-			profile.putMachineSetting('machine_name', _('X5 Dual'), 0)
-			profile.putMachineSetting('machine_type', 'MakerPi', 0)
+			profile.putMachineSetting('machine_name', _('X5 Dual'), i)
+			profile.putMachineSetting('machine_type', 'MakerPi', i)
 			profile.putMachineSetting('machine_width', 190.1, i)
 			profile.putMachineSetting('machine_depth', 205.1, i)
 			profile.putMachineSetting('machine_height', 306.1, i)
-			profile.putMachineSetting('extruder_amount', 2, 0)
+			profile.putMachineSetting('extruder_amount', 2, i)
 			profile.putMachineSetting('extruder_head_size_min_x', '75', i)
 			profile.putMachineSetting('extruder_head_size_min_y', '18', i)
 			profile.putMachineSetting('extruder_head_size_max_x', '18', i)
@@ -307,9 +307,12 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('travel_speed', 80, i)
 			profile.putProfileSetting('overlap_dual', 0.15, i)
 			profile.putProfileSetting('fill_overlap', 15, i)
-			profile.putProfileSetting('retraction_dual_amount', 16.5, i)
+			profile.putProfileSetting('retraction_dual_amount', 20.0, i)
+			profile.putProfileSetting('retraction_speed', 20.0, i)
+			profile.putProfileSetting('retraction_amount', 4.5, i)
 			profile.putProfileSetting('solid_layer_thickness', 0.6, i)
 			profile.putProfileSetting('print_temperature', 180, i)
+			profile.putProfileSetting('print_temperature2', 180, i)
 			profile.putProfileSetting('wipe_tower', 'True', i)
 			profile.putProfileSetting('wipe_tower_volume', 50, i)
 			profile.putProfileSetting('extruder_offset_x1', -12, i)
