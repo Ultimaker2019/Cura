@@ -291,6 +291,7 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			profile.putProfileSetting('fill_overlap', 4, i)
+			profile.putProfileSetting('is_Encrypt_Gcode', True, i)
 			i += 1
 			profile.putMachineSetting('machine_name', _('X5 Dual'), i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -315,9 +316,10 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('print_temperature2', 180, i)
 			profile.putProfileSetting('wipe_tower', 'True', i)
 			profile.putProfileSetting('wipe_tower_volume', 50, i)
-			profile.putProfileSetting('extruder_offset_x1', -12, i)
+			profile.putMachineSetting('extruder_offset_x1', -12, i)
 			profile.putProfileSetting('platform_adhesion', 'Raft', i)
 			profile.putProfileSetting('retraction_hop', 0.2, i)
+			profile.putProfileSetting('is_Encrypt_Gcode', True, i)
 			i += 1
 			profile.putMachineSetting('machine_name', _("M2030X"), i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -330,6 +332,7 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('nozzle_type', 'V4', i)
 			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('travel_speed', 100, i)
+			profile.putProfileSetting('is_Encrypt_Gcode', True, i)
 			i += 1
 			profile.putMachineSetting('machine_name', _("M2048X"), i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -342,6 +345,7 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('nozzle_type', 'V4', i)
 			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('travel_speed', 100, i)
+			profile.putProfileSetting('is_Encrypt_Gcode', True, i)
 
 		if profile.getPreference('check_for_updates') == 'True':
 			newVersion = version.checkForNewerVersion()

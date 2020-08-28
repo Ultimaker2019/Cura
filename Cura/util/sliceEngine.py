@@ -655,6 +655,10 @@ class Engine(object):
 				settings['TIOON_overlap_count'] = int(profile.getProfileSettingFloat('TIOON_overlap_count'))
 		else:
 			settings['TIOON_enable'] = 0
+		if profile.getProfileSetting('is_Encrypt_Gcode') == 'True':
+			settings['isEncryptGcode'] = 1 
+		else:
+			settings['isEncryptGcode'] = 0
 		return settings
 
 	def _runEngineProcess(self, cmdList):

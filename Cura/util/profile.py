@@ -219,6 +219,7 @@ setting('TIOON_mix_b',               100, int,   'basic',    _('Print Setting Mo
 setting('TIOON_fixed_proportion_a',  100, int,   'basic',    _('Print Setting Mode')).setRange(0,100).setLabel(_("Fixed Proportion Color A"), _("Fixed Proportion ColorA, Fixed Proportion ColorB equals 100 minus Fixed Proportion ColorA"))
 setting('TIOON_fixed_proportion_b',    0, int,   'hidden',   _('Print Setting Mode')).setRange(0,100).setLabel(_("Fixed Proportion Color B"), _("Fixed Proportion ColorB, Fixed Proportion ColorA equals 100 minus Fixed Proportion ColorB"))
 setting('TIOON_overlap_count',         1, int,   'basic',    _('Print Setting Mode')).setRange(0,50).setLabel(_("Overlap Count"), _("Overlap Count"))
+setting('is_Encrypt_Gcode',        False, bool,  'basic',    'hidden').setLabel(_("is Encrypt Gcode"), _("is Encrypt Gcode"))
 
 setting('filament_flow',            100., float, 'basic',    _('Filament')).setRange(5,300).setLabel(_("Flow (%)"), _("Flow compensation, the amount of material extruded is multiplied by this value"))
 setting('retraction_speed',         40.0, float, 'advanced', _('Retraction')).setRange(0.1).setLabel(_("Speed (mm/s)"), _("Speed at which the filament is retracted, a higher retraction speed works better. But a very high retraction speed can lead to filament grinding."))
