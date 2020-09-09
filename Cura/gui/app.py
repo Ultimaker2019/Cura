@@ -316,7 +316,7 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('print_temperature2', 180, i)
 			profile.putProfileSetting('wipe_tower', 'True', i)
 			profile.putProfileSetting('wipe_tower_volume', 50, i)
-			profile.putMachineSetting('extruder_offset_x1', -12, i)
+			profile.putMachineSetting('extruder_offset_x1', 12, i)
 			profile.putProfileSetting('platform_adhesion', 'Raft', i)
 			profile.putProfileSetting('retraction_hop', 0.2, i)
 			profile.putProfileSetting('is_Encrypt_Gcode', True, i)
