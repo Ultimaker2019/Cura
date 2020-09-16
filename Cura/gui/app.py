@@ -292,6 +292,7 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('travel_speed', 100, i)
 			profile.putProfileSetting('fill_overlap', 4, i)
 			profile.putProfileSetting('is_Encrypt_Gcode', True, i)
+			profile.putProfileSetting('wipe_tower_volume', 100, i)
 			i += 1
 			profile.putMachineSetting('machine_name', _('X5 Dual'), i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -333,6 +334,7 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			profile.putProfileSetting('is_Encrypt_Gcode', True, i)
+			profile.putProfileSetting('wipe_tower_volume', 100, i)
 			i += 1
 			profile.putMachineSetting('machine_name', _("M2048X"), i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
@@ -346,6 +348,7 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('travel_speed', 100, i)
 			profile.putProfileSetting('is_Encrypt_Gcode', True, i)
+			profile.putProfileSetting('wipe_tower_volume', 100, i)
 
 		if profile.getPreference('check_for_updates') == 'True':
 			newVersion = version.checkForNewerVersion()

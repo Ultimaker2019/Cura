@@ -636,21 +636,21 @@ class Engine(object):
 			settings['enableOozeShield'] = 1
 		if profile.getProfileSetting('TIOON_enable') == 'True':
 			settings['TIOON_enable'] = 1
-			if profile.getProfileSetting('TIOON_type') == _('Single'):
+			if profile.getProfileSetting('TIOON_type') == 'Single':
 				settings['TIOON_type'] = 4
-			elif profile.getProfileSetting('TIOON_type') == _('DualModel'):
+			elif profile.getProfileSetting('TIOON_type') == 'DualModel':
 				settings['TIOON_type'] = 3
-			elif profile.getProfileSetting('TIOON_type') == _('Gradient'):
+			elif profile.getProfileSetting('TIOON_type') == 'Gradient':
 				settings['TIOON_type'] = 2
 				settings['TIOON_fixed_proportion_a'] = int(profile.getProfileSettingFloat('TIOON_fixed_proportion_a'))
 				settings['TIOON_fixed_proportion_b'] = int(profile.getProfileSettingFloat('TIOON_fixed_proportion_b'))
-				if profile.getProfileSetting('TIOON_mix_type') == _('Gradient'):
+				if profile.getProfileSetting('TIOON_mix_type') == 'Gradient':
 					settings['TIOON_mix_type'] = 0
-				elif profile.getProfileSetting('TIOON_mix_type') == _('Fixed Proportion'):
+				elif profile.getProfileSetting('TIOON_mix_type') == 'Fixed Proportion':
 					settings['TIOON_mix_type'] = 1
 				settings['TIOON_mix_a'] = int(profile.getProfileSettingFloat('TIOON_mix_a'))
 				settings['TIOON_mix_b'] = int(profile.getProfileSettingFloat('TIOON_mix_b'))
-			elif profile.getProfileSetting('TIOON_type') == _('Overlap'):
+			elif profile.getProfileSetting('TIOON_type') == 'Overlap':
 				settings['TIOON_type'] = 1
 				settings['TIOON_overlap_count'] = int(profile.getProfileSettingFloat('TIOON_overlap_count'))
 		else:
