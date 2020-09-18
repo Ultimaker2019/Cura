@@ -134,6 +134,20 @@
         },
         "machine_heat_zone_length": {
             "default_value": 20
-        }
+        },
+        "machine_max_feedrate_x": { "value": 80 },
+        "machine_max_feedrate_y": { "value": 80 },
+        "machine_max_feedrate_z": { "value": 10 },
+        "machine_max_feedrate_e": { "value": 25 },
+
+        "machine_max_acceleration_x": { "value": 1800 },
+        "machine_max_acceleration_y": { "value": 1800 },
+        "machine_max_acceleration_z": { "value": 100 },
+        "machine_max_acceleration_e": { "value": 10000 },
+        "machine_acceleration": { "value": 1800 },
+
+        "machine_max_jerk_xy": { "value": 10 },
+        "machine_max_jerk_z": { "value": 0.4 },
+        "machine_max_jerk_e": { "value": 5 }
     }
 }
