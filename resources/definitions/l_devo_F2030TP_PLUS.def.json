@@ -94,7 +94,7 @@
           "default_value": 0.2
         },
         "retraction_speed": {
-          "default_value": 100
+          "value": 20
         },
         "infill_sparse_density": {
           "default_value": 20
@@ -106,7 +106,7 @@
           "default_value": 1.5
         },
         "speed_travel": {
-          "default_value": 100
+          "value": 80
         },
         "speed_print": {
           "default_value": 40
