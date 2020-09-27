@@ -94,7 +94,7 @@
           "default_value": 0.2
         },
         "retraction_speed": {
-          "value": 20
+          "value": 60
         },
         "infill_sparse_density": {
           "default_value": 20
@@ -106,7 +106,7 @@
           "default_value": 1.5
         },
         "speed_travel": {
-          "value": 80
+          "value": 100
         },
         "speed_print": {
           "default_value": 40
@@ -135,10 +135,10 @@
         "machine_heat_zone_length": {
             "default_value": 20
         },
-        "machine_max_feedrate_x": { "value": 80 },
-        "machine_max_feedrate_y": { "value": 80 },
+        "machine_max_feedrate_x": { "value": 120 },
+        "machine_max_feedrate_y": { "value": 120 },
         "machine_max_feedrate_z": { "value": 10 },
-        "machine_max_feedrate_e": { "value": 25 },
+        "machine_max_feedrate_e": { "value": 100 },
 
         "machine_max_acceleration_x": { "value": 1800 },
         "machine_max_acceleration_y": { "value": 1800 },
