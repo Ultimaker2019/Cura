@@ -148,6 +148,13 @@ Section "Cura ${VERSION}"
   CreateDirectory "$SMPROGRAMS\Cura ${VERSION}"
   CreateShortCut "$SMPROGRAMS\Cura ${VERSION}\Uninstall Cura ${VERSION}.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
   CreateShortCut "$SMPROGRAMS\Cura ${VERSION}\Cura ${VERSION}.lnk" "$INSTDIR\python\pythonw.exe" '-m "Cura.cura"' "$INSTDIR\resources\cura.ico" 0
+  CreateShortCut "$DESKTOP\Cura ${VERSION}.lnk" "$INSTDIR\python\pythonw.exe" '-m "Cura.cura"' "$INSTDIR\resources\cura.ico" 0
+  
+  ; Administrator permissions
+  DeleteRegValue HKCU "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" "$INSTDIR\python\pythonw.exe"
+  
+  ; Give all users write permissions in the install directory, so they can read/write profile and preferences files.
+  AccessControl::GrantOnFile "$INSTDIR" "(S-1-5-32-545)" "FullAccess"
   
 SectionEnd
 
@@ -165,9 +172,11 @@ Section "Install Arduino Drivers"
   ${If} ${RunningX64}
     IfSilent +2
       ExecWait '"$INSTDIR\drivers\dpinst64.exe" /lm'
+      ExecWait '"$INSTDIR\drivers\inf_tool\inf-wizard.exe" /lm'
   ${Else}
     IfSilent +2
       ExecWait '"$INSTDIR\drivers\dpinst32.exe" /lm'
+      ExecWait '"$INSTDIR\drivers\inf_tool\inf-wizard.exe" /lm'
   ${EndIf}
 SectionEnd
 
