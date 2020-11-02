@@ -409,8 +409,11 @@ class Engine(object):
 		try:
 			data = self._process.stdout.read(4096)
 			try:
-				os.mkdir(os.path.join(os.getenv("APPDATA"), "cura"))
-				f = open(os.path.join(os.getenv("APPDATA"), "cura", "temp.gcode"), 'wb') 
+				path = os.environ['HOME']
+				if platform.system() == 'Windows':
+					path = os.path.join(os.getenv("APPDATA"))
+					os.mkdir(os.path.join(path, "cura"))
+				f = open(os.path.join(path, "cura", "temp.gcode"), 'wb') 
 				while len(data) > 0:
 					if self._thread != threading.currentThread():
 						self._process.terminate()
