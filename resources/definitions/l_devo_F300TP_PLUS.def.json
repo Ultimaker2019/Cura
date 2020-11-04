@@ -1,0 +1,153 @@
+{
+    "version": 2,
+    "name": "F300TP PLUS",
+    "inherits": "fdmprinter",
+    "metadata": {
+        "visible": true,
+        "author": "L-DEVO",
+        "manufacturer": "L-DEVO",
+        "file_formats": "text/x-gcode",
+        "machine_extruder_trains":
+        {
+            "0": "l_devo_F300TP_PLUS_single_extruder_0"
+        },
+        "has_materials": true,
+        "has_variants": true,
+        "has_machine_quality": true,
+        "variants_name": "Nozzle Size",
+
+        "preferred_variant_name": "0.4mm Nozzle",
+        "preferred_quality_type": "Normal",
+        "preferred_material": "generic_pla",
+        "exclude_materials": [
+            "generic_abs",
+            "generic_bam",
+            "generic_cffcpe",
+            "generic_cffpa",
+            "generic_cpe",
+            "generic_cpe_plus",
+            "generic_gffcpe",
+            "generic_gffpa",
+            "generic_hips",
+            "generic_nylon",
+            "generic_pc",
+            "generic_petg",
+            "generic_pla",
+            "generic_pp",
+            "generic_pva",
+            "generic_tough_pla",
+            "generic_tpu"
+        ]
+    },
+
+    "overrides": {
+        "machine_name": { "default_value": "F300TP PLUS" },
+        "machine_width": {
+            "default_value": 311.4
+        },
+        "machine_height": {
+            "default_value": 450.0
+        },
+        "machine_depth": {
+            "default_value": 311.4
+        },
+        "machine_center_is_zero": {
+            "default_value": false
+        },
+        "machine_head_with_fans_polygon":
+        {
+            "default_value": [
+                [ -37, 55 ],
+                [ -37, -15.5 ],
+                [ 15.5, 55 ],
+                [ 15.5, -15.5 ]
+            ]
+        },
+        "gantry_height": {
+            "value": "53.1"
+        },
+        "machine_use_extruder_offset_to_offset_coords": {
+            "default_value": true
+        },
+        "machine_gcode_flavor": {
+            "default_value": "RepRap (Marlin/Sprinter)"
+        },
+        "machine_start_gcode": {
+            "default_value": "G21 ;metric values\nG90 ;absolute positioning\nM82 ;set extruder to absolute mode\nM107 ;start with the fan off\nG92 E0 ;zero the extruded length\nG28 X0 Y0 ;move X/Y to min endstops\nG28 Z0 ;move Z to min endstops\nG1 Z3.0 F{travel_speed} ;move the platform down 3.0mm\nG1 F200 E8 ;extrude 8 mm of feed stock\nG92 E0 ;zero the extruded length\nG1 F{speed_travel}\nM117 Printing..."
+        },
+        "machine_end_gcode": {
+            "default_value": "M104 T0 S0 ;1st extruder heater off\nM104 T1 S0 ;2nd extruder heater off\nM140 S0 ;heated bed heater off (if you have it)\nG91 ;relative positioning\nG1 E-1 F300  ;retract the filament a bit before lifting the nozzle, to release some of the pressure\nG1 Z+3 E-5 F{travel_speed} ;move Z up a bit\nG28 X0 Y0 ;move X/Y to min endstops, so the head is out of the way\nM84 X Y E B ;steppers off\nG90 ;absolute positioning\nM81"
+        },
+        "machine_extruder_count": {
+            "default_value": 1
+        },
+        "print_sequence": {
+            "enabled": true
+        },
+        "prime_tower_position_x": {
+            "value": "185"
+        },
+        "prime_tower_position_y": {
+            "value": "160"
+        },
+        "layer_height": {
+          "default_value": 0.2
+        },
+        "retraction_speed": {
+          "value": 60
+        },
+        "infill_sparse_density": {
+          "default_value": 20
+        },
+        "retraction_amount": {
+          "default_value": 4.5
+        },
+        "retraction_min_travel": {
+          "default_value": 1.5
+        },
+        "speed_travel": {
+          "value": 100
+        },
+        "speed_print": {
+          "default_value": 40
+        },
+        "wall_thickness": {
+          "default_value": 1.2
+        },
+        "bottom_thickness": {
+          "default_value": 0.2
+        },
+        "speed_layer_0": {
+          "default_value": 20
+        },
+        "speed_print_layer_0": {
+          "default_value": 20
+        },
+        "cool_min_layer_time_fan_speed_max": {
+          "default_value": 5
+        },
+        "adhesion_type": {
+          "default_value": "skirt"
+        },
+        "machine_heated_bed": {
+            "default_value": true
+        },
+        "machine_heat_zone_length": {
+            "default_value": 20
+        },
+        "machine_max_feedrate_x": { "value": 120 },
+        "machine_max_feedrate_y": { "value": 120 },
+        "machine_max_feedrate_z": { "value": 10 },
+        "machine_max_feedrate_e": { "value": 100 },
+
+        "machine_max_acceleration_x": { "value": 1800 },
+        "machine_max_acceleration_y": { "value": 1800 },
+        "machine_max_acceleration_z": { "value": 100 },
+        "machine_max_acceleration_e": { "value": 10000 },
+        "machine_acceleration": { "value": 1800 },
+
+        "machine_max_jerk_xy": { "value": 10 },
+        "machine_max_jerk_z": { "value": 0.4 },
+        "machine_max_jerk_e": { "value": 5 }
+    }
+}
