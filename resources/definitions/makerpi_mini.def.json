@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "K5/K5 PLUS/K6",
+    "name": "Mini",
     "inherits": "fdmprinter",
     "metadata": {
         "visible": true,
@@ -9,7 +9,7 @@
         "file_formats": "text/x-gcode",
         "machine_extruder_trains":
         {
-            "0": "makerpi_k5_k5_plus_k6_single_extruder_0"
+            "0": "makerpi_mini_single_extruder_0"
         },
         "has_materials": true,
         "has_variants": true,
@@ -41,15 +41,15 @@
     },
 
     "overrides": {
-        "machine_name": { "default_value": "K5/K5 PLUS/K6" },
+        "machine_name": { "default_value": "Mini" },
         "machine_width": {
-            "default_value": 202
+            "default_value": 102
         },
         "machine_height": {
-            "default_value": 300
+            "default_value": 102
         },
         "machine_depth": {
-            "default_value": 202
+            "default_value": 102
         },
         "machine_center_is_zero": {
             "default_value": false
@@ -57,8 +57,8 @@
         "machine_head_with_fans_polygon":
         {
             "default_value": [
-                [ -30, 63 ],
-                [ -30, -28 ],
+                [ -31, 63 ],
+                [ -31, -28 ],
                 [ 37, 63 ],
                 [ 37, -28 ]
             ]
@@ -94,13 +94,13 @@
           "default_value": 0.2
         },
         "retraction_speed": {
-          "default_value": 20
+          "default_value": 100
         },
         "infill_sparse_density": {
           "default_value": 20
         },
         "retraction_amount": {
-          "default_value": 0.5
+          "default_value": 4.5
         },
         "retraction_min_travel": {
           "default_value": 1.5
