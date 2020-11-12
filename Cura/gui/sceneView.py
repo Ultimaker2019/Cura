@@ -382,9 +382,11 @@ class SceneView(openglGui.glGuiPanel):
 			fileLineCount = float(self._engine.getResult().getGCodeDataCount())
 			count = 0
 			try:
-				path = os.environ['HOME']
+				path = ""
 				if platform.system() == 'Windows':
 					path = os.path.join(os.getenv("APPDATA"))
+				else:
+					path = os.environ['HOME']
 				with open(os.path.join(path, "cura", "temp.gcode"), 'r') as inputData:
 					with open(targetFilename, 'wb') as fdst:
 						for line in inputData:
