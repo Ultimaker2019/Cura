@@ -8,6 +8,7 @@ import traceback
 import threading
 import math
 import sys
+import subprocess
 
 # MemoryError: out of memory 
 # Save big gcode file memory overflow in the Windows platform
@@ -72,6 +73,8 @@ class SceneView(openglGui.glGuiPanel):
 		self.openFileButton      = openglGui.glButton(self, 4, _("Load"), (0,0), self.showLoadModel)
 		self.printButton         = openglGui.glButton(self, 6, _("Print"), (1,0), self.OnPrintButton)
 		self.printButton.setDisabled(True)
+		self.printConnectButton         = openglGui.glButton(self, 6, _("PrintConnect"), (2,0), self.OnPrintConnectButton)
+		#self.printConnectButton.setDisabled(True)
 
 		group = []
 		self.rotateToolButton = openglGui.glRadioButton(self, 8, _("Rotate"), (0,-1), group, self.OnToolSelect)
@@ -127,7 +130,7 @@ class SceneView(openglGui.glGuiPanel):
 		self.OnToolSelect(0)
 		self.updateToolButtons()
 		self.updateProfileToControls()
-
+		self.sub_process = None
 
 
 	def loadGCodeFile(self, filename):
@@ -141,6 +144,7 @@ class SceneView(openglGui.glGuiPanel):
 		self.printButton.setBottomText('')
 		self.viewSelection.setValue(4)
 		self.printButton.setDisabled(False)
+		self.printConnectButton.setDisabled(False)
 #		self.youMagineButton.setDisabled(True)
 		self.OnViewChange()
 
@@ -264,6 +268,29 @@ class SceneView(openglGui.glGuiPanel):
 		filename = dlg.GetPath()
 		dlg.Destroy()
 		meshLoader.saveMeshes(filename, self._scene.objects())
+
+	def OnPrintConnectButton(self, button = 1):
+		if len(self._scene.objects()) < 1:
+			return
+		if button == 1:
+			serch_path0 = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../run', 'USBprint2.exe'))
+			command = [serch_path0]
+			n = int(profile.getPreferenceFloat('active_machine'))
+			if n >= 6:
+				mod = "M2030X"
+			else:
+				mod = profile.getMachineSetting('machine_name', n).title()
+			command += [mod]
+
+			filePath = os.path.join("Roaming", "cura", "temp.gcode")
+			print filePath
+			command += [filePath]
+			print command
+			if self.sub_process is None:
+				self.sub_process = subprocess.Popen(command)
+			sp = self.sub_process
+			self.sub_process = subprocess.Popen(command)
+			sp.terminate()
 
 	def OnPrintButton(self, button):
 		if button == 1:
