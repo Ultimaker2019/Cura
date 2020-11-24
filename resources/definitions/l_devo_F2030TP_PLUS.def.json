@@ -18,26 +18,7 @@
 
         "preferred_variant_name": "0.4mm Nozzle",
         "preferred_quality_type": "Normal",
-        "preferred_material": "generic_pla",
-        "exclude_materials": [
-            "generic_abs",
-            "generic_bam",
-            "generic_cffcpe",
-            "generic_cffpa",
-            "generic_cpe",
-            "generic_cpe_plus",
-            "generic_gffcpe",
-            "generic_gffpa",
-            "generic_hips",
-            "generic_nylon",
-            "generic_pc",
-            "generic_petg",
-            "generic_pla",
-            "generic_pp",
-            "generic_pva",
-            "generic_tough_pla",
-            "generic_tpu"
-        ]
+        "preferred_material": "PolyLite_pla"
     },
 
     "overrides": {
