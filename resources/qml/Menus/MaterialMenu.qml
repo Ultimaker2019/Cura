@@ -73,6 +73,7 @@ Menu
 
     MenuSeparator {}
 
+/*
     Menu
     {
         id: genericMenu
@@ -94,7 +95,7 @@ Menu
             onObjectRemoved: genericMenu.removeItem(index)
         }
     }
-
+*/
     MenuSeparator {}
 
     Instantiator
