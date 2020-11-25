@@ -90,6 +90,7 @@ function gitClone
 if [ "$BUILD_TARGET" = "none" ]; then
 	echo "You need to specify a build target with:"
 	echo "$0 win32"
+	echo "$0 win64"
 	echo "$0 debian_i386"
 	echo "$0 debian_amd64"
 	echo "$0 debian_armhf"
@@ -113,7 +114,7 @@ cd "$SCRIPT_DIR"
 
 checkTool git "git: http://git-scm.com/"
 checkTool curl "curl: http://curl.haxx.se/"
-if [ $BUILD_TARGET = "win32" ]; then
+if [ $BUILD_TARGET = "win32" ]||[ $BUILD_TARGET = "win64" ]; then
 	#checkTool avr-gcc "avr-gcc: http://winavr.sourceforge.net/ "
 	#Check if we have 7zip, needed to extract and packup a bunch of packages for windows.
 	checkTool 7z "7zip: http://www.7-zip.org/"
@@ -535,9 +536,20 @@ if [ $BUILD_TARGET = "win32" ]; then
 	downloadURL http://www.uwe-sieber.de/files/ejectmedia.zip
 	#Get the power module for python
 	gitClone https://github.com/GreatFruitOmsk/Power Power
-    if [ $? != 0 ]; then echo "Failed to clone Power"; exit 1; fi
+	if [ $? != 0 ]; then echo "Failed to clone Power"; exit 1; fi
 	gitClone ${CURA_ENGINE_REPO} CuraEngine
-    if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
+	if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
+	cd CuraEngine
+	git checkout Soongon_Base_15.02.1
+	cd ..
+fi
+
+if [ $BUILD_TARGET = "win64" ]; then
+	#Get the power module for python
+	gitClone https://github.com/GreatFruitOmsk/Power Power
+	if [ $? != 0 ]; then echo "Failed to clone Power"; exit 1; fi
+	gitClone ${CURA_ENGINE_REPO} CuraEngine
+	if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
 	cd CuraEngine
 	git checkout Soongon_Base_15.02.1
 	cd ..
@@ -611,6 +623,65 @@ if [ $BUILD_TARGET = "win32" ]; then
     if [ $? != 0 ]; then echo "Failed to build CuraEngine"; exit 1; fi
 fi
 
+if [ $BUILD_TARGET = "win64" ]; then
+	if [ -z `which i686-w64-mingw32-g++` ]; then
+		CXX=g++
+	else
+		CXX=i686-w64-mingw32-g++
+	fi
+
+	#For windows extract portable python to include it.
+
+	extract WinPython-64bit-2.7.9.4.exe \$_OUTDIR/python-2.7.9.amd64 \
+		-x!\$_OUTDIR/python-2.7.9.amd64/Lib/site-packages \
+		-x!\$_OUTDIR/python-2.7.9.amd64/Lib/test \
+		-x!\$_OUTDIR/python-2.7.9.amd64/Doc \
+		-x!\$_OUTDIR/python-2.7.9.amd64/tcl \
+		-x!\$_OUTDIR/python-2.7.9.amd64/distutils
+	extract WinPython-64bit-2.7.9.4.exe \$_OUTDIR/python-2.7.9.amd64/Lib/site-packages/numpy*
+	extract WinPython-64bit-2.7.9.4.exe \$_OUTDIR/python-2.7.9.amd64/Lib/site-packages/OpenGL
+	extract WinPython-64bit-2.7.9.4.exe \$_OUTDIR/python-2.7.9.amd64/Lib/site-packages/pyserial-2.7.dist-info
+	extract WinPython-64bit-2.7.9.4.exe \$_OUTDIR/python-2.7.9.amd64/Lib/site-packages/serial
+	extract WinPython-64bit-2.7.9.4.exe \$_OUTDIR/python-2.7.9.amd64/Lib/site-packages/setuptools*
+	extract wxPython3.0-win64-3.0.2.0-py27.7z
+	extract VideoCapture-0.9-5.7z VideoCapture-0.9-5/Python27/DLLs64/vidcap.pyd
+
+	#extract ffmpeg-20120927-git-13f0cd6-win32-static.7z ffmpeg-20120927-git-13f0cd6-win32-static/bin/ffmpeg.exe
+	#extract ffmpeg-20120927-git-13f0cd6-win32-static.7z ffmpeg-20120927-git-13f0cd6-win32-static/licenses
+	extract comtypes-1.1.1.zip comtypes-1.1.1/comtypes
+	extract comtypes-1.1.1.zip comtypes-1.1.1/comtypes.egg-info
+	extract ejectmedia.zip x64
+
+	mkdir -p ${TARGET_DIR}/python
+	mkdir -p ${TARGET_DIR}/Cura/
+	mv \$_OUTDIR/python-2.7.9.amd64/* ${TARGET_DIR}/python
+	mv wxPython3.0-win64-3.0.2.0-py27/Lib/site-packages/wx* ${TARGET_DIR}/python/Lib/site-packages
+	mv comtypes-1.1.1/comtypes ${TARGET_DIR}/python/Lib/site-packages
+	mv comtypes-1.1.1/comtypes.egg-info ${TARGET_DIR}/python/Lib/site-packages
+	mv Power/power ${TARGET_DIR}/python/Lib/site-packages
+	mv VideoCapture-0.9-5/Python27/DLLs64/vidcap.pyd ${TARGET_DIR}/python/DLLs
+	#mv ffmpeg-20120927-git-13f0cd6-win32-static/bin/ffmpeg.exe ${TARGET_DIR}/Cura/
+	#mv ffmpeg-20120927-git-13f0cd6-win32-static/licenses ${TARGET_DIR}/Cura/ffmpeg-licenses/
+	mv x64/EjectMedia.exe ${TARGET_DIR}/Cura/
+
+	rm -rf Power/
+	rm -rf \$_OUTDIR
+	rm -rf wxPython3.0-win64-3.0.2.0-py27
+	rm -rf comtypes-1.1.1
+	rm -rf VideoCapture-0.9-5
+	rm -rf x64
+
+	#Clean up portable python a bit, to keep the package size down.
+	rm -rf ${TARGET_DIR}/python/Lib/site-packages/wx-3.0-msw/wx/tools
+	rm -rf ${TARGET_DIR}/python/Lib/site-packages/wx-3.0-msw/wx/locale
+	#Remove the gle files because they require MSVCR71.dll, which is not included. We also don't need gle, so it's safe to remove it.
+	rm -rf ${TARGET_DIR}/python/Lib/site-packages/OpenGL/DLLS/gle*
+
+	#Build the C++ engine
+	$MAKE -C CuraEngine VERSION=${BUILD_NAME} WIN_BITS=64BITS OS=Windows_NT CXX=${CXX}
+    if [ $? != 0 ]; then echo "Failed to build CuraEngine"; exit 1; fi
+fi
+
 #add Cura
 mkdir -p ${TARGET_DIR}/Cura ${TARGET_DIR}/resources ${TARGET_DIR}/plugins
 cp -a Cura/* ${TARGET_DIR}/Cura
@@ -620,7 +691,7 @@ cp -a plugins/* ${TARGET_DIR}/plugins
 echo $BUILD_NAME > ${TARGET_DIR}/Cura/version
 
 #add script files
-if [ $BUILD_TARGET = "win32" ]; then
+if [ $BUILD_TARGET = "win32" ]||[ $BUILD_TARGET = "win64" ]; then
     cp -a scripts/${BUILD_TARGET}/*.bat $TARGET_DIR/
     cp CuraEngine/build/CuraEngine.exe $TARGET_DIR
 #    cp /usr/lib/gcc/i686-w64-mingw32/4.8/libgcc_s_sjlj-1.dll $TARGET_DIR
@@ -630,26 +701,42 @@ fi
 
 #package the result
 if (( ${ARCHIVE_FOR_DISTRIBUTION} )); then
-	if [ $BUILD_TARGET = "win32" ]; then
+	if [ $BUILD_TARGET = "win32" ]||[ $BUILD_TARGET = "win64" ]; then
 		#rm ${TARGET_DIR}.zip
 		#cd ${TARGET_DIR}
 		#7z a ../${TARGET_DIR}.zip *
 		#cd ..
 
 		if [ ! -z `which wine` ]; then
-			#if we have wine, try to run our nsis script.
-			rm -rf scripts/win32/dist
-			ln -sf `pwd`/${TARGET_DIR} scripts/win32/dist
-			wine ~/.wine/drive_c/Program\ Files\ \(x86\)/NSIS/makensis.exe /DVERSION=${BUILD_NAME} scripts/win32/installer.nsi
-            if [ $? != 0 ]; then echo "Failed to package NSIS installer"; exit 1; fi
-			mv scripts/win32/Cura_${BUILD_NAME}.exe ./
+			if [ $BUILD_TARGET = "win32" ]; then
+				#if we have wine, try to run our nsis script.
+				rm -rf scripts/win32/dist
+				ln -sf `pwd`/${TARGET_DIR} scripts/win32/dist
+				wine ~/.wine/drive_c/Program\ Files\ \(x86\)/NSIS/makensis.exe /DVERSION=${BUILD_NAME} scripts/win32/installer.nsi
+				if [ $? != 0 ]; then echo "Failed to package NSIS installer"; exit 1; fi
+				mv scripts/win32/Cura_${BUILD_NAME}.exe ./
+			elif [ $BUILD_TARGET = "win64" ]; then
+				rm -rf scripts/win64/dist
+				ln -sf `pwd`/${TARGET_DIR} scripts/win64/dist
+				wine ~/.wine/drive_c/Program\ Files\ \(x86\)/NSIS/makensis.exe /DVERSION=${BUILD_NAME} scripts/win64/installer.nsi
+				if [ $? != 0 ]; then echo "Failed to package NSIS installer"; exit 1; fi
+				mv scripts/win64/Cura_${BUILD_NAME}_64bit.exe ./
+			fi
 		fi
 		if [ -f '/c/Program Files (x86)/NSIS/makensis.exe' ]; then
-			rm -rf scripts/win32/dist
-			mv "`pwd`/${TARGET_DIR}" scripts/win32/dist
-			'/c/Program Files (x86)/NSIS/makensis.exe' -DVERSION=${BUILD_NAME} 'scripts/win32/installer.nsi' >> log.txt
-            if [ $? != 0 ]; then echo "Failed to package NSIS installer"; exit 1; fi
-			mv scripts/win32/Cura_${BUILD_NAME}.exe ./
+				if [ $BUILD_TARGET = "win32" ]; then
+				rm -rf scripts/win32/dist
+				mv "`pwd`/${TARGET_DIR}" scripts/win32/dist
+				'/c/Program Files (x86)/NSIS/makensis.exe' -DVERSION=${BUILD_NAME} 'scripts/win32/installer.nsi' >> log.txt
+				if [ $? != 0 ]; then echo "Failed to package NSIS installer"; exit 1; fi
+				mv scripts/win32/Cura_${BUILD_NAME}.exe ./
+			elif [ $BUILD_TARGET = "win64" ]; then
+				rm -rf scripts/win64/dist
+				mv "`pwd`/${TARGET_DIR}" scripts/win64/dist
+				'/c/Program Files (x86)/NSIS/makensis.exe' -DVERSION=${BUILD_NAME} 'scripts/win64/installer.nsi' >> log.txt
+				if [ $? != 0 ]; then echo "Failed to package NSIS installer"; exit 1; fi
+				mv scripts/win64/Cura_${BUILD_NAME}_64bit.exe ./
+			fi
 		fi
 	else
 		echo "Archiving to ${TARGET_DIR}.tar.gz"

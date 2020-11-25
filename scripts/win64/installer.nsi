@@ -7,10 +7,10 @@
 Name "Cura ${VERSION}"
 
 ; The file to write
-OutFile "Cura_${VERSION}.exe"
+OutFile "Cura_${VERSION}_64bit.exe"
 
 ; The default installation directory
-InstallDir $PROGRAMFILES\Cura_${VERSION}
+InstallDir $PROGRAMFILES64\Cura_${VERSION}
 
 ; Registry key to check for directory (so if you install again, it will 
 ; overwrite the old one automatically)
@@ -124,6 +124,12 @@ ReserveFile "header.bmp"
 ; The stuff to install
 Section "Cura ${VERSION}"
 
+  ${If} ${RunningX64}
+  ${else}
+    MessageBox MB_OK|MB_ICONINFORMATION "It works only in 64bit windows."
+    Quit
+  ${EndIf}
+
   SectionIn RO
   
   ; Set output path to the installation directory.
@@ -136,7 +142,7 @@ Section "Cura ${VERSION}"
   WriteRegStr HKLM "SOFTWARE\Cura_${VERSION}" "Install_Dir" "$INSTDIR"
   
   ; Write the uninstall keys for Windows
-  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Cura_${VERSION}" "DisplayName" "Cura ${VERSION}"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Cura_${VERSION}" "DisplayName" "Cura ${VERSION}_64bit"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Cura_${VERSION}" "UninstallString" '"$INSTDIR\uninstall.exe"'
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Cura_${VERSION}" "NoModify" 1
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Cura_${VERSION}" "NoRepair" 1
@@ -146,9 +152,9 @@ Section "Cura ${VERSION}"
   SetShellVarContext all
   
   CreateDirectory "$SMPROGRAMS\Cura ${VERSION}"
-  CreateShortCut "$SMPROGRAMS\Cura ${VERSION}\Uninstall Cura ${VERSION}.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
-  CreateShortCut "$SMPROGRAMS\Cura ${VERSION}\Cura ${VERSION}.lnk" "$INSTDIR\python\pythonw.exe" '-m "Cura.cura"' "$INSTDIR\resources\cura.ico" 0
-  CreateShortCut "$DESKTOP\Cura ${VERSION}.lnk" "$INSTDIR\python\pythonw.exe" '-m "Cura.cura"' "$INSTDIR\resources\cura.ico" 0
+  CreateShortCut "$SMPROGRAMS\Cura ${VERSION}\Uninstall Cura ${VERSION}_64bit.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
+  CreateShortCut "$SMPROGRAMS\Cura ${VERSION}\Cura ${VERSION}_64bit.lnk" "$INSTDIR\python\pythonw.exe" '-m "Cura.cura"' "$INSTDIR\resources\cura.ico" 0
+  CreateShortCut "$DESKTOP\Cura ${VERSION}_64bit.lnk" "$INSTDIR\python\pythonw.exe" '-m "Cura.cura"' "$INSTDIR\resources\cura.ico" 0
   
   ; Administrator permissions
   DeleteRegValue HKCU "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" "$INSTDIR\python\pythonw.exe"
@@ -161,7 +167,7 @@ SectionEnd
 Function LaunchLink
   ; Write start menu entries for all users
   SetShellVarContext all
-  Exec '"$WINDIR\explorer.exe" "$SMPROGRAMS\Cura ${VERSION}\Cura ${VERSION}.lnk"'
+  Exec '"$WINDIR\explorer.exe" "$SMPROGRAMS\Cura ${VERSION}\Cura ${VERSION}_64bit.lnk"'
 FunctionEnd
 
 Section "Install Arduino Drivers"
@@ -219,6 +225,6 @@ Section "Uninstall"
   ; Remove directories used
   RMDir /r "$SMPROGRAMS\Cura ${VERSION}"
   RMDir /r "$INSTDIR"
-  Delete "$DESKTOP\Cura ${VERSION}.lnk"
+  Delete "$DESKTOP\Cura ${VERSION}_64bit.lnk"
 
 SectionEnd
