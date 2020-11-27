@@ -60,7 +60,7 @@ class mainWindow(wx.Frame):
 
 		mruFile = os.path.join(profile.getBasePath(), 'mru_filelist.ini')
 		self.config = wx.FileConfig(appName="Cura",
-						localFilename=mruFile,
+						localFilename=unicode(mruFile,"gbk"),
 						style=wx.CONFIG_USE_LOCAL_FILE)
 
 		self.ID_MRU_MODEL1, self.ID_MRU_MODEL2, self.ID_MRU_MODEL3, self.ID_MRU_MODEL4, self.ID_MRU_MODEL5, self.ID_MRU_MODEL6, self.ID_MRU_MODEL7, self.ID_MRU_MODEL8, self.ID_MRU_MODEL9, self.ID_MRU_MODEL10 = [wx.NewId() for line in xrange(10)]

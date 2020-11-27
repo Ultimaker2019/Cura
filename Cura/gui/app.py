@@ -362,7 +362,10 @@ class CuraApp(wx.App):
 			return
 		self.mainWindow = mainWindow.mainWindow()
 		if self.splash is not None:
-			self.splash.Show(False)
+			try:
+				self.splash.Show(False)
+			except:
+				pass
 		self.SetTopWindow(self.mainWindow)
 		self.mainWindow.Show()
 		self.mainWindow.OnDropFiles(self.loadFiles)
