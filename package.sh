@@ -663,6 +663,7 @@ if [ $BUILD_TARGET = "win64" ]; then
 	#mv ffmpeg-20120927-git-13f0cd6-win32-static/bin/ffmpeg.exe ${TARGET_DIR}/Cura/
 	#mv ffmpeg-20120927-git-13f0cd6-win32-static/licenses ${TARGET_DIR}/Cura/ffmpeg-licenses/
 	mv x64/EjectMedia.exe ${TARGET_DIR}/Cura/
+	cp -a run ${TARGET_DIR}/run
 
 	rm -rf Power/
 	rm -rf \$_OUTDIR
