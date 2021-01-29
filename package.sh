@@ -715,13 +715,13 @@ if (( ${ARCHIVE_FOR_DISTRIBUTION} )); then
 				ln -sf `pwd`/${TARGET_DIR} scripts/win32/dist
 				wine ~/.wine/drive_c/Program\ Files\ \(x86\)/NSIS/makensis.exe /DVERSION=${BUILD_NAME} scripts/win32/installer.nsi
 				if [ $? != 0 ]; then echo "Failed to package NSIS installer"; exit 1; fi
-				mv scripts/win32/Cura_${BUILD_NAME}.exe ./
+				mv scripts/win32/Cura_${BUILD_NAME}.exe ./Cura_${BUILD_NAME}_CP.exe
 			elif [ $BUILD_TARGET = "win64" ]; then
 				rm -rf scripts/win64/dist
 				ln -sf `pwd`/${TARGET_DIR} scripts/win64/dist
 				wine ~/.wine/drive_c/Program\ Files\ \(x86\)/NSIS/makensis.exe /DVERSION=${BUILD_NAME} scripts/win64/installer.nsi
 				if [ $? != 0 ]; then echo "Failed to package NSIS installer"; exit 1; fi
-				mv scripts/win64/Cura_${BUILD_NAME}_64bit.exe ./
+				mv scripts/win64/Cura_${BUILD_NAME}_64bit.exe ./Cura_${BUILD_NAME}_64bit_CP.exe
 			fi
 		fi
 		if [ -f '/c/Program Files (x86)/NSIS/makensis.exe' ]; then
@@ -730,13 +730,13 @@ if (( ${ARCHIVE_FOR_DISTRIBUTION} )); then
 				mv "`pwd`/${TARGET_DIR}" scripts/win32/dist
 				'/c/Program Files (x86)/NSIS/makensis.exe' -DVERSION=${BUILD_NAME} 'scripts/win32/installer.nsi' >> log.txt
 				if [ $? != 0 ]; then echo "Failed to package NSIS installer"; exit 1; fi
-				mv scripts/win32/Cura_${BUILD_NAME}.exe ./
+				mv scripts/win32/Cura_${BUILD_NAME}.exe ./Cura_${BUILD_NAME}_CP.exe
 			elif [ $BUILD_TARGET = "win64" ]; then
 				rm -rf scripts/win64/dist
 				mv "`pwd`/${TARGET_DIR}" scripts/win64/dist
 				'/c/Program Files (x86)/NSIS/makensis.exe' -DVERSION=${BUILD_NAME} 'scripts/win64/installer.nsi' >> log.txt
 				if [ $? != 0 ]; then echo "Failed to package NSIS installer"; exit 1; fi
-				mv scripts/win64/Cura_${BUILD_NAME}_64bit.exe ./
+				mv scripts/win64/Cura_${BUILD_NAME}_64bit.exe ./Cura_${BUILD_NAME}_64bit_CP.exe
 			fi
 		fi
 	else
