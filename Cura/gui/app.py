@@ -278,7 +278,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_max_x', '13', i)
 			profile.putMachineSetting('extruder_head_size_max_y', '86', i)
 			profile.putMachineSetting('extruder_head_size_height', '50', i)
-			profile.putProfileSetting('nozzle_type', 'V4', i)
+			profile.putProfileSetting('nozzle_type', 'V5', i)
 			i += 1
 			profile.putMachineSetting('machine_name', _("X5/K5 MIX"), i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
