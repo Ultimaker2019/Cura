@@ -412,7 +412,8 @@ class Engine(object):
 				path = ""
 				if platform.system() == 'Windows':
 					path = os.path.join(os.getenv("APPDATA"))
-					os.mkdir(os.path.join(path, "cura"))
+					if not os.path.exists(os.path.join(path, "cura")):
+						os.mkdir(os.path.join(path, "cura"))
 				else:
 					path = os.environ['HOME']
 				f = open(os.path.join(path, "cura", "temp.gcode"), 'wb') 
