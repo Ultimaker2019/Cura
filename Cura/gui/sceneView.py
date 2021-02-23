@@ -73,7 +73,7 @@ class SceneView(openglGui.glGuiPanel):
 		self.openFileButton      = openglGui.glButton(self, 4, _("Load"), (0,0), self.showLoadModel)
 		self.printButton         = openglGui.glButton(self, 6, _("Print"), (1,0), self.OnPrintButton)
 		self.printButton.setDisabled(True)
-		self.printConnectButton         = openglGui.glButton(self, 6, _("PrintConnect"), (2,0), self.OnPrintConnectButton)
+		#self.printConnectButton         = openglGui.glButton(self, 6, _("PrintConnect"), (2,0), self.OnPrintConnectButton)
 		#self.printConnectButton.setDisabled(True)
 
 		group = []
@@ -144,7 +144,7 @@ class SceneView(openglGui.glGuiPanel):
 		self.printButton.setBottomText('')
 		self.viewSelection.setValue(4)
 		self.printButton.setDisabled(False)
-		self.printConnectButton.setDisabled(False)
+#		self.printConnectButton.setDisabled(False)
 #		self.youMagineButton.setDisabled(True)
 		self.OnViewChange()
 

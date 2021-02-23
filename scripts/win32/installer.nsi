@@ -172,11 +172,9 @@ Section "Install Arduino Drivers"
   ${If} ${RunningX64}
     IfSilent +2
       ExecWait '"$INSTDIR\drivers\dpinst64.exe" /lm'
-      ExecWait '"$INSTDIR\drivers\inf_tool\inf-wizard.exe" /lm'
   ${Else}
     IfSilent +2
       ExecWait '"$INSTDIR\drivers\dpinst32.exe" /lm'
-      ExecWait '"$INSTDIR\drivers\inf_tool\inf-wizard.exe" /lm'
   ${EndIf}
 SectionEnd
 
