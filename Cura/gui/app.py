@@ -282,7 +282,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('extruder_head_size_height', '50', i)
 			profile.putProfileSetting('nozzle_type', 'V5', i)
 			i += 1
-			profile.putMachineSetting('machine_name', _("P2 Pro"), i)
+			profile.putMachineSetting('machine_name', _("P3 Pro"), i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
 			profile.putMachineSetting('machine_width', 190.1, i)
 			profile.putMachineSetting('machine_depth', 205.1, i)
