@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-12 09:14+0800\n"
+"POT-Creation-Date: 2021-05-15 10:11+0800\n"
 "Last-Translator: Michal Vondracek <info@michalvondracek.cz>\n"
 "Language-Team: Czech <info@3draty.cz>\n"
 "Language: cs\n"
@@ -11,33 +11,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 
-#: Cura/gui/app.py:283
-msgid "X5/K5 MIX"
+#: Cura/gui/app.py:285
+msgid "P2 Pro"
 msgstr ""
 
-#: Cura/gui/app.py:288 Cura/gui/app.py:330 Cura/gui/app.py:344
-#: Cura/util/profile.py:216 Cura/util/profile.py:217 Cura/util/profile.py:1117
-#: Cura/util/profile.py:1157 Cura/util/profile.py:1170
+#: Cura/gui/app.py:290 Cura/gui/app.py:304 Cura/gui/app.py:346
+#: Cura/gui/app.py:360 Cura/util/profile.py:216 Cura/util/profile.py:217
+#: Cura/util/profile.py:1117 Cura/util/profile.py:1157
+#: Cura/util/profile.py:1170
 msgid "Gradient"
 msgstr ""
 
-#: Cura/gui/app.py:297
+#: Cura/gui/app.py:299
+msgid "X5/K5 MIX"
+msgstr ""
+
+#: Cura/gui/app.py:313
 msgid "X5 Dual"
 msgstr ""
 
-#: Cura/gui/app.py:325
+#: Cura/gui/app.py:341
 msgid "M2030X"
 msgstr ""
 
-#: Cura/gui/app.py:339
+#: Cura/gui/app.py:355
 msgid "M2048X"
 msgstr ""
 
-#: Cura/gui/app.py:358 Cura/gui/mainWindow.py:790
+#: Cura/gui/app.py:374 Cura/gui/mainWindow.py:790
 msgid "A new version of Cura is available, would you like to download?"
 msgstr "Nalezena nová verze Cura, mám ji stáhnout?"
 
-#: Cura/gui/app.py:358 Cura/gui/mainWindow.py:790
+#: Cura/gui/app.py:374 Cura/gui/mainWindow.py:790
 msgid "New version available"
 msgstr "Nová verze je dostupná"
 
@@ -1115,7 +1120,7 @@ msgstr ""
 msgid "Connect"
 msgstr "Připojit"
 
-#: Cura/gui/printWindow.py:338 Cura/gui/sceneView.py:73
+#: Cura/gui/printWindow.py:338 Cura/gui/sceneView.py:74
 msgid "Print"
 msgstr "Tisknout"
 
@@ -1131,195 +1136,195 @@ msgstr "Zrušit tisk"
 msgid "Error log"
 msgstr "Chyby"
 
-#: Cura/gui/sceneView.py:72
+#: Cura/gui/sceneView.py:73
 msgid "Load"
 msgstr "Načíst"
 
-#: Cura/gui/sceneView.py:77
+#: Cura/gui/sceneView.py:80
 msgid "Rotate"
 msgstr "Otocit"
 
-#: Cura/gui/sceneView.py:78
+#: Cura/gui/sceneView.py:81
 msgid "Scale"
 msgstr "Zmenit velikost"
 
-#: Cura/gui/sceneView.py:79
+#: Cura/gui/sceneView.py:82
 msgid "Mirror"
 msgstr "Zrcadlit"
 
-#: Cura/gui/sceneView.py:81 Cura/gui/sceneView.py:84
+#: Cura/gui/sceneView.py:84 Cura/gui/sceneView.py:87
 msgid "Reset"
 msgstr "Reset"
 
-#: Cura/gui/sceneView.py:82
+#: Cura/gui/sceneView.py:85
 msgid "Lay flat"
 msgstr "Polozit"
 
-#: Cura/gui/sceneView.py:85
+#: Cura/gui/sceneView.py:88
 msgid "To max"
 msgstr "Na max"
 
-#: Cura/gui/sceneView.py:87
+#: Cura/gui/sceneView.py:90
 msgid "Mirror X"
 msgstr "Zrcadlit podle X"
 
-#: Cura/gui/sceneView.py:88
+#: Cura/gui/sceneView.py:91
 msgid "Mirror Y"
 msgstr "Zrcadlit podle Y"
 
-#: Cura/gui/sceneView.py:89
+#: Cura/gui/sceneView.py:92
 msgid "Mirror Z"
 msgstr "Zrcadlit podle Z"
 
-#: Cura/gui/sceneView.py:97
+#: Cura/gui/sceneView.py:100
 msgid "Scale X"
 msgstr "Zmenit velikost v X"
 
-#: Cura/gui/sceneView.py:99
+#: Cura/gui/sceneView.py:102
 msgid "Scale Y"
 msgstr "Zmenit velikost v Y"
 
-#: Cura/gui/sceneView.py:101
+#: Cura/gui/sceneView.py:104
 msgid "Scale Z"
 msgstr "Zmenit velikost v Z"
 
-#: Cura/gui/sceneView.py:103
+#: Cura/gui/sceneView.py:106
 msgid "Size X (mm)"
 msgstr "Zmenit velikost v X (mm)"
 
-#: Cura/gui/sceneView.py:105
+#: Cura/gui/sceneView.py:108
 msgid "Size Y (mm)"
 msgstr "Zmenit velikost v Y (mm)"
 
-#: Cura/gui/sceneView.py:107
+#: Cura/gui/sceneView.py:110
 msgid "Size Z (mm)"
 msgstr "Zmenit velikost v Z (mm)"
 
-#: Cura/gui/sceneView.py:109
+#: Cura/gui/sceneView.py:112
 msgid "Uniform scale"
 msgstr "Dodrzovat proporce"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "View mode"
 msgstr "Zobrazeni"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Normal"
 msgstr "Normální"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Overhang"
 msgstr "Previsy"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Transparent"
 msgstr "Pruhledny"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "X-Ray"
 msgstr "Rentgen"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Layers"
 msgstr "Vrstvy"
 
-#: Cura/gui/sceneView.py:231
+#: Cura/gui/sceneView.py:235
 msgid "Open 3D model"
 msgstr "Otevřít 3D model"
 
-#: Cura/gui/sceneView.py:256
+#: Cura/gui/sceneView.py:260
 msgid "Save 3D model"
 msgstr "Uložit 3D model"
 
-#: Cura/gui/sceneView.py:322 Cura/gui/sceneView.py:1024
+#: Cura/gui/sceneView.py:349 Cura/gui/sceneView.py:1053
 #, python-format
 msgid "Print with %s"
 msgstr "Tisknout na %s"
 
-#: Cura/gui/sceneView.py:325
+#: Cura/gui/sceneView.py:352
 msgid "Save GCode..."
 msgstr "Uložit GCode..."
 
-#: Cura/gui/sceneView.py:326
+#: Cura/gui/sceneView.py:353
 msgid "Slice engine log..."
 msgstr "Loig sliceru"
 
-#: Cura/gui/sceneView.py:353 Cura/gui/sceneView.py:1027
+#: Cura/gui/sceneView.py:380 Cura/gui/sceneView.py:1056
 msgid "Save toolpath"
 msgstr "Uložit cestu"
 
-#: Cura/gui/sceneView.py:417
+#: Cura/gui/sceneView.py:446
 msgid "The slicing engine reported the following"
 msgstr "Slicer vrátil"
 
-#: Cura/gui/sceneView.py:417
+#: Cura/gui/sceneView.py:446
 msgid "Engine log..."
 msgstr "Log sliceru"
 
-#: Cura/gui/sceneView.py:556
+#: Cura/gui/sceneView.py:585
 msgid "How many copies do you want?"
 msgstr "Kolik kopií?"
 
-#: Cura/gui/sceneView.py:556
+#: Cura/gui/sceneView.py:585
 msgid "Number of copies"
 msgstr "Počet kopií"
 
-#: Cura/gui/sceneView.py:556
+#: Cura/gui/sceneView.py:585
 msgid "Multiply"
 msgstr "Duplikovat"
 
-#: Cura/gui/sceneView.py:579
+#: Cura/gui/sceneView.py:608
 msgid ""
 "Cannot fit all the requested duplicates. Do you want to try and reset object "
 "positions?"
 msgstr ""
 
-#: Cura/gui/sceneView.py:579
+#: Cura/gui/sceneView.py:608
 msgid "Reset Positions"
 msgstr ""
 
-#: Cura/gui/sceneView.py:886
+#: Cura/gui/sceneView.py:915
 msgid "Center on platform"
 msgstr "Do středu stolku"
 
-#: Cura/gui/sceneView.py:887
+#: Cura/gui/sceneView.py:916
 msgid "Delete object"
 msgstr "Smazat objekt"
 
-#: Cura/gui/sceneView.py:888
+#: Cura/gui/sceneView.py:917
 msgid "Multiply object"
 msgstr "Duplikovat objekt"
 
-#: Cura/gui/sceneView.py:889
+#: Cura/gui/sceneView.py:918
 msgid "Split object into parts"
 msgstr "Rozdělit objekt na části"
 
-#: Cura/gui/sceneView.py:892
+#: Cura/gui/sceneView.py:921
 msgid "Dual extrusion merge"
 msgstr "Spojit do dvoubarevného modelu"
 
-#: Cura/gui/sceneView.py:894
+#: Cura/gui/sceneView.py:923
 msgid "Delete all objects"
 msgstr "Smazat vše"
 
-#: Cura/gui/sceneView.py:895
+#: Cura/gui/sceneView.py:924
 msgid "Reload all objects"
 msgstr "Znovu načíst vše"
 
-#: Cura/gui/sceneView.py:896
+#: Cura/gui/sceneView.py:925
 #, fuzzy
 msgid "Reset all objects positions"
 msgstr "Smazat vše"
 
-#: Cura/gui/sceneView.py:897
+#: Cura/gui/sceneView.py:926
 msgid "Reset all objects transformations"
 msgstr ""
 
-#: Cura/gui/sceneView.py:1021
+#: Cura/gui/sceneView.py:1050
 msgid "Toolpath to SD"
 msgstr "Uložit na SD"
 
-#: Cura/gui/sceneView.py:1315
+#: Cura/gui/sceneView.py:1344
 msgid "Overhang view not working due to lack of OpenGL shaders support."
 msgstr "Zborazení převisů není funkční, protože není podpora OpenGL shaderů-"
 

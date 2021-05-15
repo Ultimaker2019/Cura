@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-12 09:14+0800\n"
+"POT-Creation-Date: 2021-05-15 10:11+0800\n"
 "PO-Revision-Date: 2015-01-07 17:30+0900\n"
 "Last-Translator: Jinbuhm Kim <Jinbuhm.Kim@gmail.com>\n"
 "Language-Team: Korean <Jinbuhm.Kim@gmail.com>\n"
@@ -19,33 +19,38 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: Cura/gui/app.py:283
-msgid "X5/K5 MIX"
+#: Cura/gui/app.py:285
+msgid "P2 Pro"
 msgstr ""
 
-#: Cura/gui/app.py:288 Cura/gui/app.py:330 Cura/gui/app.py:344
-#: Cura/util/profile.py:216 Cura/util/profile.py:217 Cura/util/profile.py:1117
-#: Cura/util/profile.py:1157 Cura/util/profile.py:1170
+#: Cura/gui/app.py:290 Cura/gui/app.py:304 Cura/gui/app.py:346
+#: Cura/gui/app.py:360 Cura/util/profile.py:216 Cura/util/profile.py:217
+#: Cura/util/profile.py:1117 Cura/util/profile.py:1157
+#: Cura/util/profile.py:1170
 msgid "Gradient"
 msgstr ""
 
-#: Cura/gui/app.py:297
+#: Cura/gui/app.py:299
+msgid "X5/K5 MIX"
+msgstr ""
+
+#: Cura/gui/app.py:313
 msgid "X5 Dual"
 msgstr ""
 
-#: Cura/gui/app.py:325
+#: Cura/gui/app.py:341
 msgid "M2030X"
 msgstr ""
 
-#: Cura/gui/app.py:339
+#: Cura/gui/app.py:355
 msgid "M2048X"
 msgstr ""
 
-#: Cura/gui/app.py:358 Cura/gui/mainWindow.py:790
+#: Cura/gui/app.py:374 Cura/gui/mainWindow.py:790
 msgid "A new version of Cura is available, would you like to download?"
 msgstr "새로운 버젼의 큐라가 있습니다. 다운로드하시겠습니까?"
 
-#: Cura/gui/app.py:358 Cura/gui/mainWindow.py:790
+#: Cura/gui/app.py:374 Cura/gui/mainWindow.py:790
 msgid "New version available"
 msgstr "새로운 버젼이 있습니다."
 
@@ -1143,7 +1148,7 @@ msgstr ""
 msgid "Connect"
 msgstr "연결 "
 
-#: Cura/gui/printWindow.py:338 Cura/gui/sceneView.py:73
+#: Cura/gui/printWindow.py:338 Cura/gui/sceneView.py:74
 msgid "Print"
 msgstr "프린트"
 
@@ -1159,195 +1164,195 @@ msgstr "프린터 취소"
 msgid "Error log"
 msgstr "오류 로그"
 
-#: Cura/gui/sceneView.py:72
+#: Cura/gui/sceneView.py:73
 msgid "Load"
 msgstr "불러오기"
 
-#: Cura/gui/sceneView.py:77
+#: Cura/gui/sceneView.py:80
 msgid "Rotate"
 msgstr "회전"
 
-#: Cura/gui/sceneView.py:78
+#: Cura/gui/sceneView.py:81
 msgid "Scale"
 msgstr "크기조절"
 
-#: Cura/gui/sceneView.py:79
+#: Cura/gui/sceneView.py:82
 msgid "Mirror"
 msgstr "대칭"
 
-#: Cura/gui/sceneView.py:81 Cura/gui/sceneView.py:84
+#: Cura/gui/sceneView.py:84 Cura/gui/sceneView.py:87
 msgid "Reset"
 msgstr "리셋"
 
-#: Cura/gui/sceneView.py:82
+#: Cura/gui/sceneView.py:85
 msgid "Lay flat"
 msgstr "평면 배치"
 
-#: Cura/gui/sceneView.py:85
+#: Cura/gui/sceneView.py:88
 msgid "To max"
 msgstr "최대로 키우기"
 
-#: Cura/gui/sceneView.py:87
+#: Cura/gui/sceneView.py:90
 msgid "Mirror X"
 msgstr "X 방향 대칭"
 
-#: Cura/gui/sceneView.py:88
+#: Cura/gui/sceneView.py:91
 msgid "Mirror Y"
 msgstr "Y 방향 대칭"
 
-#: Cura/gui/sceneView.py:89
+#: Cura/gui/sceneView.py:92
 msgid "Mirror Z"
 msgstr "Z 방향 대칭"
 
-#: Cura/gui/sceneView.py:97
+#: Cura/gui/sceneView.py:100
 msgid "Scale X"
 msgstr "X 방향 크기조절"
 
-#: Cura/gui/sceneView.py:99
+#: Cura/gui/sceneView.py:102
 msgid "Scale Y"
 msgstr "Y 방향 크기조절"
 
-#: Cura/gui/sceneView.py:101
+#: Cura/gui/sceneView.py:104
 msgid "Scale Z"
 msgstr "Z 방향 크기조절"
 
-#: Cura/gui/sceneView.py:103
+#: Cura/gui/sceneView.py:106
 msgid "Size X (mm)"
 msgstr "X 사이즈(mm)"
 
-#: Cura/gui/sceneView.py:105
+#: Cura/gui/sceneView.py:108
 msgid "Size Y (mm)"
 msgstr "Y 사이즈(mm)"
 
-#: Cura/gui/sceneView.py:107
+#: Cura/gui/sceneView.py:110
 msgid "Size Z (mm)"
 msgstr "Z 사이즈(mm)"
 
-#: Cura/gui/sceneView.py:109
+#: Cura/gui/sceneView.py:112
 msgid "Uniform scale"
 msgstr "균등하게 크기 조절"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "View mode"
 msgstr "보기 모드"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Normal"
 msgstr "일반"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Overhang"
 msgstr "돌출"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Transparent"
 msgstr "투명"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "X-Ray"
 msgstr "X-레이"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Layers"
 msgstr "레이어"
 
-#: Cura/gui/sceneView.py:231
+#: Cura/gui/sceneView.py:235
 msgid "Open 3D model"
 msgstr "3D 모델 열기 "
 
-#: Cura/gui/sceneView.py:256
+#: Cura/gui/sceneView.py:260
 msgid "Save 3D model"
 msgstr "3D 모델 저장"
 
-#: Cura/gui/sceneView.py:322 Cura/gui/sceneView.py:1024
+#: Cura/gui/sceneView.py:349 Cura/gui/sceneView.py:1053
 #, python-format
 msgid "Print with %s"
 msgstr "%s 프린트"
 
-#: Cura/gui/sceneView.py:325
+#: Cura/gui/sceneView.py:352
 msgid "Save GCode..."
 msgstr "GCode 저장하기..."
 
-#: Cura/gui/sceneView.py:326
+#: Cura/gui/sceneView.py:353
 msgid "Slice engine log..."
 msgstr "슬라이스 엔진 로그..."
 
-#: Cura/gui/sceneView.py:353 Cura/gui/sceneView.py:1027
+#: Cura/gui/sceneView.py:380 Cura/gui/sceneView.py:1056
 msgid "Save toolpath"
 msgstr "툴패스 저장"
 
-#: Cura/gui/sceneView.py:417
+#: Cura/gui/sceneView.py:446
 msgid "The slicing engine reported the following"
 msgstr "슬라이스 엔진의 리포트는 다음과 같습니다"
 
-#: Cura/gui/sceneView.py:417
+#: Cura/gui/sceneView.py:446
 msgid "Engine log..."
 msgstr "엔진 로그..."
 
-#: Cura/gui/sceneView.py:556
+#: Cura/gui/sceneView.py:585
 msgid "How many copies do you want?"
 msgstr "몇 개를 출력하실 건가요?"
 
-#: Cura/gui/sceneView.py:556
+#: Cura/gui/sceneView.py:585
 msgid "Number of copies"
 msgstr "프린트할 갯수"
 
-#: Cura/gui/sceneView.py:556
+#: Cura/gui/sceneView.py:585
 msgid "Multiply"
 msgstr "곱하기"
 
-#: Cura/gui/sceneView.py:579
+#: Cura/gui/sceneView.py:608
 msgid ""
 "Cannot fit all the requested duplicates. Do you want to try and reset object "
 "positions?"
 msgstr ""
 
-#: Cura/gui/sceneView.py:579
+#: Cura/gui/sceneView.py:608
 msgid "Reset Positions"
 msgstr ""
 
-#: Cura/gui/sceneView.py:886
+#: Cura/gui/sceneView.py:915
 msgid "Center on platform"
 msgstr "플팻폼 중앙에 위치"
 
-#: Cura/gui/sceneView.py:887
+#: Cura/gui/sceneView.py:916
 msgid "Delete object"
 msgstr "오브젝트 제거"
 
-#: Cura/gui/sceneView.py:888
+#: Cura/gui/sceneView.py:917
 msgid "Multiply object"
 msgstr "오브젝트 복사"
 
-#: Cura/gui/sceneView.py:889
+#: Cura/gui/sceneView.py:918
 msgid "Split object into parts"
 msgstr "오브젝트 나누기"
 
-#: Cura/gui/sceneView.py:892
+#: Cura/gui/sceneView.py:921
 msgid "Dual extrusion merge"
 msgstr "이중 압출 합치기"
 
-#: Cura/gui/sceneView.py:894
+#: Cura/gui/sceneView.py:923
 msgid "Delete all objects"
 msgstr "모든 오브젝트 제거"
 
-#: Cura/gui/sceneView.py:895
+#: Cura/gui/sceneView.py:924
 msgid "Reload all objects"
 msgstr "모든 오브젝트 다시 불러오기"
 
-#: Cura/gui/sceneView.py:896
+#: Cura/gui/sceneView.py:925
 #, fuzzy
 msgid "Reset all objects positions"
 msgstr "모든 오브젝트 제거"
 
-#: Cura/gui/sceneView.py:897
+#: Cura/gui/sceneView.py:926
 msgid "Reset all objects transformations"
 msgstr ""
 
-#: Cura/gui/sceneView.py:1021
+#: Cura/gui/sceneView.py:1050
 msgid "Toolpath to SD"
 msgstr "툴패스를 SD에 저장"
 
-#: Cura/gui/sceneView.py:1315
+#: Cura/gui/sceneView.py:1344
 msgid "Overhang view not working due to lack of OpenGL shaders support."
 msgstr "OpenGL 셰이더가 지원이되지 않아서 돌출 보기가 동작하지 않습니다."
 
