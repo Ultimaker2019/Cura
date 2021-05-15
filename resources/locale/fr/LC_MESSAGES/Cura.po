@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-12 09:14+0800\n"
+"POT-Creation-Date: 2021-05-15 10:11+0800\n"
 "PO-Revision-Date: 2014-10-21 22:35+0100\n"
 "Last-Translator: Jeremie FRANCOIS <jeremie.francois@gmail.com>\n"
 "Language-Team:  <LL@li.org>\n"
@@ -17,34 +17,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: Cura/gui/app.py:283
-msgid "X5/K5 MIX"
+#: Cura/gui/app.py:285
+msgid "P2 Pro"
 msgstr ""
 
-#: Cura/gui/app.py:288 Cura/gui/app.py:330 Cura/gui/app.py:344
-#: Cura/util/profile.py:216 Cura/util/profile.py:217 Cura/util/profile.py:1117
-#: Cura/util/profile.py:1157 Cura/util/profile.py:1170
+#: Cura/gui/app.py:290 Cura/gui/app.py:304 Cura/gui/app.py:346
+#: Cura/gui/app.py:360 Cura/util/profile.py:216 Cura/util/profile.py:217
+#: Cura/util/profile.py:1117 Cura/util/profile.py:1157
+#: Cura/util/profile.py:1170
 msgid "Gradient"
 msgstr ""
 
-#: Cura/gui/app.py:297
+#: Cura/gui/app.py:299
+msgid "X5/K5 MIX"
+msgstr ""
+
+#: Cura/gui/app.py:313
 msgid "X5 Dual"
 msgstr ""
 
-#: Cura/gui/app.py:325
+#: Cura/gui/app.py:341
 msgid "M2030X"
 msgstr ""
 
-#: Cura/gui/app.py:339
+#: Cura/gui/app.py:355
 msgid "M2048X"
 msgstr ""
 
-#: Cura/gui/app.py:358 Cura/gui/mainWindow.py:790
+#: Cura/gui/app.py:374 Cura/gui/mainWindow.py:790
 msgid "A new version of Cura is available, would you like to download?"
 msgstr ""
 "Une nouvelle version de Cura est disponible, voulez-vous la télécharger?"
 
-#: Cura/gui/app.py:358 Cura/gui/mainWindow.py:790
+#: Cura/gui/app.py:374 Cura/gui/mainWindow.py:790
 msgid "New version available"
 msgstr "Nouvelle version disponible"
 
@@ -1166,7 +1171,7 @@ msgstr ""
 msgid "Connect"
 msgstr "Connecter"
 
-#: Cura/gui/printWindow.py:338 Cura/gui/sceneView.py:73
+#: Cura/gui/printWindow.py:338 Cura/gui/sceneView.py:74
 msgid "Print"
 msgstr "Imprimer"
 
@@ -1182,195 +1187,200 @@ msgstr "Interrompre l'impression"
 msgid "Error log"
 msgstr "Journal d'erreur"
 
-#: Cura/gui/sceneView.py:72
+#: Cura/gui/sceneView.py:73
 msgid "Load"
 msgstr "Charger"
 
-#: Cura/gui/sceneView.py:77
+#: Cura/gui/sceneView.py:76
+#, fuzzy
+msgid "PrintConnect"
+msgstr "Connecter"
+
+#: Cura/gui/sceneView.py:80
 msgid "Rotate"
 msgstr "Tourner"
 
-#: Cura/gui/sceneView.py:78
+#: Cura/gui/sceneView.py:81
 msgid "Scale"
 msgstr "Echelle"
 
-#: Cura/gui/sceneView.py:79
+#: Cura/gui/sceneView.py:82
 msgid "Mirror"
 msgstr "Symétrie"
 
-#: Cura/gui/sceneView.py:81 Cura/gui/sceneView.py:84
+#: Cura/gui/sceneView.py:84 Cura/gui/sceneView.py:87
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: Cura/gui/sceneView.py:82
+#: Cura/gui/sceneView.py:85
 msgid "Lay flat"
 msgstr "Mettre à plat"
 
-#: Cura/gui/sceneView.py:85
+#: Cura/gui/sceneView.py:88
 msgid "To max"
 msgstr "Au maximum"
 
-#: Cura/gui/sceneView.py:87
+#: Cura/gui/sceneView.py:90
 msgid "Mirror X"
 msgstr "Symétrie en X"
 
-#: Cura/gui/sceneView.py:88
+#: Cura/gui/sceneView.py:91
 msgid "Mirror Y"
 msgstr "Symétrie en Y"
 
-#: Cura/gui/sceneView.py:89
+#: Cura/gui/sceneView.py:92
 msgid "Mirror Z"
 msgstr "Symétrie en Z"
 
-#: Cura/gui/sceneView.py:97
+#: Cura/gui/sceneView.py:100
 msgid "Scale X"
 msgstr "Echelle X"
 
-#: Cura/gui/sceneView.py:99
+#: Cura/gui/sceneView.py:102
 msgid "Scale Y"
 msgstr "Echelle Y"
 
-#: Cura/gui/sceneView.py:101
+#: Cura/gui/sceneView.py:104
 msgid "Scale Z"
 msgstr "Echelle Z"
 
-#: Cura/gui/sceneView.py:103
+#: Cura/gui/sceneView.py:106
 msgid "Size X (mm)"
 msgstr "Taille axe X (mm)"
 
-#: Cura/gui/sceneView.py:105
+#: Cura/gui/sceneView.py:108
 msgid "Size Y (mm)"
 msgstr "Taille axe Y (mm)"
 
-#: Cura/gui/sceneView.py:107
+#: Cura/gui/sceneView.py:110
 msgid "Size Z (mm)"
 msgstr "Taille axe Z (mm)"
 
-#: Cura/gui/sceneView.py:109
+#: Cura/gui/sceneView.py:112
 msgid "Uniform scale"
 msgstr "Echelle uniforme"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "View mode"
 msgstr "Mode de visualisation"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Normal"
 msgstr "Normal"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Overhang"
 msgstr "Porte-à-faux"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Transparent"
 msgstr "Transparent"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "X-Ray"
 msgstr "Rayons X"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:115
 msgid "Layers"
 msgstr "Couches"
 
-#: Cura/gui/sceneView.py:231
+#: Cura/gui/sceneView.py:235
 msgid "Open 3D model"
 msgstr "Ouvrir un modèle 3D"
 
-#: Cura/gui/sceneView.py:256
+#: Cura/gui/sceneView.py:260
 msgid "Save 3D model"
 msgstr "Sauver le modèle 3D"
 
-#: Cura/gui/sceneView.py:322 Cura/gui/sceneView.py:1024
+#: Cura/gui/sceneView.py:349 Cura/gui/sceneView.py:1053
 #, python-format
 msgid "Print with %s"
 msgstr "Imprimer avec %s"
 
-#: Cura/gui/sceneView.py:325
+#: Cura/gui/sceneView.py:352
 msgid "Save GCode..."
 msgstr "Sauver le GCode..."
 
-#: Cura/gui/sceneView.py:326
+#: Cura/gui/sceneView.py:353
 msgid "Slice engine log..."
 msgstr "Journal du trancheur..."
 
-#: Cura/gui/sceneView.py:353 Cura/gui/sceneView.py:1027
+#: Cura/gui/sceneView.py:380 Cura/gui/sceneView.py:1056
 msgid "Save toolpath"
 msgstr "Sauvegarder les instructions d'impression"
 
-#: Cura/gui/sceneView.py:417
+#: Cura/gui/sceneView.py:446
 msgid "The slicing engine reported the following"
 msgstr "Le trancheur à rapporté ceci"
 
-#: Cura/gui/sceneView.py:417
+#: Cura/gui/sceneView.py:446
 msgid "Engine log..."
 msgstr "Journal du trancheur..."
 
-#: Cura/gui/sceneView.py:556
+#: Cura/gui/sceneView.py:585
 msgid "How many copies do you want?"
 msgstr "Combien de copies voulez vous?"
 
-#: Cura/gui/sceneView.py:556
+#: Cura/gui/sceneView.py:585
 msgid "Number of copies"
 msgstr "Nombre de copies"
 
-#: Cura/gui/sceneView.py:556
+#: Cura/gui/sceneView.py:585
 msgid "Multiply"
 msgstr "Multiplier"
 
-#: Cura/gui/sceneView.py:579
+#: Cura/gui/sceneView.py:608
 msgid ""
 "Cannot fit all the requested duplicates. Do you want to try and reset object "
 "positions?"
 msgstr ""
 
-#: Cura/gui/sceneView.py:579
+#: Cura/gui/sceneView.py:608
 msgid "Reset Positions"
 msgstr ""
 
-#: Cura/gui/sceneView.py:886
+#: Cura/gui/sceneView.py:915
 msgid "Center on platform"
 msgstr "Centrer sur la plateforme"
 
-#: Cura/gui/sceneView.py:887
+#: Cura/gui/sceneView.py:916
 msgid "Delete object"
 msgstr "Supprimer l'objet"
 
-#: Cura/gui/sceneView.py:888
+#: Cura/gui/sceneView.py:917
 msgid "Multiply object"
 msgstr "Multiplier l'objet"
 
-#: Cura/gui/sceneView.py:889
+#: Cura/gui/sceneView.py:918
 msgid "Split object into parts"
 msgstr "Diviser l'objet en parties"
 
-#: Cura/gui/sceneView.py:892
+#: Cura/gui/sceneView.py:921
 msgid "Dual extrusion merge"
 msgstr "Assemblage pour la double extrusion "
 
-#: Cura/gui/sceneView.py:894
+#: Cura/gui/sceneView.py:923
 msgid "Delete all objects"
 msgstr "Supprimer tous les objets"
 
-#: Cura/gui/sceneView.py:895
+#: Cura/gui/sceneView.py:924
 msgid "Reload all objects"
 msgstr " Réinitialiser les objets"
 
-#: Cura/gui/sceneView.py:896
+#: Cura/gui/sceneView.py:925
 #, fuzzy
 msgid "Reset all objects positions"
 msgstr "Supprimer tous les objets"
 
-#: Cura/gui/sceneView.py:897
+#: Cura/gui/sceneView.py:926
 msgid "Reset all objects transformations"
 msgstr ""
 
-#: Cura/gui/sceneView.py:1021
+#: Cura/gui/sceneView.py:1050
 msgid "Toolpath to SD"
 msgstr "Enregistrer sur la carte SD"
 
-#: Cura/gui/sceneView.py:1315
+#: Cura/gui/sceneView.py:1344
 msgid "Overhang view not working due to lack of OpenGL shaders support."
 msgstr ""
 "Mode de vue porte-à-faux impossible par limitation d'OpenGL (support des "
