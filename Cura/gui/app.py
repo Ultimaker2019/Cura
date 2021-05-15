@@ -227,6 +227,8 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('retraction_speed', 20.0, i)
 			profile.putProfileSetting('retraction_amount', 1.0, i)
 			profile.putProfileSetting('fill_overlap', 4, i)
+			profile.putProfileSetting('print_temperature', 200, i)
+			profile.putProfileSetting('print_bed_temperature', 60, i)
 			i += 1
 			profile.putMachineSetting('machine_name', 'K300/M3145K/M3145', i)
 			profile.putMachineSetting('machine_type', 'MakerPi', i)
