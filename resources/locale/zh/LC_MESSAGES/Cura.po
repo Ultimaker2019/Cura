@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-15 10:11+0800\n"
+"POT-Creation-Date: 2021-05-15 16:00+0800\n"
 "PO-Revision-Date: 2015-01-13 12:42+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: Cura/gui/app.py:285
-msgid "P2 Pro"
+msgid "P3 Pro"
 msgstr ""
 
 #: Cura/gui/app.py:290 Cura/gui/app.py:304 Cura/gui/app.py:346

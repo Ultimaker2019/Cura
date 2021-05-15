@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-15 10:11+0800\n"
+"POT-Creation-Date: 2021-05-15 16:00+0800\n"
 "PO-Revision-Date: 2015-05-05 14:40+0800\n"
 "Last-Translator: edwardFang <edward_fang88@yaho.com>\n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: Cura/gui/app.py:285
-msgid "P2 Pro"
+msgid "P3 Pro"
 msgstr ""
 
 #: Cura/gui/app.py:290 Cura/gui/app.py:304 Cura/gui/app.py:346
