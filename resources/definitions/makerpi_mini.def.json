@@ -43,13 +43,13 @@
     "overrides": {
         "machine_name": { "default_value": "Mini" },
         "machine_width": {
-            "default_value": 102
+            "default_value": 100
         },
         "machine_height": {
-            "default_value": 102
+            "default_value": 100
         },
         "machine_depth": {
-            "default_value": 102
+            "default_value": 100
         },
         "machine_center_is_zero": {
             "default_value": false
@@ -57,14 +57,14 @@
         "machine_head_with_fans_polygon":
         {
             "default_value": [
-                [ -31, 63 ],
-                [ -31, -28 ],
-                [ 37, 63 ],
-                [ 37, -28 ]
+                [ 0.0, 0.0 ],
+                [ 0.0, 0.0 ],
+                [ 0.0, 0.0 ],
+                [ 0.0, 0.0 ]
             ]
         },
         "gantry_height": {
-            "value": "42.8"
+            "value": "0.0"
         },
         "machine_use_extruder_offset_to_offset_coords": {
             "default_value": true
@@ -73,7 +73,7 @@
             "default_value": "RepRap (Marlin/Sprinter)"
         },
         "machine_start_gcode": {
-            "default_value": "G21 ;metric values\nG90 ;absolute positioning\nM82 ;set extruder to absolute mode\nM107 ;start with the fan off\nG92 E0 ;zero the extruded length\nG28 X0 Y0 ;move X/Y to min endstops\nG28 Z0 ;move Z to min endstops\nG1 Z3.0 F{travel_speed} ;move the platform down 3.0mm\nG1 F200 E8 ;extrude 8 mm of feed stock\nG92 E0 ;zero the extruded length\nG1 F{speed_travel}\nM117 Printing..."
+            "default_value": "G21 ;metric values\nG90 ;absolute positioning\nM82 ;set extruder to absolute mode\nM107 ;start with the fan off\nG92 E0 ;zero the extruded length\nG28 X0 Y0 ;move X/Y to min endstops\nG28 Z0 ;move Z to min endstops\nG92 Z0.1 ;Offset bed level\nG1 Z3.0 F{travel_speed} ;move the platform down 3.0mm\nG1 F200 E8 ;extrude 8 mm of feed stock\nG92 E0 ;zero the extruded length\nG1 F{speed_travel}\nM117 Printing..."
         },
         "machine_end_gcode": {
             "default_value": "M104 T0 S0 ;1st extruder heater off\nM104 T1 S0 ;2nd extruder heater off\nM140 S0 ;heated bed heater off (if you have it)\nG91 ;relative positioning\nG1 E-1 F300  ;retract the filament a bit before lifting the nozzle, to release some of the pressure\nG1 Z+3 E-5 F{travel_speed} ;move Z up a bit\nG28 X0 Y0 ;move X/Y to min endstops, so the head is out of the way\nM84 X Y E B ;steppers off\nG90 ;absolute positioning\nM81"
@@ -130,7 +130,7 @@
           "default_value": "skirt"
         },
         "machine_heated_bed": {
-            "default_value": true
+            "default_value": false
         },
         "machine_heat_zone_length": {
             "default_value": 20
