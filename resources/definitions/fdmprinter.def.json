@@ -4360,7 +4360,7 @@
                     "type": "float",
                     "minimum_value": "0",
                     "maximum_value_warning": "100",
-                    "default_value": 15,
+                    "default_value": 30,
                     "value": "15 if support_enable and support_structure == 'normal' else 0 if support_enable and support_structure == 'tree' else 15",
                     "enabled": "support_enable or support_meshes_present",
                     "limit_to_extruder": "support_infill_extruder_nr",
@@ -5056,7 +5056,7 @@
                     "label": "Use Towers",
                     "description": "Use specialized towers to support tiny overhang areas. These towers have a larger diameter than the region they support. Near the overhang the towers' diameter decreases, forming a roof.",
                     "type": "bool",
-                    "default_value": true,
+                    "default_value": false,
                     "limit_to_extruder": "support_infill_extruder_nr",
                     "enabled": "support_enable and support_structure == 'normal'",
                     "settable_per_mesh": true
