@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "Mini",
+    "name": "M1",
     "inherits": "fdmprinter",
     "metadata": {
         "visible": true,
@@ -41,7 +41,7 @@
     },
 
     "overrides": {
-        "machine_name": { "default_value": "Mini" },
+        "machine_name": { "default_value": "M1" },
         "machine_width": {
             "default_value": 100
         },
