@@ -1,15 +1,15 @@
 {
     "version": 2,
-    "name": "Extruder 2",
+    "name": "Extruder 1",
     "inherits": "fdmextruder",
     "metadata": {
-        "machine": "makerpi_p3_pro_dual",
-        "position": "1"
+        "machine": "makerpi_p3_pro_mix",
+        "position": "0"
     },
 
     "overrides": {
         "extruder_nr": {
-            "default_value": 1,
+            "default_value": 0,
             "maximum_value": "1"
         },
         "material_diameter": { "default_value": 1.75 },
@@ -22,9 +22,9 @@
         "machine_extruder_end_pos_abs": { "default_value": true },
         "machine_extruder_end_pos_x": { "default_value": 60 },
         "machine_extruder_end_pos_y": { "default_value": 200 },
-        "machine_nozzle_head_distance": { "default_value": 2.0 },
+        "machine_nozzle_head_distance": { "default_value": 0.0 },
         "extruder_prime_pos_x": { "default_value": 60 },
         "extruder_prime_pos_y": { "default_value": 200 },
-        "extruder_prime_pos_z": { "default_value": 2 }
+        "extruder_prime_pos_z": { "default_value": 0 }
     }
 }

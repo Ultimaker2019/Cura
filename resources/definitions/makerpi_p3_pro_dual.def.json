@@ -7,7 +7,7 @@
         "manufacturer": "MakerPi",
         "visible": true,
         "file_formats": "text/x-gcode",
-        "platform_offset": [0, -30, 0],
+        "platform_offset": [0, 0, 0],
         "has_machine_quality": true,
         "has_materials": true,
         "has_variant_buildplates": true,
@@ -31,9 +31,9 @@
 
     "overrides": {
         "machine_name": { "default_value": "P3 PRO DUAL" },
-        "machine_width": { "default_value": 260 },
-        "machine_depth": { "default_value": 260 },
-        "machine_height": { "default_value": 260 },
+        "machine_width": { "default_value": 300 },
+        "machine_depth": { "default_value": 300 },
+        "machine_height": { "default_value": 300 },
         "machine_heated_bed": { "default_value": true },
         "machine_heated_build_volume": { "default_value": true },
         "machine_nozzle_heat_up_speed": { "default_value": 1.4 },
