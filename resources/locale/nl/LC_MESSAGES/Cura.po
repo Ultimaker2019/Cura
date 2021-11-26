@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-15 16:00+0800\n"
+"POT-Creation-Date: 2021-11-26 16:30+0800\n"
 "PO-Revision-Date: 2013-10-01 15:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
@@ -1106,6 +1106,16 @@ msgstr "Communicatieinstellingen"
 #: Cura/gui/preferencesDialog.py:148
 msgid "Ok"
 msgstr ""
+
+#: Cura/gui/preferencesDialog.py:152
+#, fuzzy
+msgid "Add new machine"
+msgstr "Voeg een nieuwe machine toe..."
+
+#: Cura/gui/preferencesDialog.py:156
+#, fuzzy
+msgid "Remove machine"
+msgstr "Selecteer je machine"
 
 #: Cura/gui/preferencesDialog.py:160 Cura/gui/preferencesDialog.py:196
 #, fuzzy
@@ -3344,14 +3354,6 @@ msgstr ""
 
 #~ msgid "Plugins"
 #~ msgstr "Plugins"
-
-#, fuzzy
-#~ msgid "Add new machine"
-#~ msgstr "Voeg een nieuwe machine toe..."
-
-#, fuzzy
-#~ msgid "Remove machine"
-#~ msgstr "Selecteer je machine"
 
 #~ msgid "Share on YouMagine"
 #~ msgstr "Deel op YouMagine..."

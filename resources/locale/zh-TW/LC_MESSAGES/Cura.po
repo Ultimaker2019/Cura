@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-15 16:00+0800\n"
+"POT-Creation-Date: 2021-11-26 16:30+0800\n"
 "PO-Revision-Date: 2015-05-05 14:40+0800\n"
 "Last-Translator: edwardFang <edward_fang88@yaho.com>\n"
 "Language-Team: \n"
@@ -1065,6 +1065,14 @@ msgstr "通訊設置"
 #: Cura/gui/preferencesDialog.py:148
 msgid "Ok"
 msgstr ""
+
+#: Cura/gui/preferencesDialog.py:152
+msgid "Add new machine"
+msgstr "添加新機器向導"
+
+#: Cura/gui/preferencesDialog.py:156
+msgid "Remove machine"
+msgstr "請選擇妳的機器類型"
 
 #: Cura/gui/preferencesDialog.py:160 Cura/gui/preferencesDialog.py:196
 msgid "Change machine name"
@@ -3225,14 +3233,6 @@ msgstr ""
 
 #~ msgid "Plugins"
 #~ msgstr "插件"
-
-#, fuzzy
-#~ msgid "Add new machine"
-#~ msgstr "添加新機器向導"
-
-#, fuzzy
-#~ msgid "Remove machine"
-#~ msgstr "請選擇妳的機器類型"
 
 #~ msgid "Copy profile to clipboard"
 #~ msgstr "拷貝配置到剪貼板"

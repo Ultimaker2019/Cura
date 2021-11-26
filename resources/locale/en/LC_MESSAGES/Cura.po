@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-15 16:00+0800\n"
+"POT-Creation-Date: 2021-11-26 16:30+0800\n"
 "PO-Revision-Date: 2013-09-27 09:41+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1016,6 +1016,14 @@ msgstr ""
 
 #: Cura/gui/preferencesDialog.py:148
 msgid "Ok"
+msgstr ""
+
+#: Cura/gui/preferencesDialog.py:152
+msgid "Add new machine"
+msgstr ""
+
+#: Cura/gui/preferencesDialog.py:156
+msgid "Remove machine"
 msgstr ""
 
 #: Cura/gui/preferencesDialog.py:160 Cura/gui/preferencesDialog.py:196

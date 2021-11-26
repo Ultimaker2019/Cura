@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-15 16:00+0800\n"
+"POT-Creation-Date: 2021-11-26 16:30+0800\n"
 "PO-Revision-Date: 2015-01-06 16:05-0300\n"
 "Last-Translator: Ernesto Bazzano <bazza@riseup.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1117,6 +1117,14 @@ msgstr "Ajustes comunicación"
 #: Cura/gui/preferencesDialog.py:148
 msgid "Ok"
 msgstr "Aceptar"
+
+#: Cura/gui/preferencesDialog.py:152
+msgid "Add new machine"
+msgstr "Añadir nueva máquina"
+
+#: Cura/gui/preferencesDialog.py:156
+msgid "Remove machine"
+msgstr "Selecciona tu maquina"
 
 #: Cura/gui/preferencesDialog.py:160 Cura/gui/preferencesDialog.py:196
 msgid "Change machine name"
@@ -3355,12 +3363,6 @@ msgstr "%0.2f metros %0.0f gramos"
 
 #~ msgid "Plugins"
 #~ msgstr "Complementos"
-
-#~ msgid "Add new machine"
-#~ msgstr "Añadir nueva máquina"
-
-#~ msgid "Remove machine"
-#~ msgstr "Selecciona tu maquina"
 
 #~ msgid "Share on YouMagine"
 #~ msgstr "Comparte en YoMagine"
