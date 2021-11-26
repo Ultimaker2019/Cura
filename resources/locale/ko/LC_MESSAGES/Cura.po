@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-15 16:00+0800\n"
+"POT-Creation-Date: 2021-11-26 16:28+0800\n"
 "PO-Revision-Date: 2015-01-07 17:30+0900\n"
 "Last-Translator: Jinbuhm Kim <Jinbuhm.Kim@gmail.com>\n"
 "Language-Team: Korean <Jinbuhm.Kim@gmail.com>\n"
@@ -1098,6 +1098,14 @@ msgstr "통신 설정"
 #: Cura/gui/preferencesDialog.py:148
 msgid "Ok"
 msgstr "확인"
+
+#: Cura/gui/preferencesDialog.py:152
+msgid "Add new machine"
+msgstr "새로운 기기 추가"
+
+#: Cura/gui/preferencesDialog.py:156
+msgid "Remove machine"
+msgstr "프린터 제거"
 
 #: Cura/gui/preferencesDialog.py:160 Cura/gui/preferencesDialog.py:196
 msgid "Change machine name"
@@ -3275,12 +3283,6 @@ msgstr "%0.2f 미터 %0.0f 그램"
 
 #~ msgid "Plugins"
 #~ msgstr "플러그인"
-
-#~ msgid "Add new machine"
-#~ msgstr "새로운 기기 추가"
-
-#~ msgid "Remove machine"
-#~ msgstr "프린터 제거"
 
 #~ msgid "Share on YouMagine"
 #~ msgstr "YouMagine에 공유"
