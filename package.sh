@@ -225,6 +225,9 @@ if [ "$BUILD_TARGET" = "darwin" ]; then
     echo $BUILD_NAME > scripts/darwin/dist/Cura.app/Contents/Resources/version
 	rm -rf CuraEngine
 	gitClone ${CURA_ENGINE_REPO} CuraEngine
+        cd CuraEngine
+        git checkout Soongon_Base_15.02.1
+        cd ..
     if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
 	$MAKE -C CuraEngine VERSION=${BUILD_NAME}
     if [ $? != 0 ]; then echo "Failed to build CuraEngine"; exit 1; fi
