@@ -205,7 +205,10 @@ class GLVBO(GLReferenceCounter):
 					glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, self._bufferIndices)
 					glDrawElements(self._renderType, self._size, GL_UNSIGNED_INT, c_void_p(0))
 				else:
-					glDrawArrays(self._renderType, 0, info['size'])
+					try:
+						glDrawArrays(self._renderType, 0, info['size'])
+					except:
+						traceback.print_exc()
 
 				glBindBuffer(GL_ARRAY_BUFFER, 0)
 				if self._hasIndices:
