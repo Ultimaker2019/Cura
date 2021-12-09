@@ -46,7 +46,7 @@ class ExtruderStack(CuraContainerStack):
         super().setNextStack(stack)
         stack.addExtruder(self)
         self.setMetaDataEntry("machine", stack.id)
-        self.setMetaDataEntry("enabled", "None")
+        self.setMetaDataEntry("enabled", stack.getMetaDataEntry("enabled"))
 
     @override(ContainerStack)
     def getNextStack(self) -> Optional["GlobalStack"]:
