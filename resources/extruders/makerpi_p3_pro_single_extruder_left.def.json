@@ -4,7 +4,8 @@
     "inherits": "fdmextruder",
     "metadata": {
         "machine": "makerpi_p3_pro_single",
-        "position": "0"
+        "position": "0",
+        "enabled": "False"
     },
 
     "overrides": {

@@ -19,7 +19,8 @@
         "nozzle_offsetting_for_disallowed_areas": false,
         "machine_extruder_trains":
         {
-            "0": "makerpi_p3_pro_single_extruder"
+            "0": "makerpi_p3_pro_single_extruder_left",
+            "1": "makerpi_p3_pro_single_extruder_right"
         },
         "first_start_actions": [ "DiscoverUM3Action" ],
         "supported_actions": [ "DiscoverUM3Action" ],
@@ -52,14 +53,14 @@
             "default_value": "G28 X0 Y0 ;move X/Y to min endstops\nG28 Z0 ;move Z to min endstops\nG1 Z15.0 F600 ;move the platform down 15.0mm\nG21 ;metric values\nG90 ;absolute positioning\nM82 ;set extruder to absolute mode\nM107 ;start with the fan off\nT1 ;Switch to the 1st extruder\nG92 E0 ;zero the extruded length\nG1 F200 E6 ;extrude 6 mm of feed stock\nG92 E0 ;zero the extruded length again\nG1 F3600\nM117 Printing..."
         },
         "machine_end_gcode": {
-            "default_value": "M104 T0 S0 ;1st extruder heater off\nM140 S0 ;heated bed heater off (if you have it)\nG91 ;relative positioning\nG1 E-1 F300  ;retract the filament a bit before lifting the nozzle, to release some of the pressure\nG1 Z+3 E-5 F{travel_speed} ;move Z up a bit\nG28 X0 Y0 ;move X/Y to min endstops, so the head is out of the way\nM84 X Y E B ;steppers off\nG90 ;absolute positioning\nM81"
+            "default_value": "M104 S0 ;1st extruder heater off\nM140 S0 ;heated bed heater off (if you have it)\nG91 ;relative positioning\nG1 E-1 F300  ;retract the filament a bit before lifting the nozzle, to release some of the pressure\nG1 Z+3 E-5 F{travel_speed} ;move Z up a bit\nG28 X0 Y0 ;move X/Y to min endstops, so the head is out of the way\nM84 X Y E B ;steppers off\nG90 ;absolute positioning\nM81"
         },
         "machine_max_feedrate_x": { "default_value": 300 },
         "machine_max_feedrate_y": { "default_value": 300 },
         "machine_max_feedrate_z": { "default_value": 40 },
         "machine_acceleration": { "default_value": 3000 },
         "gantry_height": { "value": "60" },
-        "machine_extruder_count": { "default_value": 1 },
+        "machine_extruder_count": { "default_value": 2 },
         "extruder_prime_pos_abs": { "default_value": true },
         "prime_blob_enable": { "enabled": false, "default_value": false },
 
