@@ -87,7 +87,7 @@
           "default_value": 1.5
         },
         "speed_travel": {
-          "value": 100
+          "value": 80
         },
         "speed_print": {
           "default_value": 40
