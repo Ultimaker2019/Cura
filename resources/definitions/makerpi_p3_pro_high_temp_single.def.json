@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "P3 PRO SINGLE",
+    "name": "P3 pro single high temp",
     "inherits": "fdmprinter",
     "metadata": {
         "author": "Soongon",
@@ -19,8 +19,8 @@
         "nozzle_offsetting_for_disallowed_areas": false,
         "machine_extruder_trains":
         {
-            "0": "makerpi_p3_pro_single_extruder_left",
-            "1": "makerpi_p3_pro_single_extruder_right"
+            "0": "makerpi_p3_pro_high_temp_single_extruder_left",
+            "1": "makerpi_p3_pro_high_temp_single_extruder_right"
         },
         "first_start_actions": [ "DiscoverUM3Action" ],
         "supported_actions": [ "DiscoverUM3Action" ],
@@ -30,7 +30,7 @@
     },
 
     "overrides": {
-        "machine_name": { "default_value": "P3 PRO SINGLE" },
+        "machine_name": { "default_value": "P3 pro single high temp" },
         "machine_width": { "default_value": 300 },
         "machine_depth": { "default_value": 300 },
         "machine_height": { "default_value": 300 },

@@ -1,16 +1,16 @@
 {
     "version": 2,
-    "name": "Extruder 1",
+    "name": "Extruder 2",
     "inherits": "fdmextruder",
     "metadata": {
-        "machine": "makerpi_p3_pro_single",
-        "position": "0",
-        "enabled": "False"
+        "machine": "makerpi_p3_pro_high_temp_single",
+        "position": "1",
+        "enabled": "True"
     },
 
     "overrides": {
         "extruder_nr": {
-            "default_value": 0,
+            "default_value": 1,
             "maximum_value": "1"
         },
         "material_diameter": { "default_value": 1.75 },
