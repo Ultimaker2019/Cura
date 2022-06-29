@@ -30,7 +30,7 @@
 
     "overrides": {
         "machine_name": { "default_value": "K600 single mirror or copy" },
-        "machine_width": { "default_value": 300 },
+        "machine_width": { "default_value": 270 },
         "machine_depth": { "default_value": 600 },
         "machine_height": { "default_value": 800 },
         "machine_heated_bed": { "default_value": true },
@@ -49,7 +49,7 @@
         },
         "machine_gcode_flavor": { "default_value": "Marlin" },
         "machine_start_gcode": {
-            "default_value": "G28 X0 Y0 ;move X/Y to min endstops\nG28 Z0 ;move Z to min endstops\nG1 Z15.0 F600 ;move the platform down 15.0mm\nG21 ;metric values\nG90 ;absolute positioning\nM82 ;set extruder to absolute mode\nM107 ;start with the fan off\nT1 ;Switch to the 1st extruder\nG92 E0 ;zero the extruded length\nG1 F200 E12 ;extrude 12 mm of feed stock\nG92 E0 ;zero the extruded length again\nG1 F3600\nM117 Printing..."
+            "default_value": "G28 X0 Y0 ;move X/Y to min endstops\nG28 Z0 ;move Z to min endstops\nG1 Z15.0 F600 ;move the platform down 15.0mm\nG21 ;metric values\nG90 ;absolute positioning\nM82 ;set extruder to absolute mode\nM107 ;start with the fan off\nT0 ;Switch to the 1st extruder\nG92 E0 ;zero the extruded length\nG1 F200 E12 ;extrude 12 mm of feed stock\nG92 E0 ;zero the extruded length again\nG1 F3600\nM117 Printing..."
         },
         "machine_end_gcode": {
             "default_value": "M104 S0 ;1st extruder heater off\nM140 S0 ;heated bed heater off (if you have it)\nG91 ;relative positioning\nG1 E-1 F300  ;retract the filament a bit before lifting the nozzle, to release some of the pressure\nG1 Z+3 E-5 F{travel_speed} ;move Z up a bit\nG28 X0 Y0 ;move X/Y to min endstops, so the head is out of the way\nM84 X Y E B ;steppers off\nG90 ;absolute positioning\nM81"
