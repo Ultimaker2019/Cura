@@ -195,7 +195,8 @@ class CuraEngineBackend(QObject, Backend):
         This is useful for debugging and used to actually start the engine.
         :return: list of commands and args / parameters.
         """
-        command = [self._application.getPreferences().getValue("backend/location"), "connect", "127.0.0.1:{0}".format(self._port), ""]
+        gcode_file_path = os.path.expanduser('~') + "\\AppData\\Local\\cura\\temp.gcode"
+        command = [self._application.getPreferences().getValue("backend/location"), "connect", "127.0.0.1:{0}".format(self._port), "", str(gcode_file_path)]
 
         parser = argparse.ArgumentParser(prog = "cura", add_help = False)
         parser.add_argument("--debug", action = "store_true", default = False, help = "Turn on the debug mode by setting this option.")
