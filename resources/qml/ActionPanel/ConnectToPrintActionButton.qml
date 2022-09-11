@@ -28,10 +28,6 @@ Item
         id: connectToPrintButton
         height: parent.height
 
-        shadowEnabled: true
-        shadowColor: UM.Theme.getColor("primary_shadow")
-        cornerSide: Cura.RoundedRectangle.Direction.Right
-
         anchors
         {
             top: parent.top
