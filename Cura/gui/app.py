@@ -365,6 +365,22 @@ class CuraApp(wx.App):
 			profile.putProfileSetting('travel_speed', 100, i)
 			profile.putProfileSetting('is_Encrypt_Gcode', True, i)
 			profile.putProfileSetting('wipe_tower_volume', 100, i)
+			i += 1
+			profile.putMachineSetting('machine_name', 'M20', i)
+			profile.putMachineSetting('machine_type', 'MakerPi', i)
+			profile.putMachineSetting('extruder_amount', 1, i)
+			profile.putMachineSetting('machine_width', 200, i)
+			profile.putMachineSetting('machine_depth', 200, i)
+			profile.putMachineSetting('machine_height', 200, i)
+			profile.putMachineSetting('has_heated_bed', 'True', i)
+			profile.putMachineSetting('extruder_head_size_min_x', '75', i)
+			profile.putMachineSetting('extruder_head_size_min_y', '10', i)
+			profile.putMachineSetting('extruder_head_size_max_x', '53', i)
+			profile.putMachineSetting('extruder_head_size_max_y', '35', i)
+			profile.putMachineSetting('extruder_head_size_height', '50', i)
+			profile.putProfileSetting('nozzle_type', 'V5', i)
+			profile.putProfileSetting('platform_adhesion', 'Raft', i)
+			profile.putProfileSetting('travel_speed', 80, i)
 
 		if profile.getPreference('check_for_updates') == 'True':
 			newVersion = version.checkForNewerVersion()
