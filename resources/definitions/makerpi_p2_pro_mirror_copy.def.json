@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "P2 PRO",
+    "name": "P2 PRO Mirror & Copy",
     "inherits": "fdmprinter",
     "metadata": {
         "author": "Soongon",
@@ -19,8 +19,7 @@
         "nozzle_offsetting_for_disallowed_areas": false,
         "machine_extruder_trains":
         {
-            "0": "makerpi_p2_pro_extruder_left",
-            "1": "makerpi_p2_pro_extruder_right"
+            "0": "makerpi_p2_pro_mirror_copy_single_extruder"
         },
         "first_start_actions": [ "DiscoverUM3Action" ],
         "supported_actions": [ "DiscoverUM3Action" ],
@@ -30,8 +29,8 @@
     },
 
     "overrides": {
-        "machine_name": { "default_value": "P2 PRO" },
-        "machine_width": { "default_value": 220 },
+        "machine_name": { "default_value": "P2 PRO Mirror & Copy" },
+        "machine_width": { "default_value": 80 },
         "machine_depth": { "default_value": 220 },
         "machine_height": { "default_value": 250 },
         "machine_heated_bed": { "default_value": true },
@@ -60,7 +59,7 @@
         "machine_max_feedrate_z": { "default_value": 40 },
         "machine_acceleration": { "default_value": 3000 },
         "gantry_height": { "value": "60" },
-        "machine_extruder_count": { "default_value": 2 },
+        "machine_extruder_count": { "default_value": 1 },
         "extruder_prime_pos_abs": { "default_value": true },
         "prime_blob_enable": { "enabled": false, "default_value": false },
 
