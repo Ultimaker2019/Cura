@@ -109,6 +109,7 @@ from cura.UI.WelcomePagesModel import WelcomePagesModel
 from cura.UI.WhatsNewPagesModel import WhatsNewPagesModel
 from cura.UltimakerCloud import UltimakerCloudConstants
 from cura.Utils.NetworkingUtil import NetworkingUtil
+from cura.GcodeTempSave import GcodeTempSave
 from . import BuildVolume
 from . import CameraAnimation
 from . import CuraActions
@@ -1766,6 +1767,11 @@ class CuraApplication(QtApplication):
         extension = os.path.splitext(f)[1]
         extension = extension.lower()
         filename = os.path.basename(f)
+
+        if extension == '.gcode' or extension == '.g':
+            thread_01 = GcodeTempSave(f)
+            thread_01.start()
+
         if self._currently_loading_files:
             # If a non-slicable file is already being loaded, we prevent loading of any further non-slicable files
             if extension in self._non_sliceable_extensions:
