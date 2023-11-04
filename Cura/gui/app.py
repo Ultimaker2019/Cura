@@ -142,7 +142,7 @@ class CuraApp(wx.App):
 			profile.putMachineSetting('machine_width', 105.1, i)
 			profile.putMachineSetting('machine_depth', 105.1, i)
 			profile.putMachineSetting('machine_height', 105.1, i)
-			profile.putMachineSetting('has_heated_bed', 'False', i)
+			profile.putMachineSetting('has_heated_bed', 'True', i)
 			profile.putMachineSetting('extruder_head_size_min_x', '0', i)
 			profile.putMachineSetting('extruder_head_size_min_y', '0', i)
 			profile.putMachineSetting('extruder_head_size_max_x', '0', i)
