@@ -7660,6 +7660,17 @@
                     "minimum_value_warning": "25",
                     "maximum_value_warning": "100",
                     "settable_per_mesh": true
+                },
+                "home_first_then_heat":
+                {
+                    "label": "Home first then heat up",
+                    "description": "Start printing, home first, then heat up",
+                    "default_value": false,
+                    "type": "bool",
+                    "enabled": "machine_nozzle_temp_enabled",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": false,
+                    "settable_per_meshgroup": false
                 }
             }
         },
