@@ -130,7 +130,7 @@
           "default_value": "skirt"
         },
         "machine_heated_bed": {
-            "default_value": false
+            "default_value": true
         },
         "machine_heat_zone_length": {
             "default_value": 20
