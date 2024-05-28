@@ -3902,6 +3902,27 @@
                     "settable_per_mesh": false,
                     "settable_per_extruder": true
                 },
+                "retraction_delay_before_hop": {
+                    "label": "Delay Before Z Hop",
+                    "description": "Delay before z hop.",
+                    "type": "bool",
+                    "default_value": false,
+                    "enabled": "retraction_enable and retraction_hop_enabled",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": true
+                },
+                "retraction_delay_time_before_hop": {
+                    "label": "Delay Time Before Z Hop",
+                    "description": "Delay time before z hop.",
+                    "unit": "ms",
+                    "type": "int",
+                    "default_value": 1000,
+                    "minimum_value_warning": "0",
+                    "maximum_value_warning": "100000",
+                    "enabled": "retraction_delay_before_hop",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": true
+                },
                 "retraction_hop": {
                     "label": "Z Hop Height",
                     "description": "The height difference when performing a Z Hop.",
