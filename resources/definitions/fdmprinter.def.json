@@ -7741,7 +7741,15 @@
                     "type": "str",
                     "default_value": "[[1,0,0], [0,1,0], [0,0,1]]",
                     "enabled": false
-                }
+                },
+                "enable_checksum":
+                {
+                    "description": "Instruction addition checksum support",
+                    "type": "bool",
+                    "label": "Enable cmd checksum",
+                    "default_value": false,
+                    "enabled": false
+                },
             }
         }
     }
