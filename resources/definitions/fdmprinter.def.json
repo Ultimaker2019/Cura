@@ -7697,9 +7697,21 @@
                 {
                     "label": "Enable cmd checksum",
                     "description": "Instruction addition checksum support",
+                    "default_value": true,
+                    "type": "bool",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": false,
+                    "settable_per_meshgroup": true
+                },
+                "enable_single_line_test":
+                {
+                    "label": "Enable single line test",
+                    "description": "Enable single line test",
                     "default_value": false,
                     "type": "bool",
-                    "settable_per_mesh": true
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": false,
+                    "settable_per_meshgroup": true
                 }
             }
         },
