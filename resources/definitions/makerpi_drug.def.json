@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "Drug Multiple 4",
+    "name": "四头 AutoBio2000-4",
     "inherits": "fdmprinter",
     "metadata": {
         "author": "Soongon",
@@ -32,7 +32,7 @@
     },
 
     "overrides": {
-        "machine_name": { "default_value": "Drug Multiple 4" },
+        "machine_name": { "default_value": "四头 AutoBio2000-4" },
         "machine_width": { "default_value": 110 },
         "machine_depth": { "default_value": 200 },
         "machine_height": { "default_value": 100 },

@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "Drug Multiple 2",
+    "name": "双头 AutoBio2000-2",
     "inherits": "fdmprinter",
     "metadata": {
         "author": "Soongon",
@@ -30,7 +30,7 @@
     },
 
     "overrides": {
-        "machine_name": { "default_value": "Drug Multiple 2" },
+        "machine_name": { "default_value": "双头 AutoBio2000-2" },
         "machine_width": { "default_value": 220 },
         "machine_depth": { "default_value": 200 },
         "machine_height": { "default_value": 100 },

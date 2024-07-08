@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "AutoBio2000",
+    "name": "单头 AutoBio2000-1",
     "inherits": "fdmprinter",
     "metadata": {
         "author": "Soongon",
@@ -32,7 +32,7 @@
     },
 
     "overrides": {
-        "machine_name": { "default_value": "AutoBio 2000" },
+        "machine_name": { "default_value": "单头 AutoBio2000-1" },
         "machine_width": { "default_value": 110 },
         "machine_depth": { "default_value": 200 },
         "machine_height": { "default_value": 100 },
