@@ -53,7 +53,7 @@
             "default_value": "G28 X0 Y0 ;move X/Y to min endstops\nG28 Z0 ;move Z to min endstops\n;G1 Z15.0 F600 ;move the platform down 15.0mm\nG21 ;metric values\nG90 ;absolute positioning\nM82 ;set extruder to absolute mode\nM107 ;start with the fan off\nG1 F3600\nM117 Printing..."
         },
         "machine_end_gcode": {
-            "default_value": "M104 T0 S0 ;1st extruder heater off\nM104 T1 S0 ;2nd extruder heater off\nM140 S0 ;heated bed heater off (if you have it)\nG91 ;relative positioning\n;G1 Z+3 F{travel_speed} ;move Z up a bit\nG28 X0 Y0 ;move X/Y to min endstops, so the head is out of the way\nM84 X Y E B ;steppers off\nG90 ;absolute positioning\nM81\nM82 ;set extruder to absolute mode\nG28 Z"
+            "default_value": "M104 T0 S0 ;1st extruder heater off\nM104 T1 S0 ;2nd extruder heater off\nM140 S0 ;heated bed heater off (if you have it)\nG91 ;relative positioning\n;G1 Z+30 F{travel_speed} ;move Z up a bit\nG28 X0 Y0 ;move X/Y to min endstops, so the head is out of the way\nM84 X Y E B ;steppers off\nG90 ;absolute positioning\nM81\nM82 ;set extruder to absolute mode\nG28 Z"
         },
         "machine_max_feedrate_x": { "default_value": 300 },
         "machine_max_feedrate_y": { "default_value": 300 },
